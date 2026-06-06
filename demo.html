@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo aanvragen — BuildProof</title>
+<link rel="stylesheet" href="assets/buildproof-tokens.css">
+<link rel="stylesheet" href="site.css">
+<style>
+  .demo-page { min-height: 100vh; display: flex; flex-direction: column; }
+  .demo-body { flex: 1; padding: 64px 0 80px; }
+  .demo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+  .demo-copy h1 { font-family: var(--font-body); font-weight: 900; font-size: 38px; line-height: 1.15; color: var(--ink-900); margin: 0 0 18px; }
+  .demo-copy p { font-size: 17px; line-height: 1.65; color: var(--ink-700); margin: 0 0 28px; }
+  .demo-copy ul { padding: 0 0 0 20px; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+  .demo-copy ul li { font-size: 16px; color: var(--ink-700); line-height: 1.5; }
+  .demo-form-card { background: var(--surface-050); border: 1px solid var(--line-200); border-radius: var(--radius-xl); padding: 40px; box-shadow: var(--shadow-md); }
+  .demo-form-card h2 { font-family: var(--font-display); font-weight: 800; font-size: 22px; color: var(--ink-900); margin: 0 0 28px; }
+  .field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 18px; }
+  .field label { font-weight: 700; font-size: 14px; color: var(--ink-700); }
+  .field input, .field select, .field textarea {
+    border: 1.5px solid var(--line-300); border-radius: var(--radius-md);
+    padding: 12px 14px; font-family: var(--font-body); font-size: 15px; color: var(--ink-900);
+    background: #fff; transition: border-color .15s ease, box-shadow .15s ease;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus {
+    outline: none; border-color: var(--blue-500); box-shadow: 0 0 0 3px var(--blue-100);
+  }
+  .field textarea { resize: vertical; min-height: 100px; }
+  .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .submit-btn { width: 100%; padding: 16px; font-size: 16px; margin-top: 6px; }
+  .form-note { font-size: 13px; color: var(--ink-500); text-align: center; margin-top: 14px; }
+  @media (max-width: 820px) {
+    .demo-grid { grid-template-columns: 1fr; gap: 40px; }
+    .field-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body class="demo-page">
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="header-logo" href="index.html" aria-label="BuildProof"><img src="assets/bp-logo-black.png" alt="BuildProof"></a>
+    <div class="header-actions">
+      <a href="calendly.html" class="btn btn-gold">Probeer het gratis</a>
+      <a href="demo.html" class="btn btn-dark">Vraag een demo aan</a>
+    </div>
+  </div>
+</header>
+
+<main class="demo-body">
+  <div class="wrap demo-grid">
+    <div class="demo-copy">
+      <h1>Vraag een persoonlijke demo aan</h1>
+      <p>Ontdek hoe BuildProof uw WKB-bewijsvoering en onderhoud vereenvoudigt. Onze expert laat u in 30 minuten zien hoe de software werkt voor uw specifieke situatie.</p>
+      <ul>
+        <li>Persoonlijke rondleiding door de software</li>
+        <li>Antwoord op al uw vragen</li>
+        <li>Geen verplichtingen</li>
+        <li>Binnen 1 werkdag contact</li>
+      </ul>
+    </div>
+    <div class="demo-form-card">
+      <h2>Vul uw gegevens in</h2>
+      <form onsubmit="handleSubmit(event)">
+        <div class="field-row">
+          <div class="field">
+            <label for="voornaam">Voornaam</label>
+            <input type="text" id="voornaam" name="voornaam" placeholder="Jan" required>
+          </div>
+          <div class="field">
+            <label for="achternaam">Achternaam</label>
+            <input type="text" id="achternaam" name="achternaam" placeholder="de Vries" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="email">Zakelijk e-mailadres</label>
+          <input type="email" id="email" name="email" placeholder="jan@bedrijf.nl" required>
+        </div>
+        <div class="field">
+          <label for="telefoon">Telefoonnummer</label>
+          <input type="tel" id="telefoon" name="telefoon" placeholder="+31 6 12345678">
+        </div>
+        <div class="field">
+          <label for="bedrijf">Bedrijfsnaam</label>
+          <input type="text" id="bedrijf" name="bedrijf" placeholder="Uw bedrijfsnaam" required>
+        </div>
+        <div class="field">
+          <label for="grootte">Aantal medewerkers</label>
+          <select id="grootte" name="grootte">
+            <option value="">Selecteer...</option>
+            <option>1 – 10</option>
+            <option>11 – 50</option>
+            <option>51 – 200</option>
+            <option>201 – 500</option>
+            <option>500+</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="bericht">Wat wilt u bereiken met BuildProof? (optioneel)</label>
+          <textarea id="bericht" name="bericht" placeholder="Vertel ons kort over uw situatie..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-gold submit-btn">Demo aanvragen</button>
+        <p class="form-note">Uw gegevens worden vertrouwelijk behandeld en nooit gedeeld met derden.</p>
+      </form>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-brand">
+      <img src="assets/bp-logo-black.png" alt="BuildProof">
+      <p class="copy" id="footer-copy"></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var c = document.getElementById('footer-copy');
+  if (c) c.textContent = 'Copyright © ' + new Date().getFullYear() + ' BuildProof';
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    var btn = e.target.querySelector('button[type="submit"]');
+    btn.textContent = 'Verzonden! We nemen snel contact op.';
+    btn.disabled = true;
+    btn.style.background = 'var(--success-bg)';
+    btn.style.color = 'var(--success)';
+  }
+</script>
+</body>
+</html>
