@@ -1,0 +1,187 @@
+/* ============================================================
+   BuildProof — Colors & Type foundations
+   ------------------------------------------------------------
+   FONTS ARE SUBSTITUTED. The only source material was one
+   landing-page screenshot. Closest Google Font matches:
+     • Display (heavy uppercase grotesque)  → Montserrat
+     • Body / UI (rounded humanist sans)    → Nunito
+   Swap these @font-face/import lines for the real licensed
+   fonts when available.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&display=swap');
+
+:root {
+  /* ---------- BRAND BLUE (primary) ---------- */
+  --blue-900: #16345b;
+  --blue-800: #1d4577;
+  --blue-700: #234e83;
+  --blue-600: #2b5f9e;   /* core brand blue — page backgrounds, primary */
+  --blue-500: #3873b6;
+  --blue-400: #5a92ca;
+  --blue-300: #8fb5dd;
+  --blue-200: #c2d6ec;
+  --blue-100: #e2ecf6;
+  --blue-050: #eef4fa;
+
+  /* ---------- ORANGE (action / CTA) ---------- */
+  --orange-700: #b85e2c;
+  --orange-600: #c8652f;   /* hover */
+  --orange-500: #e07840;   /* core CTA */
+  --orange-400: #e9986a;
+  --orange-200: #f6d2b8;
+  --orange-100: #fbe9dc;
+
+  /* ---------- GOLD / AMBER (accent / highlight) ---------- */
+  --gold-600: #cfa23f;
+  --gold-500: #e2b455;     /* core accent — emphasised headline words */
+  --gold-400: #e8c06a;     /* as sampled from artwork */
+  --gold-200: #f3e0b3;
+  --gold-100: #faf1d8;
+
+  /* ---------- INK / NEUTRALS (on light) ---------- */
+  --ink-900: #1b2a3d;   /* primary text on white (deep navy-ink) */
+  --ink-700: #3c4a5c;   /* secondary text */
+  --ink-500: #6b7787;   /* muted / captions */
+  --ink-400: #9aa5b3;   /* placeholder */
+  --line-300: #d7dee7;  /* borders */
+  --line-200: #e6ebf2;  /* hairlines */
+  --surface-100: #f4f7fb; /* app canvas / cards-on-white */
+  --surface-050: #fafbfd;
+  --white: #ffffff;
+
+  /* ---------- SEMANTIC ---------- */
+  --success: #2fa968;   /* completed / approved (WhatsApp-green family) */
+  --success-bg: #e4f4ec;
+  --warning: #e2b455;   /* attention (reuses gold) */
+  --warning-bg: #faf1d8;
+  --danger: #d64545;    /* errors / overdue */
+  --danger-bg: #fbe5e5;
+  --info: #2b5f9e;      /* reuses brand blue */
+  --info-bg: #e2ecf6;
+
+  /* ---------- SEMANTIC SURFACE ROLES ---------- */
+  --bg-brand: var(--blue-600);
+  --bg-app: var(--surface-100);
+  --fg-on-brand: var(--white);
+  --fg-on-brand-muted: rgba(255,255,255,0.82);
+  --fg1: var(--ink-900);
+  --fg2: var(--ink-700);
+  --fg3: var(--ink-500);
+  --accent: var(--orange-500);
+  --accent-text: var(--gold-500);
+
+  /* ---------- TYPE FAMILIES ---------- */
+  --font-display: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'Nunito', 'Segoe UI', system-ui, sans-serif;
+
+  /* ---------- TYPE SCALE (px @ 16 root) ---------- */
+  --text-hero: 64px;
+  --text-h1: 44px;
+  --text-h2: 32px;
+  --text-h3: 24px;
+  --text-h4: 20px;
+  --text-lg: 18px;
+  --text-base: 16px;
+  --text-sm: 14px;
+  --text-xs: 12px;
+  --text-eyebrow: 13px;
+
+  --lh-tight: 1.05;
+  --lh-snug: 1.2;
+  --lh-normal: 1.5;
+
+  /* ---------- RADII ---------- */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+
+  /* ---------- SHADOWS ---------- */
+  --shadow-sm: 0 1px 2px rgba(27,42,61,0.08), 0 1px 3px rgba(27,42,61,0.06);
+  --shadow-md: 0 4px 12px rgba(27,42,61,0.10), 0 2px 4px rgba(27,42,61,0.06);
+  --shadow-lg: 0 12px 32px rgba(27,42,61,0.16);
+  --shadow-cta: 0 8px 20px rgba(224,120,64,0.32);
+  --shadow-book: 22px 26px 50px rgba(13,30,54,0.38);
+
+  /* ---------- SPACING (4px base) ---------- */
+  --sp-1: 4px;  --sp-2: 8px;  --sp-3: 12px; --sp-4: 16px;
+  --sp-5: 24px; --sp-6: 32px; --sp-7: 48px; --sp-8: 64px; --sp-9: 96px;
+}
+
+/* ============================================================
+   SEMANTIC TYPE ROLES
+   ============================================================ */
+.bp-hero {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: var(--text-hero);
+  line-height: var(--lh-tight);
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+.bp-h1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--text-h1);
+  line-height: var(--lh-snug);
+  letter-spacing: -0.01em;
+}
+.bp-h2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--text-h2);
+  line-height: var(--lh-snug);
+}
+/* Content headings (e.g. ebook cover) use the rounded family heavy */
+.bp-h3 {
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: var(--text-h3);
+  line-height: var(--lh-snug);
+  color: var(--ink-900);
+}
+.bp-h4 {
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: var(--text-h4);
+  line-height: var(--lh-snug);
+}
+.bp-eyebrow {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-eyebrow);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.bp-lead {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: var(--text-lg);
+  line-height: 1.4;
+}
+.bp-body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: var(--text-base);
+  line-height: var(--lh-normal);
+  color: var(--ink-700);
+}
+.bp-small {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  line-height: 1.45;
+}
+.bp-button-label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.bp-mono {
+  font-family: 'SFMono-Regular', ui-monospace, 'Roboto Mono', monospace;
+  font-size: var(--text-sm);
+}
