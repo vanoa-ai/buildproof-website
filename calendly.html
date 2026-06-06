@@ -13,6 +13,12 @@
   .cal-intro h1 { font-family: var(--font-body); font-weight: 900; font-size: 36px; color: var(--ink-900); margin: 0 0 12px; }
   .cal-intro p { font-size: 18px; color: var(--ink-700); margin: 0; }
   .cal-embed { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); }
+  @media (max-width: 767px) {
+    .cal-body { padding: 32px 0 48px; }
+    .cal-intro h1 { font-size: 26px; }
+    .cal-intro p { font-size: 16px; }
+    .cal-embed iframe { height: 600px; }
+  }
 </style>
 </head>
 <body class="cal-page">
@@ -23,6 +29,9 @@
     <div class="header-actions">
       <a href="calendly.html" class="btn btn-gold">Probeer het gratis</a>
       <a href="demo.html" class="btn btn-dark">Vraag een demo aan</a>
+      <button class="m-burger" aria-label="Menu" onclick="void(0)">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
     </div>
   </div>
 </header>
