@@ -36,6 +36,7 @@ function clean(str, maxLen) {
   return String(str || '').trim().slice(0, maxLen).replace(/[<>"'`]/g, '');
 }
 
+app.options('/api/subscribe', cors(corsOptions));
 app.post('/api/subscribe', cors(corsOptions), limiter, async (req, res) => {
   const voornaam = clean(req.body.voornaam, 100);
   const email    = clean(req.body.email, 254);
