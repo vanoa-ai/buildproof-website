@@ -517,6 +517,9 @@ button { font-family: inherit; }
   flex-direction: column;
   overflow: hidden;
   transition: box-shadow .2s ease, transform .2s ease;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 .blog-card:hover {
   box-shadow: var(--shadow-md);
@@ -562,6 +565,28 @@ button { font-family: inherit; }
   transition: gap .15s ease;
 }
 .blog-card-link:hover { gap: 10px; }
+
+/* Related posts at the bottom of a blog article */
+.blog-related {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px 96px;
+}
+.blog-related-head {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 24px;
+  color: var(--ink-900);
+  margin: 0 0 24px;
+}
+.blog-related-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+@media (max-width: 767px) {
+  .blog-related-grid { grid-template-columns: 1fr; }
+}
 
 /* ===========================================================
    BLOG POST PAGE
@@ -709,7 +734,7 @@ button { font-family: inherit; }
 .sp-close:hover { background: var(--line-200); color: var(--ink-900); }
 .sp-progress-wrap {
   position: relative;
-  margin-bottom: 32px;
+  margin: 16px 0 40px;
 }
 .sp-progress-track {
   height: 10px;
@@ -720,13 +745,29 @@ button { font-family: inherit; }
 .sp-progress-bar {
   height: 100%;
   width: 50%;
-  background: var(--blue-600);
+  background-color: var(--blue-600);
+  background-image: linear-gradient(
+    100deg,
+    rgba(255, 255, 255, 0) 20%,
+    rgba(255, 255, 255, 0.55) 50%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  background-repeat: no-repeat;
+  background-size: 50% 100%;
   border-radius: var(--radius-pill);
+  animation: sp-progress-shimmer 1.6s linear infinite;
+}
+@keyframes sp-progress-shimmer {
+  0%   { background-position: -150% 0; }
+  100% { background-position: 250% 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sp-progress-bar { animation: none; }
 }
 .sp-progress-label {
   position: absolute;
   right: 0;
-  top: -22px;
+  top: calc(100% + 8px);
   font-size: 12px;
   font-weight: 700;
   color: var(--ink-500);
@@ -734,10 +775,11 @@ button { font-family: inherit; }
 .sp-title {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 24px;
+  font-size: clamp(15px, 4.3vw, 24px);
   color: var(--ink-900);
   margin: 0 0 24px;
   line-height: 1.25;
+  white-space: nowrap;
 }
 .sp-field { margin-bottom: 12px; }
 .sp-field input {
@@ -788,7 +830,6 @@ button { font-family: inherit; }
 }
 @media (max-width: 767px) {
   .sp-modal { padding: 36px 24px 28px; }
-  .sp-title { font-size: 20px; }
 }
 
 /* ===========================================================
