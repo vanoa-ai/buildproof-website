@@ -7,19 +7,19 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.set('trust proxy', 1);
-app.use(cors(corsOptions));
-app.options('*', cors(corsOptions));
-app.use(express.json({ limit: '10kb' }));
-app.use(express.static(path.join(__dirname)));
-
-// Only allow requests from same origin in production
+// Only allow requests from the configured origin in production
 const corsOptions = {
   origin: process.env.NODE_ENV === 'production'
     ? (process.env.ALLOWED_ORIGIN || false)
     : true,
   methods: ['POST'],
 };
+
+app.set('trust proxy', 1);
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
+app.use(express.json({ limit: '10kb' }));
+app.use(express.static(path.join(__dirname)));
 
 // Max 5 form submissions per IP per 15 minutes
 const limiter = rateLimit({
