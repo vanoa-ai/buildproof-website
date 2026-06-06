@@ -657,6 +657,131 @@ button { font-family: inherit; }
 }
 
 /* ===========================================================
+   STAPPENPLAN MODAL
+   =========================================================== */
+.sp-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(27,42,61,0.65);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.sp-overlay[hidden] { display: none; }
+.sp-modal {
+  background: #fff;
+  border-radius: var(--radius-xl);
+  padding: 44px 40px 36px;
+  width: 100%;
+  max-width: 520px;
+  position: relative;
+  box-shadow: var(--shadow-lg);
+}
+.sp-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: var(--surface-050);
+  color: var(--ink-500);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .15s ease, color .15s ease;
+}
+.sp-close:hover { background: var(--line-200); color: var(--ink-900); }
+.sp-progress-wrap {
+  position: relative;
+  margin-bottom: 32px;
+}
+.sp-progress-track {
+  height: 10px;
+  background: var(--line-200);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+.sp-progress-bar {
+  height: 100%;
+  width: 50%;
+  background: var(--blue-600);
+  border-radius: var(--radius-pill);
+}
+.sp-progress-label {
+  position: absolute;
+  right: 0;
+  top: -22px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink-500);
+}
+.sp-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 24px;
+  color: var(--ink-900);
+  margin: 0 0 24px;
+  line-height: 1.25;
+}
+.sp-field { margin-bottom: 12px; }
+.sp-field input {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1.5px solid var(--line-200);
+  border-radius: var(--radius-md);
+  padding: 15px 18px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--ink-900);
+  background: var(--surface-050);
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+.sp-field input:focus {
+  outline: none;
+  border-color: var(--blue-600);
+  box-shadow: 0 0 0 3px var(--blue-100);
+  background: #fff;
+}
+.sp-error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #dc2626;
+  margin-bottom: 12px;
+}
+.sp-error[hidden] { display: none; }
+.sp-submit {
+  width: 100%;
+  padding: 18px;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-top: 6px;
+  justify-content: center;
+  display: flex;
+}
+.sp-submit:disabled { opacity: 0.65; cursor: not-allowed; transform: none; }
+.sp-privacy {
+  font-size: 12px;
+  color: var(--ink-500);
+  text-align: center;
+  margin: 14px 0 0;
+}
+@media (max-width: 767px) {
+  .sp-modal { padding: 36px 24px 28px; }
+  .sp-title { font-size: 20px; }
+}
+
+/* ===========================================================
    BURGER + MOBILE NAV (hidden by default)
    =========================================================== */
 .m-burger {

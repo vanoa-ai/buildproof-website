@@ -578,10 +578,7 @@
     <div>
       <h2>Download ons gratis stappenplan</h2>
       <p>Ontdek stap voor stap hoe u WKB-bewijsvoering correct inricht en altijd voldoet aan de eisen.</p>
-      <form class="news-form" onsubmit="return false">
-        <input type="email" placeholder="Uw e-mailadres" aria-label="E-mailadres">
-        <button class="btn btn-gold">Download gratis</button>
-      </form>
+      <button class="btn btn-gold" id="stappenplanBtn">Download gratis</button>
     </div>
     <div class="news-media" style="background:none;box-shadow:none;display:flex;align-items:center;justify-content:center;">
       <img src="assets/stappenplan-cover.png" alt="Gratis stappenplan: Van WhatsApp-chaos naar een dossier dat zichzelf bouwt" style="max-height:320px;width:auto;object-fit:contain;filter:drop-shadow(0 20px 40px rgba(27,42,61,0.22));">
@@ -649,6 +646,31 @@
   </div>
 </footer>
 
+
+<!-- ============ STAPPENPLAN MODAL ============ -->
+<div class="sp-overlay" id="spOverlay" hidden role="dialog" aria-modal="true" aria-labelledby="spTitle">
+  <div class="sp-modal">
+    <button class="sp-close" id="spClose" aria-label="Sluiten">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <div class="sp-progress-wrap">
+      <span class="sp-progress-label">50%</span>
+      <div class="sp-progress-track"><div class="sp-progress-bar"></div></div>
+    </div>
+    <h2 class="sp-title" id="spTitle">Waar mogen we hem naar toe sturen?</h2>
+    <form id="spForm" novalidate>
+      <div class="sp-field">
+        <input type="text" id="spVoornaam" name="voornaam" placeholder="Voornaam*" autocomplete="given-name" required>
+      </div>
+      <div class="sp-field">
+        <input type="email" id="spEmail" name="email" placeholder="Email*" autocomplete="email" required>
+      </div>
+      <div class="sp-error" id="spError" hidden></div>
+      <button type="submit" class="btn btn-gold sp-submit">Gratis downloaden</button>
+    </form>
+    <p class="sp-privacy">Uw gegevens worden vertrouwelijk behandeld en nooit gedeeld met derden.</p>
+  </div>
+</div>
 
 <script>
 /* BuildProof homepage — interactions */
@@ -720,6 +742,57 @@
   var prev = document.getElementById('tPrev'), next = document.getElementById('tNext');
   if (prev) prev.addEventListener('click', function () { ti = (ti - 1 + reviews.length) % reviews.length; render(); });
   if (next) next.addEventListener('click', function () { ti = (ti + 1) % reviews.length; render(); });
+
+  /* stappenplan modal */
+  var spOverlay = document.getElementById('spOverlay');
+  var spClose   = document.getElementById('spClose');
+  var spForm    = document.getElementById('spForm');
+  var spError   = document.getElementById('spError');
+  var spBtn     = document.getElementById('stappenplanBtn');
+
+  function openSp() {
+    spOverlay.hidden = false;
+    document.body.style.overflow = 'hidden';
+    document.getElementById('spVoornaam').focus();
+  }
+  function closeSp() {
+    spOverlay.hidden = true;
+    document.body.style.overflow = '';
+    spForm.reset();
+    spError.hidden = true;
+  }
+
+  if (spBtn)     spBtn.addEventListener('click', openSp);
+  if (spClose)   spClose.addEventListener('click', closeSp);
+  if (spOverlay) spOverlay.addEventListener('click', function(e) { if (e.target === spOverlay) closeSp(); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && spOverlay && !spOverlay.hidden) closeSp(); });
+
+  if (spForm) spForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var submitBtn = spForm.querySelector('button[type="submit"]');
+    var voornaam  = document.getElementById('spVoornaam').value.trim();
+    var email     = document.getElementById('spEmail').value.trim();
+    spError.hidden = true;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Even geduld…';
+
+    fetch('/api/subscribe', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ voornaam: voornaam, email: email }),
+    })
+    .then(function(r) { return r.json().then(function(d) { return { ok: r.ok, data: d }; }); })
+    .then(function(res) {
+      if (!res.ok) throw new Error(res.data.error || 'Er ging iets mis.');
+      window.location.href = 'https://tally.so/r/rjGdJ2';
+    })
+    .catch(function(err) {
+      spError.textContent = err.message;
+      spError.hidden = false;
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Gratis downloaden';
+    });
+  });
 })();
 </script>
 </body>
