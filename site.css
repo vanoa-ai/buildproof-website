@@ -485,6 +485,178 @@ button { font-family: inherit; }
 }
 
 /* ===========================================================
+   BLOG PREVIEW SECTION
+   =========================================================== */
+.blog-preview {
+  padding: 80px 0;
+  background: #fff;
+}
+.blog-section-head {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.blog-section-head h2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 36px;
+  color: var(--ink-900);
+  margin: 0 0 10px;
+}
+.blog-section-head p {
+  font-size: 17px;
+  color: var(--ink-500);
+  margin: 0;
+}
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.blog-card {
+  background: var(--surface-050);
+  border: 1px solid var(--line-200);
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow .2s ease, transform .2s ease;
+}
+.blog-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+.blog-card-tag {
+  display: inline-flex;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--blue-600);
+  background: rgba(43,95,158,0.08);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 16px;
+  width: fit-content;
+}
+.blog-card h3 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.3;
+  color: var(--ink-900);
+  margin: 0 0 12px;
+}
+.blog-card p {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--ink-500);
+  margin: 0 0 20px;
+  flex: 1;
+}
+.blog-card-link {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--blue-600);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: gap .15s ease;
+}
+.blog-card-link:hover { gap: 10px; }
+
+/* ===========================================================
+   BLOG POST PAGE
+   =========================================================== */
+.blog-page { min-height: 100vh; display: flex; flex-direction: column; }
+.blog-body { flex: 1; padding: 64px 0 96px; }
+.blog-article {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.blog-article-tag {
+  display: inline-flex;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--blue-600);
+  background: rgba(43,95,158,0.08);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 20px;
+}
+.blog-article-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 42px;
+  line-height: 1.15;
+  color: var(--ink-900);
+  margin: 0 0 20px;
+  letter-spacing: -0.02em;
+}
+.blog-article-meta {
+  font-size: 14px;
+  color: var(--ink-500);
+  margin-bottom: 48px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--line-200);
+}
+.blog-article-body h2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 24px;
+  color: var(--ink-900);
+  margin: 40px 0 14px;
+}
+.blog-article-body p {
+  font-size: 17px;
+  line-height: 1.75;
+  color: #374151;
+  margin: 0 0 20px;
+}
+.blog-article-body ul {
+  padding: 0 0 0 22px;
+  margin: 0 0 20px;
+}
+.blog-article-body ul li {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #374151;
+  margin-bottom: 8px;
+}
+.blog-article-body strong { color: var(--ink-900); font-weight: 700; }
+.blog-cta-box {
+  background: var(--surface-050);
+  border: 1px solid var(--line-200);
+  border-radius: var(--radius-xl);
+  padding: 36px 40px;
+  margin-top: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.blog-cta-box p {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--ink-900);
+  margin: 0;
+  flex: 1;
+  min-width: 200px;
+}
+.blog-disclaimer {
+  font-size: 13px;
+  color: var(--ink-500);
+  font-style: italic;
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line-200);
+}
+
+/* ===========================================================
    BURGER + MOBILE NAV (hidden by default)
    =========================================================== */
 .m-burger {
@@ -543,6 +715,7 @@ button { font-family: inherit; }
   .phone { display: none; }
   .area-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-full-tagline { font-size: 26px; }
+  .blog-grid { grid-template-columns: 1fr 1fr; }
 }
 
 /* ===========================================================
@@ -638,4 +811,13 @@ button { font-family: inherit; }
   .footer-full-logo { height: 44px; }
   .footer-full-ctas { flex-direction: column; }
   .footer-full-ctas .btn { width: 100%; justify-content: center; }
+
+  /* blog */
+  .blog-preview { padding: 48px 0; }
+  .blog-section-head { margin-bottom: 32px; }
+  .blog-section-head h2 { font-size: 26px; }
+  .blog-grid { grid-template-columns: 1fr; }
+  .blog-article-title { font-size: 28px; }
+  .blog-article-body h2 { font-size: 20px; }
+  .blog-cta-box { padding: 28px 24px; flex-direction: column; align-items: flex-start; }
 }
