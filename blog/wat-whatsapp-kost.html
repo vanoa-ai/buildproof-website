@@ -143,7 +143,7 @@
     var btn = spForm.querySelector('button[type="submit"]');
     spError.hidden = true;
     btn.disabled = true; btn.textContent = 'Even geduld…';
-    fetch('/api/subscribe', {
+    fetch('https://api.site.buildproof.nl/api/subscribe', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ voornaam: document.getElementById('spVoornaam').value.trim(), email: document.getElementById('spEmail').value.trim() }),

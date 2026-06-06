@@ -780,7 +780,7 @@
     submitBtn.disabled = true;
     submitBtn.textContent = 'Even geduld…';
 
-    fetch('/api/subscribe', {
+    fetch('https://api.site.buildproof.nl/api/subscribe', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ voornaam: voornaam, email: email }),
