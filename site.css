@@ -384,7 +384,6 @@ button { font-family: inherit; }
    FOOTER — full-screen
    =========================================================== */
 .footer-full {
-  min-height: 100vh;
   background: var(--ink-900);
   display: flex;
   align-items: center;
@@ -406,16 +405,16 @@ button { font-family: inherit; }
   width: 100%;
   max-width: 680px;
   margin: 0 auto;
-  padding: 80px 32px;
+  padding: 56px 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 .footer-full-logo {
-  height: 40px;
+  height: 56px;
   width: auto;
-  margin-bottom: 28px;
+  margin-bottom: 20px;
   opacity: 0.95;
 }
 .footer-full-tagline {
@@ -432,7 +431,7 @@ button { font-family: inherit; }
   gap: 14px;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 32px 0 40px;
+  margin: 24px 0 28px;
 }
 .footer-btn-outline {
   background: transparent;
@@ -448,7 +447,7 @@ button { font-family: inherit; }
 .footer-full-social {
   display: flex;
   gap: 14px;
-  margin-bottom: 60px;
+  margin-bottom: 32px;
 }
 .footer-full-social a {
   width: 42px;
@@ -468,7 +467,7 @@ button { font-family: inherit; }
 }
 .footer-full-bottom {
   border-top: 1px solid rgba(255,255,255,0.1);
-  padding-top: 24px;
+  padding-top: 20px;
   width: 100%;
 }
 .footer-full-copy {
@@ -625,10 +624,10 @@ button { font-family: inherit; }
   .news-form .btn { width: 100%; }
   .news-media { height: auto; background: none; box-shadow: none; }
 
-  /* full-screen footer */
-  .footer-full-inner { padding: 60px 24px; }
+  /* footer */
+  .footer-full-inner { padding: 40px 24px; }
   .footer-full-tagline { font-size: 22px; }
-  .footer-full-logo { height: 32px; }
+  .footer-full-logo { height: 44px; }
   .footer-full-ctas { flex-direction: column; }
   .footer-full-ctas .btn { width: 100%; justify-content: center; }
 }
