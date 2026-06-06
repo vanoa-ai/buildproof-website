@@ -70,7 +70,7 @@ button { font-family: inherit; }
   display: flex; align-items: center; gap: 28px;
   height: 68px;
 }
-.header-logo img { height: 26px; width: auto; }
+.header-logo img { height: 36px; width: auto; }
 .main-nav { display: flex; align-items: center; gap: 22px; margin-left: 10px; }
 .nav-item {
   display: inline-flex; align-items: center; gap: 5px;
@@ -546,7 +546,7 @@ button { font-family: inherit; }
 
   /* header */
   .header-row { height: 56px; gap: 10px; }
-  .header-logo img { height: 20px; }
+  .header-logo img { height: 28px; }
   .header-actions .btn { padding: 10px 14px; font-size: 13px; }
 
   /* hero */
