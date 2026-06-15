@@ -15,10 +15,10 @@
   <div class="wrap header-row">
     <a class="header-logo" href="#" aria-label="BuildProof"><img src="assets/buildproof-logo.png" alt="BuildProof"></a>
     <nav class="main-nav">
-      <span class="nav-item">Product</span>
-      <span class="nav-item">Industrieën</span>
-      <span class="nav-item">Prijzen</span>
-      <span class="nav-item">Bronnen</span>
+      <a class="nav-item" href="#product">Product</a>
+      <a class="nav-item" href="#voordelen">Voordelen</a>
+      <a class="nav-item" href="#kennisbank">Kennisbank</a>
+      <a class="nav-item" href="demo/">Demo</a>
     </nav>
     <div class="header-actions">
       <a href="calendly/" class="btn btn-gold">Probeer het gratis</a>
@@ -37,10 +37,10 @@
       <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
     </button>
     <nav class="m-nav-links">
-      <a href="#">Product</a>
-      <a href="#">Industrieën</a>
-      <a href="#">Prijzen</a>
-      <a href="#">Bronnen</a>
+      <a href="#product">Product</a>
+      <a href="#voordelen">Voordelen</a>
+      <a href="#kennisbank">Kennisbank</a>
+      <a href="demo/">Demo</a>
     </nav>
     <div class="m-nav-ctas">
       <a href="calendly/" class="btn btn-gold">Probeer het gratis</a>
@@ -61,7 +61,7 @@
 </section>
 
 <!-- ============ FEATURE TABS ============ -->
-<section class="features">
+<section class="features" id="product">
   <div class="wrap">
     <div class="tabbar" role="tablist">
       <button class="tab" role="tab" aria-selected="true"  data-tab="0">Voorzieningen</button>
@@ -377,7 +377,7 @@
 </section>
 
 <!-- ============ WHY / ACCORDION ============ -->
-<section class="why">
+<section class="why" id="voordelen">
   <div class="wrap">
     <h2>Daarom is BuildProof de beste software voor WKB bewijsvoering.</h2>
     <div class="why-grid">
@@ -501,8 +501,8 @@
   </div>
 </section>
 
-<!-- ============ WORK AREAS ============ -->
-<section class="areas">
+<!-- ============ WORK AREAS (verborgen) ============ -->
+<section class="areas" style="display:none">
   <div class="wrap">
     <h2>Ontdek onze werkgebieden</h2>
     <div class="area-grid">
@@ -587,7 +587,7 @@
 </section>
 
 <!-- ============ BLOG ============ -->
-<section class="blog-preview">
+<section class="blog-preview" id="kennisbank">
   <div class="wrap">
     <div class="blog-section-head">
       <h2>Kennisbank</h2>
@@ -615,6 +615,30 @@
         <div class="blog-card-content">
           <h3>Geen foto's, geen bewijs: het risico van WhatsApp bij oplevering en garantie</h3>
           <p>Sinds de Wkb moet jij als installateur bewijzen dat een gebrek niet jouw schuld is. Waarom verspreide WhatsApp-foto's een risico zijn en wat je nodig hebt.</p>
+        </div>
+      </a>
+
+      <a class="blog-card" href="blog/wkb-uitgelegd-installateur/">
+        <div class="blog-card-img"></div>
+        <div class="blog-card-content">
+          <h3>De Wkb in het kort: wat verandert er voor jou als installateur?</h3>
+          <p>De Wet kwaliteitsborging voor het bouwen is sinds 2024 van kracht. Wat betekent dat concreet voor installateurs, en hoe zorg je dat je dossier op orde is?</p>
+        </div>
+      </a>
+
+      <a class="blog-card" href="blog/opleverdossier-checklist/">
+        <div class="blog-card-img"></div>
+        <div class="blog-card-content">
+          <h3>Het complete opleverdossier: wat moet erin en hoe lever je foutloos op?</h3>
+          <p>Een opleverdossier is meer dan een mapje foto's. Ontdek welke onderdelen erin horen en gebruik onze checklist om niets te vergeten bij de oplevering.</p>
+        </div>
+      </a>
+
+      <a class="blog-card" href="blog/faalkosten-verlagen-documentatie/">
+        <div class="blog-card-img"></div>
+        <div class="blog-card-content">
+          <h3>Faalkosten verlagen begint bij documentatie: zo voorkom je dure fouten</h3>
+          <p>Faalkosten vreten je marge op. Een groot deel ontstaat door slechte vastlegging en communicatie. Zo draai je dat om met een dossier dat zichzelf bijhoudt.</p>
         </div>
       </a>
 
@@ -688,6 +712,9 @@
   if (burger) burger.addEventListener('click', openNav);
   if (close) close.addEventListener('click', closeNav);
   if (mNav) mNav.addEventListener('click', function(e) { if (e.target === mNav) closeNav(); });
+  document.querySelectorAll('.m-nav-links a').forEach(function (link) {
+    link.addEventListener('click', closeNav);
+  });
 
   var tabs = document.querySelectorAll('.tab');
   var panels = document.querySelectorAll('.panel');

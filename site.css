@@ -75,9 +75,12 @@ button { font-family: inherit; }
 .nav-item {
   display: inline-flex; align-items: center; gap: 5px;
   font-weight: 700; font-size: 15px; color: var(--ink-700);
-  cursor: pointer; padding: 6px 0;
+  cursor: pointer; padding: 6px 0; text-decoration: none;
 }
 .nav-item:hover { color: var(--ink-900); }
+
+/* offset anchor targets so the sticky header doesn't cover them */
+#product, #voordelen, #kennisbank { scroll-margin-top: 84px; }
 .nav-item .caret { font-size: 10px; color: var(--ink-400); }
 .header-actions { display: flex; align-items: center; gap: 12px; margin-left: auto; }
 .header-actions .login {
