@@ -127,3 +127,6 @@ iframe[src*="calendly.com"] { background: #fff; border-radius: 20px; box-shadow:
 .kv.open { color: #b3403e !important; }
 .text-zinc-400, .text-gray-400, .text-gray-300:not(.bp-dot-off), .text-zinc-300 { color: var(--slate-500) !important; }
 .bp-nvt { color: var(--slate-500) !important; }
+
+/* Hero-titel: twee regels op desktop */
+@media (min-width: 1024px) { .bp-hero-title { font-size: clamp(46px, 4.4vw, 58px); } .bp-nowrap-lg { white-space: nowrap; } }
