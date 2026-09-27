@@ -36,7 +36,7 @@ svg.text-primary, .text-primary svg { color: var(--navy) !important; }
 
 /* Groot CTA-vlak: navy met amber knop (geen grote amber vlakken met tekst) */
 .bp-cta-navy { background-color: var(--navy) !important; color: #fff !important; }
-.bp-cta-navy p, .bp-cta-navy span, .bp-cta-navy div, .bp-cta-navy svg { color: #fff !important; }
+.bp-cta-navy p, .bp-cta-navy span, .bp-cta-navy div, .bp-cta-navy svg, .bp-cta-navy h2, .bp-cta-navy h3 { color: #fff !important; }
 .bp-cta-navy p:last-child { color: var(--slate-300) !important; }
 .bp-cta-navy button { background: var(--amber) !important; color: var(--navy) !important; }
 .bp-cta-navy button * { color: var(--navy) !important; }
@@ -105,3 +105,25 @@ h2 .relative.inline-block > span.absolute { opacity: .9; }
 .bp-cm-foot span:last-child { color: var(--slate-500); font-weight: 500; }
 .bp-avatar { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #fff; }
 .bp-avatar img { width: 72%; height: 72%; object-fit: contain; }
+
+/* QA mobiel */
+.kv span { white-space: nowrap; }
+@media (max-width: 640px) {
+  .bp-dash-bar span { font-size: 11px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 55%; }
+  .kv { padding: 8px 2px; } .kv span { font-size: 9px; }
+  .text-\[280px\] { display: none; }
+}
+
+/* QA pakketten */
+.bp-dot-off { opacity: .28; }
+.bp-cell-off { background-color: var(--mist-100) !important; color: var(--slate-400) !important; box-shadow: none !important; border-color: var(--mist-200) !important; }
+.capitalize { text-transform: none !important; }
+
+/* Calendly-vlak: witte kaart, ook tijdens het laden */
+iframe[src*="calendly.com"] { background: #fff; border-radius: 20px; box-shadow: var(--sh-card); border: 1px solid var(--mist-200) !important; }
+
+/* Contrast (WCAG): statustekst in donkerdere tint op lichte statusvlakken; kleine grijze tekst in slate-500 */
+.kv.ok, .bp-row em.ok, .ok-text, .bp-cm-foot { color: #1e7a45 !important; }
+.kv.open { color: #b3403e !important; }
+.text-zinc-400, .text-gray-400, .text-gray-300:not(.bp-dot-off), .text-zinc-300 { color: var(--slate-500) !important; }
+.bp-nvt { color: var(--slate-500) !important; }
