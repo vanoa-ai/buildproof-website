@@ -205,3 +205,48 @@ html { scroll-behavior: smooth; scroll-padding-top: 4rem; }
   [aria-label="Cookievoorkeuren"] p { font-size: 12px; line-height: 1.45; }
   [aria-label="Cookievoorkeuren"] button { padding: 7px 12px; font-size: 13px; }
 }
+
+/* Mobiel menu */
+.bp-mm {
+  position: absolute; top: 4rem; left: 0; right: 0;
+  max-height: calc(100dvh - 4rem); overflow-y: auto; overscroll-behavior: contain;
+  background: #fff; border-bottom: 1px solid var(--mist-200);
+  box-shadow: 0 24px 48px rgba(27, 42, 61, .18);
+  padding: 8px 16px 20px;
+  animation: bp-mm-in .18s ease-out;
+}
+@keyframes bp-mm-in { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+.bp-mm-label {
+  margin: 16px 4px 6px; font-size: 11px; font-weight: 700;
+  letter-spacing: .08em; text-transform: uppercase; color: var(--slate-400);
+}
+.bp-mm-nav { display: flex; flex-direction: column; }
+.bp-mm-link {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 4px; font-size: 16px; font-weight: 600; color: var(--navy);
+  border-bottom: 1px solid var(--mist-100); text-decoration: none;
+}
+.bp-mm-link:last-child { border-bottom: 0; }
+.bp-mm-chev { color: var(--slate-300); transition: transform .15s, color .15s; }
+.bp-mm-link:active .bp-mm-chev, .bp-mm-link:hover .bp-mm-chev { color: var(--navy); transform: translateX(2px); }
+.bp-mm-cta {
+  display: flex; align-items: center; justify-content: center; width: 100%;
+  margin-top: 12px; height: 48px; border-radius: 10px;
+  background: var(--amber); color: var(--navy); font-weight: 700; font-size: 15px;
+  box-shadow: 0 8px 20px rgba(254, 206, 33, .35);
+}
+.bp-mm-cta:active { background: var(--amber-600); }
+.bp-mm-contact { display: grid; grid-template-columns: 1fr; gap: 8px; }
+.bp-mm-card {
+  display: flex; align-items: center; gap: 12px; padding: 12px;
+  border-radius: 10px; background: var(--mist-50); border: 1px solid var(--mist-200);
+  color: var(--navy); font-size: 14px; font-weight: 600; text-decoration: none;
+}
+.bp-mm-card small {
+  display: block; font-size: 11px; font-weight: 500; color: var(--slate-500); line-height: 1.2;
+}
+.bp-mm-ico {
+  display: grid; place-items: center; flex: none; width: 36px; height: 36px;
+  border-radius: 999px; background: var(--amber-100); color: var(--navy);
+}
+@media (min-width: 768px) { .bp-mm { display: none; } }
