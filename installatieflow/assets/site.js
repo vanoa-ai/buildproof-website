@@ -16,7 +16,10 @@
   var COOKIE_EVENT = 'cookiebanner:open';
   var SCAN_ORIGIN = 'https://ai-scanrapport.vibepreview.com';
 
-  var path = location.pathname.replace(/\/+$/, '') || '/';
+  // De site kan onder een subpad draaien (bijv. /installatieflow): afgeleid uit de src van dit script
+  var BASE = ((document.currentScript && document.currentScript.src.match(/^https?:\/\/[^/]+(.*)\/assets\/site\.js/)) || [])[1] || '';
+  window.IF_BASE = BASE;
+  var path = location.pathname.slice(BASE.length).replace(/\/+$/, '') || '/';
 
   function $(sel, root) { return (root || document).querySelector(sel); }
   function $all(sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); }
@@ -398,11 +401,11 @@
           return;
         }
         try { sessionStorage.setItem('if:scrollToScan', '1'); } catch (x) {}
-        location.href = '/ontdek';
+        location.href = BASE + '/ontdek';
         return;
       }
       if (path === '/' && href === '/scan') trackForm('Contactformulier ingevuld');
-      location.href = href;
+      location.href = BASE + href;
       return;
     }
     // Links in het open mobiele menu sluiten het menu
@@ -460,7 +463,7 @@
         var m = (typeof d === 'string' ? d : JSON.stringify(d)).toLowerCase();
         hit = ['form-submit', 'form_submit', 'formsubmitted', 'form submission', 'submit_success', 'redirect'].some(function (k) { return m.indexOf(k) !== -1; });
       } catch (x) {}
-      if (hit) { trackForm('Contactformulier ingevuld'); location.href = '/scan'; }
+      if (hit) { trackForm('Contactformulier ingevuld'); location.href = BASE + '/scan'; }
     });
   }
 

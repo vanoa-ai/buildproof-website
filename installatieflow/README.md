@@ -5,10 +5,10 @@
 ## Starten
 
 ```bash
-node installatieflow/server.js   # http://localhost:4000
+node installatieflow/server.js   # http://localhost:4000/installatieflow/
 ```
 
-De server gebruikt `express` uit de hoofdmap van deze repo.
+Live draait de map onder `https://site.buildproof.nl/installatieflow/` (via de BuildProof-server). Alle interne paden gebruiken daarom het prefix `/installatieflow`; `site.js` leidt dat af uit zijn eigen `src`.
 
 ## Structuur
 
