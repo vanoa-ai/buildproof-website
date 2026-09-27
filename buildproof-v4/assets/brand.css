@@ -213,7 +213,7 @@ html { scroll-behavior: smooth; scroll-padding-top: 4rem; }
   display: flex; flex-direction: column;
   background: #fff; border-bottom: 1px solid var(--mist-200);
   box-shadow: 0 24px 48px rgba(27, 42, 61, .18);
-  padding: 8px 16px calc(20px + env(safe-area-inset-bottom));
+  padding: 4px 16px calc(20px + env(safe-area-inset-bottom));
   animation: bp-mm-in .18s ease-out;
 }
 @keyframes bp-mm-in { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
@@ -232,8 +232,8 @@ html { scroll-behavior: smooth; scroll-padding-top: 4rem; }
 .bp-mm-link:active .bp-mm-chev, .bp-mm-link:hover .bp-mm-chev { color: var(--navy); transform: translateX(2px); }
 .bp-mm-cta {
   display: flex; align-items: center; justify-content: center; width: 100%;
-  margin-top: 12px; height: 48px; border-radius: 10px;
-  background: var(--amber); color: var(--navy); font-weight: 700; font-size: 15px;
+  margin-top: 16px; height: 40px; border-radius: 6px;
+  background: var(--amber); color: var(--navy); font-weight: 700; font-size: 14px;
   box-shadow: 0 8px 20px rgba(254, 206, 33, .35);
 }
 .bp-mm-cta:active { background: var(--amber-600); }
