@@ -21,18 +21,34 @@ body { color: var(--ink-700); }
 /* Tekst op amber altijd navy (nooit wit) */
 .bg-\[\#FACC14\], .bg-\[\#FFCC00\], .bg-primary, [style*="background-color: rgb(254, 206, 33)"] { color: var(--navy); }
 
-/* Amber mag geen tekstkleur op wit zijn: gemarkeerde woorden worden navy op een amber markering */
-span.text-primary, span.text-\[\#FACC14\], span.text-\[\#FFCC00\], span[style*="color: rgb(254, 206, 33)"] {
-  color: var(--navy) !important; background: var(--amber); padding: 0 .18em; border-radius: 6px;
-  -webkit-box-decoration-break: clone; box-decoration-break: clone;
+/* Amber-tekst: op licht navy (amber op wit = 1,5:1), op donker amber (9,7:1). bp-on-dark wordt bij het bouwen gezet. */
+.text-primary, .text-\[\#FACC14\], .text-\[\#FFCC00\], .text-\[\#EAB308\] { color: var(--navy) !important; }
+.bp-on-dark.text-primary, .bp-on-dark.text-\[\#FACC14\], .bp-on-dark.text-\[\#FFCC00\], .bp-on-dark.text-\[\#EAB308\], .bp-on-dark[style*="color"] { color: var(--amber) !important; }
+span.text-primary:not(.bp-on-dark), span.text-\[\#FACC14\]:not(.bp-on-dark), span.text-\[\#FFCC00\]:not(.bp-on-dark) {
+  background: var(--amber); padding: 0 .16em; border-radius: 6px; -webkit-box-decoration-break: clone; box-decoration-break: clone;
 }
-/* Amber-tekst op licht (koppen, links, iconen) wordt navy */
-.text-primary:not(span), .text-\[\#FACC14\]:not(span), .text-\[\#FFCC00\]:not(span), [style*="color: rgb(254, 206, 33)"]:not(span) { color: var(--navy) !important; }
-/* Op navy vlakken mag amber wél als tekstkleur (9,7 : 1) */
-.bg-\[\#0D0C09\] .text-primary:not(span), .bg-\[\#0D0C09\] .text-\[\#FACC14\]:not(span), .bg-\[\#0A0A0A\] .text-\[\#FACC14\]:not(span), .bg-\[\#111113\] .text-primary:not(span),
-[style*="background-color: rgb(27, 42, 61)"] [style*="color: rgb(254, 206, 33)"]:not(span) { color: var(--amber) !important; }
-.bg-\[\#0D0C09\] span.text-primary, .bg-\[\#0D0C09\] span.text-\[\#FACC14\], .bg-\[\#0A0A0A\] span.text-\[\#FACC14\], .bg-\[\#111113\] span.text-primary,
-[style*="background-color: rgb(27, 42, 61)"] span[style*="color: rgb(254, 206, 33)"] { color: var(--amber) !important; background: none; padding: 0; }
+svg.text-primary, .text-primary svg { color: var(--navy) !important; }
+.bp-on-dark svg, svg.bp-on-dark { color: var(--amber) !important; }
+[style*="color: rgb(254, 206, 33)"]:not(.bp-on-dark) { color: var(--navy) !important; }
+.text-black { color: var(--navy) !important; }
+.bg-black { background-color: var(--navy) !important; }
+.bg-muted\/30 { background-color: var(--mist-50) !important; }
+
+/* Groot CTA-vlak: navy met amber knop (geen grote amber vlakken met tekst) */
+.bp-cta-navy { background-color: var(--navy) !important; color: #fff !important; }
+.bp-cta-navy p, .bp-cta-navy span, .bp-cta-navy div, .bp-cta-navy svg { color: #fff !important; }
+.bp-cta-navy p:last-child { color: var(--slate-300) !important; }
+.bp-cta-navy button { background: var(--amber) !important; color: var(--navy) !important; }
+.bp-cta-navy button * { color: var(--navy) !important; }
+
+/* Aankondigingsbalk rustig in navy */
+[data-announcement] { background-color: var(--navy) !important; color: #fff !important; }
+[data-announcement]:hover { background-color: var(--ink-900) !important; }
+[data-announcement] p, [data-announcement] button, [data-announcement] svg { color: #fff !important; }
+
+/* Hero: rustige, donkere ondergrond achter de tekst */
+[style*="background-color: rgba(27, 42, 61, 0.45)"] { background: linear-gradient(90deg, rgba(20, 32, 47, .88) 0%, rgba(27, 42, 61, .7) 45%, rgba(27, 42, 61, .25) 100%) !important; }
+
 .ontdek-highlight { background-image: linear-gradient(var(--amber), var(--amber)) !important; background-size: 100% 100% !important; background-position: 0 0 !important; border-radius: 6px; color: var(--navy) !important; }
 h2 .relative.inline-block > span.absolute { opacity: .9; }
 
