@@ -197,4 +197,3 @@ iframe[src*="calendly.com"] { background: #fff; border-radius: 20px; box-shadow:
 /* Soepel scrollen naar interne ankers; ruimte voor de sticky header (h-16 / md:h-20) */
 html { scroll-behavior: smooth; scroll-padding-top: 4rem; }
 @media (min-width: 768px) { html { scroll-padding-top: 5rem; } }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
