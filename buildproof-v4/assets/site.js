@@ -448,6 +448,15 @@
   }
 
   // ---------- Scan-iframe berichten ----------
+  // Calendly meldt zijn hoogte; laat het iframe meegroeien zodat alles bereikbaar is
+  if (path === '/scan') {
+    window.addEventListener('message', function (ev) {
+      if (ev.origin !== 'https://calendly.com' || !ev.data || ev.data.event !== 'calendly.page_height') return;
+      var frame = document.getElementById('scanframe');
+      var h = parseInt(ev.data.payload && ev.data.payload.height, 10);
+      if (frame && h > 0) { frame.style.height = h + 'px'; frame.style.minHeight = '0'; }
+    });
+  }
   if (path === '/scan' || path === '/ontdek') {
     window.addEventListener('message', function (ev) {
       if (ev.origin !== SCAN_ORIGIN) return;
