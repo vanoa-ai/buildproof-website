@@ -193,3 +193,8 @@ iframe[src*="calendly.com"] { background: #fff; border-radius: 20px; box-shadow:
 .bp-hero-bg { background: url('img/hero-monteurs-mobiel.jpg') center 30% / cover no-repeat; }
 @media (min-width: 768px) { .bp-hero-bg { background-image: url('img/hero-monteurs.jpg'); background-position: left center; } }
 @media (min-width: 1280px) { .bp-hero-bg { background-size: 118% auto; background-position: left center; } }
+
+/* Soepel scrollen naar interne ankers; ruimte voor de sticky header (h-16 / md:h-20) */
+html { scroll-behavior: smooth; scroll-padding-top: 4rem; }
+@media (min-width: 768px) { html { scroll-padding-top: 5rem; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
