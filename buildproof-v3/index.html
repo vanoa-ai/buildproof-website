@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BuildProof — Wkb-bewijs vastleggen op de bouwplaats</title>
+  <meta name="description" content="BuildProof is de bouwplaats-app voor installateurs en bouwbedrijven. Leg foto's, meerwerk en oplevering vast per kavel en bouw automatisch je Wkb-dossier op.">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap">
+  <link rel="stylesheet" href="assets/v3.css">
+</head>
+<body>
+
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a href="./" class="logo" aria-label="BuildProof home"><img src="assets/img/buildproof-logo.png" alt="BuildProof"></a>
+    <nav class="main-nav" id="mainNav" aria-label="Hoofdmenu">
+      <a href="#voordelen">Voordelen</a>
+      <a href="#hoe-het-werkt">Hoe het werkt</a>
+      <a href="#voor-wie">Voor wie</a>
+      <a href="#kennisbank">Kennisbank</a>
+      <a href="#faq">FAQ</a>
+      <button class="btn btn-primary nav-cta" data-demo>Plan een demo</button>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu openen" aria-expanded="false" aria-controls="mainNav"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">BuildProof: de bouwplaats-app voor Wkb-bewijs</p>
+      <h1>Bewijs van je werk. <span class="accent">Zonder zoekwerk.</span></h1>
+      <p class="lead">Je monteurs leggen foto's, meerwerk en inregelwaarden vast op het moment dat het werk gebeurt, direct bij het juiste project en kavel. Jij hebt bij de oplevering een compleet dossier, zonder een dag te zoeken.</p>
+      <div class="btn-row">
+        <button class="btn btn-primary btn-lg" data-demo>Plan een gratis demo</button>
+        <a class="btn btn-outline btn-lg" href="#hoe-het-werkt">Bekijk hoe het werkt</a>
+      </div>
+      <dl class="hero-facts">
+        <div><dt>3 tikken</dt><dd>project, kavel, foto</dd></div>
+        <div><dt>1 klik</dt><dd>opleverdossier per woning</dd></div>
+      </dl>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-photo"><img src="assets/img/hero.jpg" alt="Twee installateurs bij hun werkbus" width="1600" height="1067"></div>
+      <span class="chip chip-green chip-a">✓ Foto vastgelegd · Kavel 14</span>
+      <span class="chip chip-orange chip-b">Meerwerk gemeld</span>
+      <span class="chip chip-blue chip-c">Dossier 92% compleet</span>
+    </div>
+  </div>
+</section>
+
+<!-- Strip -->
+<aside class="strip" id="strip">
+  <div class="wrap strip-inner">
+    <p><strong>Wat verandert de Wkb voor installateurs?</strong> <span>Lees het in vijf minuten in onze uitleg.</span></p>
+    <a class="btn btn-light btn-sm" href="../blog/wkb-uitgelegd-installateur/">Lees de uitleg</a>
+    <button class="strip-close" aria-label="Sluiten" id="stripClose">×</button>
+  </div>
+</aside>
+
+<!-- Voordelen -->
+<section class="section" id="voordelen">
+  <div class="wrap">
+    <p class="pill">Voordelen</p>
+    <h2 class="section-title">Minder zoeken, sterker staan bij elke oplevering</h2>
+
+    <div class="benefits panel">
+      <div class="tabs" role="tablist" aria-label="Voordelen">
+        <button role="tab" aria-selected="true" aria-controls="tab-1" id="t-1" class="tab is-active">Altijd bewijs</button>
+        <button role="tab" aria-selected="false" aria-controls="tab-2" id="t-2" class="tab">Geen zoekwerk</button>
+        <button role="tab" aria-selected="false" aria-controls="tab-3" id="t-3" class="tab">Sterk bij oplevering</button>
+      </div>
+      <div class="benefit-body">
+        <div class="benefit-text">
+          <div class="tab-panel" id="tab-1" role="tabpanel" aria-labelledby="t-1">
+            <h3>Elk onderdeel aantoonbaar goed uitgevoerd</h3>
+            <p>Sinds de Wkb moet jij kunnen laten zien dat je werk klopt, ook als het al jaren achter een wand zit. Met foto's per kavel en onderdeel heb je dat bewijs altijd bij de hand.</p>
+          </div>
+          <div class="tab-panel" id="tab-2" role="tabpanel" aria-labelledby="t-2" hidden>
+            <h3>Alles op één plek, niet in vijf groepsapps</h3>
+            <p>Geen camerarollen, WhatsApp-groepen of mailtjes meer doorzoeken. Wat je team vastlegt, staat direct op de goede plek en is vanaf kantoor terug te vinden.</p>
+          </div>
+          <div class="tab-panel" id="tab-3" role="tabpanel" aria-labelledby="t-3" hidden>
+            <h3>Het dossier ligt klaar voordat je oplevert</h3>
+            <p>Foto's, meerwerk, inregelrapporten en leverbonnen komen per woning samen. Je ziet ruim op tijd wat nog ontbreekt en levert op met een compleet dossier.</p>
+          </div>
+        </div>
+        <div class="benefit-visual">
+          <div class="phone" role="img" aria-label="BuildProof app met onderdelen per kavel">
+            <div class="phone-notch"></div>
+            <p class="ph-label">Project</p>
+            <p class="ph-title">Nieuwbouw De Weide</p>
+            <p class="ph-sub">Kavel 14 · Installatie</p>
+            <ul class="ph-list">
+              <li><span>Riolering</span><em class="ok">4/4</em></li>
+              <li><span>Vloerverwarming</span><em class="ok">6/6</em></li>
+              <li><span>Warmtepomp</span><em class="todo">2/3</em></li>
+              <li><span>Ventilatie WTW</span><em class="todo">1/4</em></li>
+            </ul>
+            <div class="ph-thumbs"><i></i><i></i><i></i><i></i></div>
+            <div class="ph-btn">Foto maken</div>
+          </div>
+          <span class="chip chip-green chip-p1">✓ Onderdeel compleet</span>
+          <span class="chip chip-orange chip-p2">3 foto's ontbreken</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="facts">
+      <div class="fact"><strong>Offline</strong><span>werkt ook zonder bereik, uploadt vanzelf</span></div>
+      <div class="fact"><strong>Per kavel</strong><span>alles ingedeeld zoals jullie al werken</span></div>
+      <div class="fact"><strong>Realtime</strong><span>kantoor ziet direct wat er binnenkomt</span></div>
+      <div class="fact"><strong>EU</strong><span>gegevens veilig opgeslagen in Europa</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Hoe het werkt -->
+<section class="section section-tint" id="hoe-het-werkt">
+  <div class="wrap">
+    <p class="pill">Functies</p>
+    <h2 class="section-title">Hoe het werkt</h2>
+
+    <div class="feature">
+      <div class="feature-text">
+        <h3>Foto's vastleggen per project, kavel en onderdeel</h3>
+        <p>Je monteur kiest waar hij staat en maakt de foto. BuildProof zet hem direct op de juiste plek. Stel fotodoelen in per onderdeel, dan zie je meteen wat nog ontbreekt.</p>
+        <button class="text-link" data-demo>Zie het in de demo ›</button>
+      </div>
+      <div class="feature-visual panel">
+        <div class="mock-card">
+          <div class="mc-head"><span class="tag">Kavel 14</span><span>Vandaag 10:42</span></div>
+          <div class="mc-grid"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <p class="mc-foot"><span>Warmtepomp · 2 van 3 foto's</span><span class="st todo">1 ontbreekt</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature feature-rev">
+      <div class="feature-text">
+        <h3>Meerwerk en afwijkingen direct vastgelegd</h3>
+        <p>Extra werk of iets dat afwijkt van de tekening? Leg het vast met foto en omschrijving, op het moment dat het gebeurt. Dan is er achteraf geen discussie over wat er is afgesproken.</p>
+        <button class="text-link" data-demo>Zie het in de demo ›</button>
+      </div>
+      <div class="feature-visual panel">
+        <div class="mock-card">
+          <div class="mc-head"><span class="tag tag-orange">Meerwerk</span><span>Kavel 14</span></div>
+          <div class="mc-photo"></div>
+          <p class="mc-text"><strong>Extra afvoerpunt keuken</strong><br>Op verzoek van de bewoner verplaatst, 1,5 m extra leiding.</p>
+          <p class="mc-foot"><span class="ok-text">✓ Gekoppeld aan dossier</span><span>M. de Vries</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature">
+      <div class="feature-text">
+        <h3>Eén dossier per woning, klaar voor de oplevering</h3>
+        <p>Foto's, meerwerk, inregelrapporten en leverbonnen komen per kavel samen. Volg de voortgang op kantoor en deel het opleverdossier met je opdrachtgever via een beveiligde link.</p>
+        <button class="text-link" data-demo>Zie het in de demo ›</button>
+      </div>
+      <div class="feature-visual panel">
+        <div class="dash" role="img" aria-label="BuildProof dashboard met voortgang per kavel">
+          <div class="dash-bar"><img src="assets/img/logo-wit.png" alt=""><span>Projectdossier</span></div>
+          <div class="dash-rows">
+            <div class="dr"><span>Kavel 12</span><b style="--p:100%"></b><em class="ok">Compleet</em></div>
+            <div class="dr"><span>Kavel 13</span><b style="--p:100%"></b><em class="ok">Compleet</em></div>
+            <div class="dr"><span>Kavel 14</span><b style="--p:82%"></b><em class="todo">82%</em></div>
+            <div class="dr"><span>Kavel 15</span><b style="--p:64%"></b><em class="todo">64%</em></div>
+            <div class="dr"><span>Kavel 16</span><b style="--p:30%"></b><em class="todo">30%</em></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Voor wie -->
+<section class="section" id="voor-wie">
+  <div class="wrap">
+    <p class="pill">Voor wie</p>
+    <h2 class="section-title">Gemaakt voor wie op de bouwplaats staat</h2>
+    <div class="cards-3">
+      <article class="card">
+        <div class="card-icon">🔧</div>
+        <h3>Installateurs</h3>
+        <p>Leg riolering, vloerverwarming, ventilatie en inregelwaarden per woning vast. Aantoonbaar goed, ook jaren later.</p>
+      </article>
+      <article class="card">
+        <div class="card-icon">🏗️</div>
+        <h3>Bouwbedrijven</h3>
+        <p>Houd grip op meerdere projecten en ploegen. Zie per kavel wat er is vastgelegd en wat nog ontbreekt voor de oplevering.</p>
+      </article>
+      <article class="card">
+        <div class="card-icon">🤝</div>
+        <h3>Onderaannemers</h3>
+        <p>Werk mee in het dossier van je opdrachtgever via een uitnodigingslink. Jouw deel van het bewijs, direct op de goede plek.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Support -->
+<section class="section">
+  <div class="wrap">
+    <div class="support panel">
+      <div class="support-visual">
+        <div class="step-list">
+          <div><b>1</b><span>Demo van 20 minuten</span></div>
+          <div><b>2</b><span>Eerste project samen ingericht</span></div>
+          <div><b>3</b><span>Je team legt dezelfde week vast</span></div>
+        </div>
+      </div>
+      <div class="support-text">
+        <p class="pill pill-white">Hulp bij de start</p>
+        <h2>Binnen een week aan de slag, met persoonlijke hulp</h2>
+        <p>Geen dikke handleiding of lange implementatie. We richten je eerste project samen in met kavels en onderdelen en nodigen je team uit. Vragen? Mail ons op <a href="mailto:info@buildproof.nl">info@buildproof.nl</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Kennisbank -->
+<section class="section section-tint" id="kennisbank">
+  <div class="wrap">
+    <p class="pill">Kennisbank</p>
+    <h2 class="section-title">Meer weten over Wkb-bewijsvoering</h2>
+    <div class="cards-3">
+      <a class="post" href="../blog/wkb-uitgelegd-installateur/">
+        <div class="post-top t1"><span>Wkb</span></div>
+        <h3>De Wkb in het kort: wat verandert er voor jou als installateur?</h3>
+        <span class="text-link">Lees verder ›</span>
+      </a>
+      <a class="post" href="../blog/opleverdossier-checklist/">
+        <div class="post-top t2"><span>Oplevering</span></div>
+        <h3>Het complete opleverdossier: checklist voor een foutloze oplevering</h3>
+        <span class="text-link">Lees verder ›</span>
+      </a>
+      <a class="post" href="../blog/bewijslast-oplevering-garantie/">
+        <div class="post-top t3"><span>Bewijslast</span></div>
+        <h3>Geen foto's, geen bewijs: WhatsApp bij oplevering en garantie</h3>
+        <span class="text-link">Lees verder ›</span>
+      </a>
+    </div>
+    <p class="center"><a class="btn btn-outline" href="../blog/">Bekijk alle artikelen</a></p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="wrap faq-grid">
+    <div class="faq-intro">
+      <p class="pill">FAQ</p>
+      <h2>Veelgestelde vragen</h2>
+      <p>Staat je vraag er niet bij? Mail ons op <a href="mailto:info@buildproof.nl">info@buildproof.nl</a> of plan een demo, dan beantwoorden we hem live.</p>
+      <button class="text-link" data-demo>Plan een demo ›</button>
+    </div>
+    <div class="faq-list">
+      <details open>
+        <summary><span class="num">01</span>Werkt de app ook zonder internet op de bouwplaats?</summary>
+        <p>Ja. Foto's en meldingen worden op de telefoon bewaard en automatisch verstuurd zodra er weer bereik is. Ook in een kelder of ruwbouw zonder dekking gaat er niets verloren.</p>
+      </details>
+      <details>
+        <summary><span class="num">02</span>Kunnen onderaannemers meewerken in een project?</summary>
+        <p>Ja. Je nodigt ze uit via een link. Ze zien alleen de projecten waarvoor ze zijn uitgenodigd en leggen hun deel van het werk vast in hetzelfde dossier.</p>
+      </details>
+      <details>
+        <summary><span class="num">03</span>Hoe snel kunnen we starten?</summary>
+        <p>Meestal binnen een week. Na de demo richten we samen je eerste project in en nodigen we je team uit. Daarna kan iedereen direct vastleggen.</p>
+      </details>
+      <details>
+        <summary><span class="num">04</span>Waar worden onze gegevens opgeslagen?</summary>
+        <p>In Europa, in een beveiligde omgeving met versleutelde verbindingen. Alleen mensen die jij toegang geeft, zien je projecten. Met de WebDAV-sync kun je dossiers ook automatisch naar je eigen server laten kopiëren.</p>
+      </details>
+      <details>
+        <summary><span class="num">05</span>Wat kost BuildProof?</summary>
+        <p>Dat hangt af van het aantal gebruikers en projecten. In de demo kijken we samen wat past en krijg je direct een helder voorstel, zonder lange looptijd.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="wrap">
+    <div class="cta">
+      <h2>Al je bewijs op één plek.<br>Eén dossier per woning.</h2>
+      <p>Zie in 20 minuten hoe BuildProof werkt op een project zoals het jouwe. Gratis en zonder verplichtingen.</p>
+      <div class="btn-row center-row">
+        <button class="btn btn-primary btn-lg" data-demo>Plan een gratis demo</button>
+        <a class="btn btn-ghost btn-lg" href="mailto:info@buildproof.nl">Mail ons</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <img src="assets/img/buildproof-logo.png" alt="BuildProof">
+      <p class="footer-claim">Bewijs van goed werk.</p>
+      <p>De bouwplaats-app voor Wkb-bewijsvoering. Ontwikkeld in Nederland.</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul><li><a href="mailto:info@buildproof.nl">info@buildproof.nl</a></li><li><button class="link-btn" data-demo>Plan een demo</button></li></ul>
+    </div>
+    <div>
+      <h4>Product</h4>
+      <ul><li><a href="#voordelen">Voordelen</a></li><li><a href="#hoe-het-werkt">Hoe het werkt</a></li><li><a href="#voor-wie">Voor wie</a></li><li><a href="#faq">FAQ</a></li></ul>
+    </div>
+    <div>
+      <h4>Kennisbank</h4>
+      <ul><li><a href="../blog/wkb-uitgelegd-installateur/">De Wkb uitgelegd</a></li><li><a href="../blog/opleverdossier-checklist/">Checklist opleverdossier</a></li><li><a href="../blog/faalkosten-verlagen-documentatie/">Faalkosten verlagen</a></li><li><a href="../blog/">Alle artikelen</a></li></ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© 2026 BuildProof. Alle rechten voorbehouden.</span>
+    <a href="../buildproof-nieuw/privacyverklaring/">Privacyverklaring</a>
+  </div>
+</footer>
+
+<!-- Demo-popup (Calendly) -->
+<div class="modal" id="demoModal" role="dialog" aria-modal="true" aria-labelledby="demoTitle" hidden>
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-box">
+    <button class="modal-close" data-close aria-label="Sluiten">×</button>
+    <h2 id="demoTitle">Plan een gratis demo</h2>
+    <p>Kies een moment dat jou uitkomt. De demo duurt ongeveer 20 minuten.</p>
+    <div class="modal-frame" id="demoFrame"></div>
+  </div>
+</div>
+
+<script src="assets/v3.js"></script>
+</body>
+</html>
