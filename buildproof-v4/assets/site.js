@@ -1,4 +1,4 @@
-/* BuildProof — interactie zonder framework.
+/* BuildProof, interactie zonder framework.
  * Pagina's zijn statische HTML; dit script voegt het gedrag toe:
  * navigatieknoppen, aankondigingsbalk, toestandswissels (menu, FLOW, teamfilter,
  * verschillen-toggle), accordeons, FAQ-zoeken, cookiebanner + Meta Pixel,

@@ -1,5 +1,5 @@
 /* Scan-resultaat: bouwt het FLOW-rapport op uit de URL-parameters
- * (pakket, motor, naam, f, l, o, w, tools) — zelfde logica als de originele site. */
+ * (pakket, motor, naam, f, l, o, w, tools), zelfde logica als de originele site. */
 window.IF_renderScanResult = function () {
   'use strict';
 
