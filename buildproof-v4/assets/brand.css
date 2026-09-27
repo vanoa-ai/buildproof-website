@@ -188,3 +188,8 @@ iframe[src*="calendly.com"] { background: #fff; border-radius: 20px; box-shadow:
 .bp-demo-cal iframe { width: 100%; }
 @media (max-width: 1023px) { .bp-demo-page { padding-top: 24px; } .bp-demo-info { padding: 28px 22px; } }
 @media (max-width: 1023px) { .bp-demo-steps, .bp-demo-checks { display: none; } .bp-demo-lead { margin-bottom: 16px; } }
+
+/* Hero-foto */
+.bp-hero-bg { background: url('img/hero-monteurs-mobiel.jpg') center 30% / cover no-repeat; }
+@media (min-width: 768px) { .bp-hero-bg { background-image: url('img/hero-monteurs.jpg'); background-position: left center; } }
+@media (min-width: 1280px) { .bp-hero-bg { background-size: 118% auto; background-position: left center; } }
