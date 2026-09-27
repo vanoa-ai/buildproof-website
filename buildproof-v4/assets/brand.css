@@ -232,7 +232,7 @@ html { scroll-behavior: smooth; scroll-padding-top: 4rem; }
 .bp-mm-link:active .bp-mm-chev, .bp-mm-link:hover .bp-mm-chev { color: var(--navy); transform: translateX(2px); }
 .bp-mm-cta {
   display: flex; align-items: center; justify-content: center; width: 100%;
-  margin-top: 16px; height: 40px; border-radius: 6px;
+  margin-top: 16px; height: 44px; border-radius: 8px;
   background: var(--amber); color: var(--navy); font-weight: 700; font-size: 14px;
   box-shadow: 0 8px 20px rgba(254, 206, 33, .35);
 }
