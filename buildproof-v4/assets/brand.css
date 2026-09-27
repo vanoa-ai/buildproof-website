@@ -197,3 +197,11 @@ iframe[src*="calendly.com"] { background: #fff; border-radius: 20px; box-shadow:
 /* Soepel scrollen naar interne ankers; ruimte voor de sticky header (h-16 / md:h-20) */
 html { scroll-behavior: smooth; scroll-padding-top: 4rem; }
 @media (min-width: 768px) { html { scroll-padding-top: 5rem; } }
+
+/* Cookiebanner compacter op mobiel */
+@media (max-width: 639px) {
+  [role="dialog"][aria-label="Cookievoorkeuren"] { padding: 0 10px 10px; }
+  [aria-label="Cookievoorkeuren"] > div > div { gap: 10px; padding: 12px 14px; }
+  [aria-label="Cookievoorkeuren"] p { font-size: 12px; line-height: 1.45; }
+  [aria-label="Cookievoorkeuren"] button { padding: 7px 12px; font-size: 13px; }
+}
