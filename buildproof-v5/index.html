@@ -64,7 +64,7 @@
   <!-- Hero -->
   <section class="hero grid-paper">
     <div class="wrap">
-      <span class="label">Voor installatiebedrijven</span>
+      <span class="label"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 10V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/><path d="M14 6a6 6 0 0 1 6 6v3"/><path d="M4 15v-3a6 6 0 0 1 6-6"/><rect x="2" y="15" width="20" height="4" rx="1"/></svg></i>Voor installatiebedrijven</span>
       <h1 class="h1"><span class="line">Sneller op de bouw.</span> <span class="line">Minder werk op <span class="mark">kantoor</span>.</span></h1>
       <div class="hero-grid">
         <div class="hero-copy">
@@ -112,9 +112,9 @@
   <section class="section" id="probleem">
     <div class="wrap problem-grid">
       <div class="problem-intro" data-reveal>
-        <span class="label"><b>01</b> Het probleem</span>
         <h2 class="h2">Het werk is goed gedaan. Maar staat het ook in het dossier?</h2>
-        <p class="lead">Foto’s staan in camerarollen en groepsapps, checklists op papier en meetwaarden in een schrift. En dan nog weet niemand precies wat klaar is. <strong>Bij een vraag of claim zoek je dagen naar bewijs.</strong></p>
+        <p class="lead">Foto’s staan in camerarollen en groepsapps, checklists op papier en meetwaarden in een schrift.</p>
+        <p class="lead">En dan nog weet niemand precies wat klaar is. <strong>Bij een vraag of claim zoek je dagen naar bewijs.</strong></p>
         <div class="stat">
           <div class="stat-num"><b>20–40</b><span>uur per maand</span></div>
           <p>is kantoor kwijt aan uitzoeken, nabellen en overtypen, alleen om de dossiers rond te krijgen.</p>
@@ -131,7 +131,6 @@
           <li class="tl-item" data-reveal>
             <span class="tl-num">01</span>
             <div class="tl-body">
-              <span class="tl-tag">Probleem</span>
               <h3 class="h3">Bewijs staat overal en nergens.</h3>
               <p>Monteurs maken genoeg foto’s. Alleen staan ze verspreid over telefoons, WhatsApp en mail, zonder kavel of onderdeel erbij. Terugzoeken kost uren.</p>
               <div class="tl-vis ui src" aria-hidden="true">
@@ -144,9 +143,8 @@
           <li class="tl-item" data-reveal>
             <span class="tl-num">02</span>
             <div class="tl-body">
-              <span class="tl-tag">Oorzaak</span>
               <h3 class="h3">Kantoor ziet het pas achteraf.</h3>
-              <p>Wat er op de bouw gebeurt, komt pas op kantoor als iemand het doorstuurt. Status per kavel? Die houdt iemand bij in een spreadsheet, als er tijd voor is.</p>
+              <p>Wat er op de bouw gebeurt, komt pas op kantoor als iemand het doorstuurt. Status per kavel? Die houdt iemand bij in een spreadsheet, als daar al tijd voor is.</p>
               <div class="tl-vis ui lag" aria-hidden="true">
                 <div class="lag-row"><span class="lag-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg></span><div><b>Foto gemaakt</b><span>Bouwplaats · kavel 14</span></div><em>ma 09:12</em></div>
                 <div class="lag-gap"><span>3 dagen niets</span></div>
@@ -157,8 +155,7 @@
           <li class="tl-item" data-reveal>
             <span class="tl-num">03</span>
             <div class="tl-body">
-              <span class="tl-tag">Gevolg</span>
-              <h3 class="h3">Discussie en faalkosten.</h3>
+              <h3 class="h3">Gevolg: discussie en faalkosten.</h3>
               <p>Zonder vastgelegd meerwerk of meetrapport sta je zwak bij de oplevering. Dan betaal jij voor een gebrek dat niet van jou is, of voor meerwerk dat je niet kunt aantonen.</p>
               <div class="tl-vis ui claim" aria-hidden="true">
                 <small><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Vraag van de opdrachtgever</small>
@@ -176,8 +173,7 @@
   <section class="section bg-mist grid-paper" id="hoe-het-werkt">
     <div class="wrap">
       <div class="section-head split" data-reveal>
-        <div><span class="label"><b>02</b> Hoe het werkt</span>
-        <h2 class="h2">Leg elke stap vast op het moment dat hij gebeurt.</h2></div>
+        <div><h2 class="h2">Leg elke stap vast op het moment dat hij gebeurt.</h2></div>
         <p class="lead">De monteur legt vast op de bouwplaats. Kantoor ziet per kavel wat klaar is. En het dossier vult zich terwijl er gewerkt wordt.</p>
       </div>
 
@@ -248,28 +244,18 @@
         </div>
       </div>
 
-      <div class="changes-head" data-reveal>
+      <div class="compare" data-reveal>
         <h3 class="h3">Wat er verandert</h3>
-        <p>Zo gaat het nu, en zo gaat het met BuildProof.</p>
+        <table class="cmp">
+          <thead><tr><th scope="col"><span class="sr-only">Onderdeel</span></th><th scope="col">Zonder BuildProof</th><th scope="col" class="cmp-bp">Met BuildProof</th></tr></thead>
+          <tbody>
+          <tr><th scope="row"><span class="cmp-topic"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg></i>Foto’s</span></th><td data-label="Zonder BuildProof"><span class="cmp-ic cmp-no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></span>Zoeken in groepsapps en camerarollen</td><td class="cmp-bp" data-label="Met BuildProof"><span class="cmp-ic cmp-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Staan meteen op de juiste kavel</td></tr>
+          <tr><th scope="row"><span class="cmp-topic"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg></i>Checklists en metingen</span></th><td data-label="Zonder BuildProof"><span class="cmp-ic cmp-no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></span>Op papier en in een schrift</td><td class="cmp-bp" data-label="Met BuildProof"><span class="cmp-ic cmp-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Op de telefoon, met meetrapport</td></tr>
+          <tr><th scope="row"><span class="cmp-topic"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg></i>Status per kavel</span></th><td data-label="Zonder BuildProof"><span class="cmp-ic cmp-no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></span>Bijhouden in Excel</td><td class="cmp-bp" data-label="Met BuildProof"><span class="cmp-ic cmp-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Kantoor ziet het direct</td></tr>
+          <tr><th scope="row"><span class="cmp-topic"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 13h4M10 17h4"/></svg></i>Dossier</span></th><td data-label="Zonder BuildProof"><span class="cmp-ic cmp-no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></span>Pas maken bij de oplevering</td><td class="cmp-bp" data-label="Met BuildProof"><span class="cmp-ic cmp-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Staat klaar als PDF</td></tr>
+          </tbody>
+        </table>
       </div>
-      <ul class="changes" data-swipe>
-        <li class="change" data-reveal>
-          <div class="change-old"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg><div><small>Nu</small><s>Foto’s zoeken in groepsapps</s></div></div>
-          <div class="change-new"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><div><small>Met BuildProof</small>Een foto staat meteen op de juiste kavel</div></div>
-        </li>
-        <li class="change" data-reveal style="--d:.06s">
-          <div class="change-old"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg><div><small>Nu</small><s>Checklists en meetwaarden op papier</s></div></div>
-          <div class="change-new"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><div><small>Met BuildProof</small>Checklists en meetrapport op de telefoon</div></div>
-        </li>
-        <li class="change" data-reveal style="--d:.12s">
-          <div class="change-old"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg><div><small>Nu</small><s>Status per kavel bijhouden in Excel</s></div></div>
-          <div class="change-new"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><div><small>Met BuildProof</small>Kantoor ziet de status per kavel direct</div></div>
-        </li>
-        <li class="change" data-reveal style="--d:.18s">
-          <div class="change-old"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg><div><small>Nu</small><s>Dossier pas bij de oplevering maken</s></div></div>
-          <div class="change-new"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><div><small>Met BuildProof</small>Het rapport staat klaar als PDF</div></div>
-        </li>
-      </ul>
     </div>
   </section>
 
@@ -277,8 +263,7 @@
   <section class="section" id="bewijs">
     <div class="wrap">
       <div class="section-head split" data-reveal>
-        <div><span class="label"><b>03</b> Wat je vastlegt</span>
-        <h2 class="h2">Alles wat je moet kunnen aantonen, per kavel in één dossier.</h2></div>
+        <div><h2 class="h2">Alles wat je moet kunnen aantonen, automatisch per kavel in één dossier.</h2></div>
         <p class="lead">Op de bouwplaats leg je vier soorten bewijs vast: foto’s, checklists, inregelrapporten en meerwerk. Samen vormen ze het dossier van elke kavel.</p>
       </div>
       <div class="proofs" data-swipe>
@@ -371,7 +356,7 @@
   <section class="section dark monteur" id="monteur">
     <div class="wrap monteur-grid">
       <div class="monteur-vis" data-reveal>
-        <div class="monteur-photo"><img src="/buildproof-v5/assets/img/monteurs-portret.jpg" alt="Twee monteurs lachen bij de achterkant van hun bus" loading="lazy" width="960" height="1200"></div>
+        <div class="monteur-photo"><img src="/buildproof-v5/assets/img/monteur-portret.jpg" alt="Lachende monteur met koffie bij de open bus" loading="lazy" width="800" height="1000"></div>
         <div class="phone" aria-hidden="true">
           <div class="phone-notch"></div>
           <div class="phone-top"><small>Project</small><b>Nieuwbouw De Weide</b><span>Kavel 14 · Installatie</span></div>
@@ -386,9 +371,9 @@
         </div>
       </div>
       <div class="monteur-copy" data-reveal style="--d:.08s">
-        <span class="label"><b>04</b> Gebouwd voor de monteur</span>
+        <span class="label"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></i>Gebouwd voor de monteur</span>
         <h2 class="h2">Als de monteur het niet gebruikt, <span class="amber">werkt het niet.</span></h2>
-        <p class="lead">Daarom zijn we extreem gaan focussen op gebruiksgemak op de bouwplaats. Geen extra administratie voor de monteur: openen, kavel kiezen, vastleggen. De rest regelt BuildProof, zodat kantoor niets meer hoeft uit te zoeken.</p>
+        <p class="lead">Daarom zijn we extreem gaan focussen op gebruiksgemak op de bouwplaats. Geen extra administratie voor de monteur, maar juist minder: openen, kavel kiezen, vastleggen. De rest regelt BuildProof, zodat kantoor niets meer hoeft uit te zoeken.</p>
         <ul class="points">
           <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 14a8 8 0 0 1-8 8"/><path d="M18 11v-1a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 10V9a2 2 0 0 0-2-2a2 2 0 0 0-2 2v1"/><path d="M10 9.5V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v10"/><path d="M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg></i><div><b>In een paar tikken vastgelegd</b><span>Kavel kiezen, foto maken, klaar. Geen formulieren invullen op de steiger.</span></div></li>
           <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></svg></i><div><b>Grote knoppen, duidelijke schermen</b><span>Gemaakt voor de bouwplaats, niet voor achter een bureau.</span></div></li>
@@ -404,7 +389,7 @@
     <div class="wrap">
       <div class="why-grid">
         <div class="why-copy" data-reveal>
-          <span class="label"><b>05</b> Waarom BuildProof</span>
+          <span class="label"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></i>Waarom BuildProof</span>
           <h2 class="why-statement">Er zijn genoeg bouwapps. Wij kozen voor één ding en doen dat goed: <span class="mark">vastleggen</span>, op de plek waar het gebeurt.</h2>
           <p class="lead">De meeste bouwapps willen alles tegelijk doen: planning, uren, facturen, communicatie. Daardoor worden ze log en ingewikkeld, en dan gebruikt de monteur het gewoon niet.</p>
         </div>
@@ -442,7 +427,7 @@
   <section class="section bg-mist" id="pakketten">
     <div class="wrap">
       <div class="section-head split" data-reveal>
-        <div><span class="label"><b>06</b> Pakketten</span>
+        <div><span class="label"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg></i>Pakketten</span>
         <h2 class="h2">Begin met foto’s. Breid uit wanneer je projecten erom vragen.</h2></div>
         <p class="lead">Elk pakket bouwt verder op het vorige. Je kiest wat je team vastlegt.</p>
       </div>
@@ -535,7 +520,7 @@
   <section class="section" id="werkwijze">
     <div class="wrap start-grid">
       <div class="start-copy" data-reveal>
-        <span class="label"><b>07</b> Werkwijze</span>
+        <span class="label"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg></i>Werkwijze</span>
         <h2 class="h2">Geen lange implementatie. We richten het samen met je in.</h2>
         <ol class="steps">
           <li class="step"><span class="step-num">01</span><div><h3>Demo</h3><p>We laten zien hoe BuildProof werkt op jouw eigen project.</p></div></li>
@@ -544,7 +529,7 @@
         </ol>
       </div>
       <div class="demo-card dark grid-paper" data-reveal style="--d:.08s">
-        <span class="label">Plan een demo</span>
+        <span class="label"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></i>Plan een demo</span>
         <h2 class="h2">Zie hoe jouw werk bewezen wordt.</h2>
         <p>In de demo nemen we een van jouw projecten als voorbeeld. Je ziet hoe foto’s, checklists en meetrapporten per kavel samenkomen.</p>
         <ul class="demo-list">
@@ -562,7 +547,7 @@
   <section class="section bg-mist" id="faq">
     <div class="wrap faq-grid">
       <div class="faq-side" data-reveal>
-        <span class="label"><b>08</b> Vragen</span>
+        <span class="label"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></i>Vragen</span>
         <h2 class="h2">Veelgestelde vragen</h2>
         <p class="lead">Alles wat je wilt weten over BuildProof en hoe het werkt.</p>
         <div class="ask">
