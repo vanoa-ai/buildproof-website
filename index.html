@@ -456,14 +456,14 @@
       <div class="plans">
         <article class="plan is-pick">
           <div class="plan-top"><h3 class="plan-name">BuildProof</h3><span class="plan-badge">Alles inbegrepen</span></div>
-          <div class="price-amount">€ 50,00</div>
+          <div class="price-amount">€ 50,00</div>
           <p class="price-per">per gebruiker per maand, excl. btw</p>
           <div class="calc">
             <label for="users"><span>Aantal gebruikers</span><output id="users-out" for="users">15</output></label>
             <input id="users" type="range" min="1" max="60" step="1" value="15">
             <div class="calc-sum">
-              <div><small>Per maand</small><b id="month">€ 750,00</b></div>
-              <div><small>Per jaar</small><b id="year">€ 9.000,00</b></div>
+              <div><small>Per maand</small><b id="month">€ 750,00</b></div>
+              <div><small>Per jaar</small><b id="year">€ 9.000,00</b></div>
             </div>
           </div>
         </article>
@@ -496,7 +496,7 @@
           <span class="label"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></i>Uit de praktijk</span>
           <h2 class="h2" style="margin-top:18px">1 fte bespaard bij een bedrijf van 10 tot 20 man.</h2>
           <p class="lead" style="margin-top:16px">Alleen al op kantoor scheelt het 19 uur per week. Daar komen opleverdossiers, meetrapporten en minder navragen op de bouw nog bij.</p>
-          <p class="result-note">Praktijkcijfers van een bestaand installatiebedrijf. Indicatie loonkosten 1 fte administratief medewerker: € 55.000,00 tot € 65.000,00 per jaar.</p>
+          <p class="result-note">Praktijkcijfers van een bestaand installatiebedrijf. Indicatie loonkosten 1 fte administratief medewerker: € 55.000,00 tot € 65.000,00 per jaar.</p>
         </div>
         <div class="result-card" data-reveal style="--d:.08s">
           <table>
@@ -558,7 +558,7 @@
       </div>
       <div class="faq-list">
         <details class="qa" data-reveal><summary>Wat doet BuildProof precies?<i aria-hidden="true"></i></summary><div>BuildProof is een app en een kantoordashboard. Op de bouwplaats leg je foto’s per kavel en onderdeel vast, vink je checklists af, vul je het inregelrapport in en registreer je meerwerk, veiligheidsmeldingen en leverbonnen. Alles komt vanzelf bij kantoor binnen. Daar zie je de status per kavel, maak je rapporten als PDF en deel je ze met de opdrachtgever.</div></details>
-        <details class="qa" data-reveal><summary>Wat kost BuildProof?<i aria-hidden="true"></i></summary><div>€ 50,00 per gebruiker per maand, excl. btw, met alle modules erin. Met 15 gebruikers is dat € 750,00 per maand.</div></details>
+        <details class="qa" data-reveal><summary>Wat kost BuildProof?<i aria-hidden="true"></i></summary><div>€ 50,00 per gebruiker per maand, excl. btw, met alle modules erin. Met 15 gebruikers is dat € 750,00 per maand.</div></details>
         <details class="qa" data-reveal><summary>Werkt BuildProof ook zonder internetverbinding?<i aria-hidden="true"></i></summary><div>Ja. Alles wat je vastlegt wordt op het toestel bewaard en verstuurd zodra er weer bereik is. Je ziet in de app wat nog verzonden moet worden. Er gaat niets verloren, ook niet in een kelder of ruwbouw.</div></details>
         <details class="qa" data-reveal><summary>Kunnen onderaannemers meewerken in een project?<i aria-hidden="true"></i></summary><div>Ja. Je nodigt ze uit via een link. Ze zien alleen de projecten waar ze voor zijn uitgenodigd, en leggen hun deel van het werk vast in hetzelfde dossier.</div></details>
         <details class="qa" data-reveal><summary>Hoe zit het met de opslag en beveiliging van mijn gegevens?<i aria-hidden="true"></i></summary><div>Je gegevens worden opgeslagen in Europa, via versleutelde verbindingen. Alleen mensen die jij toegang geeft, zien je projecten. Wil je een eigen kopie? Dan kun je dossiers automatisch naar je eigen server laten kopiëren.</div></details>
@@ -641,7 +641,7 @@
 <script>
 (function () {
   var input = document.getElementById('users');
-  function euro(n) { return '€ ' + String(n).replace(/\B(?=(\d{3})+(?!\d))/g, '.') + ',00'; }
+  function euro(n) { return '€ ' + String(n).replace(/\B(?=(\d{3})+(?!\d))/g, '.') + ',00'; }
   function update() {
     var n = Number(input.value);
     document.getElementById('users-out').textContent = n;
