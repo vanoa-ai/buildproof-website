@@ -16,8 +16,8 @@
   .cmp td { padding-left: 46px; }
   .cmp-ic { left: 14px; }
   .cmp-topic { gap: 8px; }
-  .cmp th:nth-child(1) { width: 28%; } .cmp th:nth-child(2) { width: 37%; } .cmp th:nth-child(3) { width: 35%; }
-  .cmp-wrap::after { left: 28%; right: 35%; }
+  .compare .cmp th:nth-child(1) { width: 28%; } .compare .cmp th:nth-child(2) { width: 37%; } .compare .cmp th:nth-child(3) { width: 35%; }
+  .compare .cmp-wrap::after { left: 28%; right: 35%; }
 }
 #probleem .wrap > *, #probleem .wrap > * > *, .tl-item > *, .tl-vis > * { min-width: 0; }
 @media (max-width: 359px) {
