@@ -6,7 +6,6 @@
 @media (min-width: 1024px) and (max-width: 1199px) { .nav { gap: 16px; } .nav a { font-size: 14px; } .site-header .wrap { gap: 16px; } }
 @media (min-width: 768px) and (max-width: 1023px) { .capture { left: -14px; } }
 .calc-sum b { white-space: nowrap; overflow-wrap: normal; }
-@media (max-width: 379px) { .calc-sum { grid-template-columns: minmax(0, 1fr); } }
 @media (min-width: 640px) {
   .cmp td { position: relative; padding-left: 58px; }
   .cmp-ic { position: absolute; left: 24px; top: 50%; margin: -11px 0 0; }
@@ -66,6 +65,7 @@
 .calc-sum { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 .calc-sum small { display: block; font-size: 13px; color: var(--slate-500); }
 .calc-sum b { font-size: 22px; font-weight: 700; color: var(--navy); font-variant-numeric: tabular-nums; letter-spacing: -.01em; overflow-wrap: anywhere; }
+@media (max-width: 379px) { .calc-sum { grid-template-columns: minmax(0, 1fr); } }
 .result { display: grid; gap: 24px; align-items: start; }
 @media (min-width: 900px) { .result { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); } }
 .result-card { background: #fff; border: 1px solid var(--mist-200); border-radius: 24px; box-shadow: var(--sh-1); padding: 26px; }
