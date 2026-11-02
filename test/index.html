@@ -30,7 +30,7 @@
 @media (min-width: 1024px) {
   .problem-grid { grid-template-columns: minmax(0, 1fr); gap: 56px; }
   .problem-intro { position: static; display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); column-gap: 64px; align-items: start; }
-  .problem-intro .h2 { grid-column: 1; grid-row: 1 / span 2; }
+  .problem-intro .h2 { grid-column: 1; grid-row: 1 / span 2; font-size: clamp(28px, 2.9vw, 38px); text-wrap: initial; }
   .problem-intro .lead { grid-column: 2; margin-top: 0; }
   .problem-intro .lead + .lead { margin-top: 12px; }
   .problem-intro .stat { grid-column: 1 / -1; display: grid; grid-template-columns: auto minmax(0, 1fr) minmax(0, 1.2fr); column-gap: 36px; align-items: center; margin-top: 40px; }
