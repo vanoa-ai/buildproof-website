@@ -11,7 +11,7 @@
 .legal-table th { background: var(--mist-50); color: var(--navy); font-size: 13px; font-weight: 600; }
 .legal-table tr:last-child td { border-bottom: 0; }
 .article.legal a { color: var(--navy); font-weight: 600; text-underline-offset: 2px; }
-.article.legal ol { padding-left: 22px; margin: 0; display: grid; gap: 6px; }
+.article.legal ol { list-style: decimal; padding-left: 22px; margin: 0; display: grid; gap: 6px; }
 .article.legal p, .article.legal li { font-size: 16px; overflow-wrap: anywhere; }
 .article h2[id], .article p[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
 .nav a { white-space: nowrap; }
