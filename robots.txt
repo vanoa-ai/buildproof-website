@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /assets/BuildProof-gratis-stappenplan.pdf
+Disallow: /test/
+Disallow: /versie-b/
 
 Sitemap: https://site.buildproof.nl/sitemap.xml
