@@ -25,6 +25,10 @@
 <style>
 #probleem { background: var(--mist-100); padding-block: clamp(88px, 11vw, 160px); }
 #probleem .stat { background: #fff; }
+.final-note.werkvloer { display: inline-flex; align-items: center; gap: 14px; margin-top: 28px; padding: 10px 20px 10px 10px; border-radius: 16px; background: rgba(255, 255, 255, .06); border: 1px solid rgba(254, 206, 33, .4); color: #fff; font-size: clamp(15px, 1.5vw, 17px); line-height: 1.4; max-width: 100%; }
+.final-note.werkvloer i { display: grid; place-items: center; flex: none; width: 42px; height: 42px; border-radius: 12px; background: var(--amber); color: var(--navy); }
+.final-note.werkvloer i svg { width: 22px; height: 22px; }
+.final-note.werkvloer b { color: var(--amber); font-weight: 700; }
 #hoe-het-werkt .section-head .lead, #tarief .section-head .lead { background: #fff; border: 1px solid var(--mist-200); border-radius: 16px; padding: 18px 22px; box-shadow: var(--sh-1); }
 .why-copy .lead strong { color: var(--navy); font-weight: 600; }
 @media (min-width: 1024px) {
@@ -391,7 +395,7 @@
           <a class="btn btn-primary" href="/demo/">Plan een demo<svg class="ic ic-go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
           <a class="btn btn-line-dark" href="tel:+31475796164">Bel 0475 79 61 64</a>
         </div>
-        <p class="final-note">Gebouwd vanaf de werkvloer, niet vanachter een bureau.</p>
+        <p class="final-note werkvloer"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 10V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/><path d="M14 6a6 6 0 0 1 6 6v3"/><path d="M4 15v-3a6 6 0 0 1 6-6"/><rect x="2" y="15" width="20" height="4" rx="1"/></svg></i><span><b>Gebouwd vanaf de werkvloer,</b> niet vanachter een bureau.</span></p>
       </div>
       <div class="done" data-fill aria-hidden="true">
         <div class="done-head"><b>Nieuwbouw De Weide</b><span class="tnum" data-fill-count="24 van 24 gereed">14 van 24 gereed</span></div>
