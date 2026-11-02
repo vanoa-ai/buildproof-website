@@ -2,7 +2,8 @@
 .stat-num b { font-size: clamp(34px, 11vw, 60px); white-space: nowrap; }
 .plan-top { flex-wrap: wrap; }
 .foot-contact svg { flex: none; }
-.sp-grid { display: grid; gap: 40px; align-items: start; }
+.sp-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 40px; align-items: start; }
+.sp-card .btn { white-space: normal; text-align: center; }
 @media (min-width: 900px) { .sp-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 460px); gap: 64px; } }
 .sp-list { display: grid; gap: 16px; margin-top: 24px; }
 .sp-list li { display: flex; gap: 12px; font-size: 17px; line-height: 1.5; color: var(--ink-700); }
