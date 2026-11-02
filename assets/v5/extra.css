@@ -1,7 +1,17 @@
+@font-face { font-family: 'Poppins'; font-style: normal; font-weight: 400; font-display: swap; src: url('/assets/fonts/poppins-400.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Poppins'; font-style: normal; font-weight: 500; font-display: swap; src: url('/assets/fonts/poppins-500.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Poppins'; font-style: normal; font-weight: 600; font-display: swap; src: url('/assets/fonts/poppins-600.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Poppins'; font-style: normal; font-weight: 700; font-display: swap; src: url('/assets/fonts/poppins-700.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
 .logo img, .site-footer .logo img { height: 28px; width: auto; max-width: none; }
 .stat-num b { font-size: clamp(34px, 11vw, 60px); white-space: nowrap; }
 .plan-top { flex-wrap: wrap; }
 .foot-contact svg { flex: none; }
+.cal-gate { background: #fff; border: 1px solid var(--mist-200); border-radius: 20px; box-shadow: var(--sh-2); padding: clamp(24px, 4vw, 44px); display: grid; gap: 14px; justify-items: start; }
+.cal-gate h2 { font-size: 22px; font-weight: 700; color: var(--navy); }
+.cal-gate p { color: var(--ink-600); }
+.cal-gate .cal-alt { font-size: 14px; color: var(--slate-500); }
+.cal-gate a { color: var(--navy); font-weight: 600; }
 .sp-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 40px; align-items: start; }
 .sp-card .btn { white-space: normal; text-align: center; }
 @media (min-width: 900px) { .sp-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 460px); gap: 64px; } }
