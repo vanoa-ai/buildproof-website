@@ -22,6 +22,7 @@
   .site-footer ul { gap: 0; }
   .site-footer ul a, .foot-bottom a, .foot-bottom button { display: inline-flex; align-items: center; min-height: 44px; }
   .textlink { display: inline-flex; align-items: center; min-height: 44px; }
+  .ask a { display: flex; align-items: center; min-height: 44px; }
   .nav a { display: inline-flex; align-items: center; min-height: 44px; }
   .logo { padding-block: 8px; }
 }
