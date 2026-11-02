@@ -1,4 +1,8 @@
 .logo img, .site-footer img { height: 36px; width: auto; }
+.cmp-wrap::before { right: 0; border-right: 1px solid var(--mist-200); border-radius: 20px; }
+.cmp-wrap::after { left: 26%; right: 34%; }
+.cmp th:nth-child(2) { width: 40%; } .cmp th:nth-child(3) { width: 34%; }
+.cmp thead th.cmp-bp span { display: inline-block; color: var(--amber); transform: translateY(-10px); }
 .shots { display: grid; grid-template-columns: repeat(5, 200px); gap: 18px; overflow-x: auto; scroll-snap-type: x proximity; padding-bottom: 12px; }
 .shots figure { margin: 0; display: grid; gap: 12px; min-width: 0; scroll-snap-align: start; align-content: start; }
 .appshot { border-radius: 26px; overflow: hidden; border: 5px solid var(--ink-900); background: var(--ink-900); box-shadow: var(--sh-2); aspect-ratio: 1 / 2; }
