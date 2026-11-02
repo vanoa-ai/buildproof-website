@@ -3,6 +3,8 @@
 .plan-top { flex-wrap: wrap; }
 .foot-contact svg { flex: none; }
 .foot-bottom nav { flex-wrap: wrap; gap: 4px 20px; }
+.article { grid-template-columns: minmax(0, 1fr); }
+.article > * { min-width: 0; }
 .legal-table { overflow-x: auto; border: 1px solid var(--mist-200); border-radius: 14px; }
 .legal-table table { width: 100%; min-width: 520px; border-collapse: collapse; font-size: 14.5px; }
 .legal-table th, .legal-table td { text-align: left; vertical-align: top; padding: 10px 14px; border-bottom: 1px solid var(--mist-200); line-height: 1.5; }
