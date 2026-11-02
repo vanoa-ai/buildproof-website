@@ -2,6 +2,16 @@
 .stat-num b { font-size: clamp(34px, 11vw, 60px); white-space: nowrap; }
 .plan-top { flex-wrap: wrap; }
 .foot-contact svg { flex: none; }
+.foot-bottom nav { flex-wrap: wrap; gap: 4px 20px; }
+.legal-table { overflow-x: auto; border: 1px solid var(--mist-200); border-radius: 14px; }
+.legal-table table { width: 100%; min-width: 520px; border-collapse: collapse; font-size: 14.5px; }
+.legal-table th, .legal-table td { text-align: left; vertical-align: top; padding: 10px 14px; border-bottom: 1px solid var(--mist-200); line-height: 1.5; }
+.legal-table th { background: var(--mist-50); color: var(--navy); font-size: 13px; font-weight: 600; }
+.legal-table tr:last-child td { border-bottom: 0; }
+.article.legal a { color: var(--navy); font-weight: 600; text-underline-offset: 2px; }
+.article.legal ol { padding-left: 22px; margin: 0; display: grid; gap: 6px; }
+.article.legal p, .article.legal li { font-size: 16px; overflow-wrap: anywhere; }
+.article h2[id], .article p[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
 .nav a { white-space: nowrap; }
 @media (min-width: 1024px) and (max-width: 1199px) { .nav { gap: 16px; } .nav a { font-size: 14px; } .site-header .wrap { gap: 16px; } }
 @media (min-width: 768px) and (max-width: 1023px) { .capture { left: -14px; } }

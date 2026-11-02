@@ -30,6 +30,8 @@ app.use((req, res, next) => {
 app.use((req, res, next) => {
   if (/^\/(buildproof-(nieuw|v3|v4|v5)|installatieflow)(\/|$)/.test(req.path)) return res.redirect(301, '/');
   if (/^\/calendly(\/|$)/.test(req.path)) return res.redirect(301, '/demo/');
+  if (/^\/privacyverklaring(\/|$)/.test(req.path)) return res.redirect(301, '/privacybeleid/');
+  if (/^\/voorwaarden(\/|$)/.test(req.path)) return res.redirect(301, '/algemene-voorwaarden/');
   next();
 });
 
