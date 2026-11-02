@@ -22,6 +22,9 @@
 <style>
 #probleem { background: var(--mist-100); padding-block: clamp(88px, 11vw, 160px); }
 #probleem .stat { background: #fff; }
+#probleem .problem-intro .lead + .lead { position: relative; background: var(--navy); color: #fff; padding: 20px 24px; border-radius: 22px; box-shadow: var(--sh-2); margin-top: 24px; margin-bottom: 14px; }
+#probleem .problem-intro .lead + .lead strong { color: var(--amber); font-weight: 600; }
+#probleem .problem-intro .lead + .lead::after { content: ''; position: absolute; left: 34px; bottom: -14px; width: 0; height: 0; border-style: solid; border-width: 16px 18px 0 0; border-color: var(--navy) transparent transparent transparent; }
 .final-note.werkvloer { display: inline-flex; align-items: center; gap: 14px; margin-top: 28px; padding: 10px 20px 10px 10px; border-radius: 16px; background: rgba(255, 255, 255, .06); border: 1px solid rgba(254, 206, 33, .4); color: #fff; font-size: clamp(15px, 1.5vw, 17px); line-height: 1.4; max-width: 100%; }
 .final-note.werkvloer i { display: grid; place-items: center; flex: none; width: 42px; height: 42px; border-radius: 12px; background: var(--amber); color: var(--navy); }
 .final-note.werkvloer i svg { width: 22px; height: 22px; }
@@ -33,7 +36,7 @@
   .problem-intro { position: static; display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); column-gap: 64px; align-items: start; }
   .problem-intro .h2 { grid-column: 1; grid-row: 1; font-size: clamp(28px, 2.9vw, 38px); text-wrap: initial; }
   .problem-intro .h2 + .lead { grid-column: 1; grid-row: 2; margin-top: 16px; }
-  .problem-intro .lead + .lead { grid-column: 2; grid-row: 1 / span 2; align-self: center; margin-top: 0; }
+  #probleem .problem-intro .lead + .lead { grid-column: 2; grid-row: 1 / span 2; align-self: center; margin-top: 0; }
   .problem-intro .stat { grid-column: 1 / -1; display: grid; grid-template-columns: auto minmax(0, 1fr) minmax(0, 1.2fr); column-gap: 36px; align-items: center; margin-top: 40px; }
   .problem-intro .stat p { margin-top: 0; }
   .tl { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; align-items: stretch; }
@@ -171,8 +174,8 @@
               <p>Zonder vastgelegd meerwerk of meetrapport sta je zwak bij de oplevering. Dan betaal jij voor een gebrek dat niet van jou is, of voor meerwerk dat je niet kunt aantonen.</p>
               <div class="tl-vis ui claim" aria-hidden="true">
                 <small><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Vraag van de opdrachtgever</small>
-                <q>Is de vloerverwarming op kavel 9 wel afgeperst? Er is een lekkage.</q>
-                <div class="claim-foot">Foto of meetrapport<span class="pill pill-open">Niet te vinden</span></div>
+                <q>Is de ventilatie op kavel 9 wel ingeregeld? De bewoner klaagt over geluid.</q>
+                <div class="claim-foot">Meetrapport<span class="pill pill-open">Niet te vinden</span></div>
               </div>
             </div>
           </li>
