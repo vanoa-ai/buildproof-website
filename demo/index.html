@@ -49,6 +49,7 @@
     </aside>
     <div class="demo-cal">
       <div class="cal-gate" id="cal-gate"><h2>Kies een moment in de agenda</h2><p>De agenda komt van Calendly, dat eigen cookies kan plaatsen. Daarom laden we hem pas als jij dat wilt.</p><button type="button" class="btn btn-primary" id="cal-open">Open de agenda</button><p class="cal-alt">Lees meer in ons <a href="/cookiebeleid/">cookiebeleid</a>.</p></div>
+      <div class="cal-load" id="cal-load" hidden><i aria-hidden="true"></i><span>De agenda wordt geladen</span><a href="https://calendly.com/buildproof-nl/kort-gesprek" target="_blank" rel="noopener">Duurt het lang? Open de agenda los</a></div>
       <iframe hidden id="calendly" data-src="https://calendly.com/buildproof-nl/kort-gesprek?hide_gdpr_banner=1&amp;primary_color=fece21&amp;embed_domain=site.buildproof.nl&amp;embed_type=Inline" title="Plan een demo met BuildProof"></iframe>
     </div>
   </div>
@@ -109,7 +110,15 @@
 <script>
 (function () {
   var frame = document.getElementById('calendly'), gate = document.getElementById('cal-gate');
-  function load() { if (frame.src) return; frame.src = frame.getAttribute('data-src'); frame.hidden = false; gate.hidden = true; }
+  var loader = document.getElementById('cal-load');
+  function ready() { loader.hidden = true; }
+  function load() {
+    if (frame.getAttribute('src')) return;
+    gate.hidden = true; frame.hidden = false; loader.hidden = false;
+    window.addEventListener('message', function (ev) { if (ev.origin === 'https://calendly.com' && ev.data && String(ev.data.event || '').indexOf('calendly.') === 0) ready(); });
+    frame.addEventListener('load', function () { setTimeout(ready, 2500); });
+    frame.src = frame.getAttribute('data-src');
+  }
   document.getElementById('cal-open').addEventListener('click', load);
   document.addEventListener('click', function (e) { if (e.target.closest && e.target.closest('[data-accept]')) load(); });
   try { var v = JSON.parse(localStorage.getItem('buildproof_cookie_consent') || 'null'); if (v && v.value === 'accepted') load(); } catch (e) {}

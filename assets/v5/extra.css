@@ -7,6 +7,24 @@
 .stat-num b { font-size: clamp(34px, 11vw, 60px); white-space: nowrap; }
 .plan-top { flex-wrap: wrap; }
 .foot-contact svg { flex: none; }
+@media (max-width: 639px) {
+  .compare .cmp-wrap::before { display: block; position: static; content: 'Met en zonder BuildProof'; background: none; border: 0; margin-bottom: 12px; font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--slate-500); }
+  .compare .cmp { background: transparent; border: 0; box-shadow: none; overflow: visible; }
+  .compare .cmp tbody { display: grid; gap: 12px; }
+  .compare .cmp tr { display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; padding: 14px; background: #fff; border: 1px solid var(--mist-200); border-radius: 18px; box-shadow: var(--sh-1); }
+  .compare .cmp tbody th { padding: 0 0 4px; }
+  .compare .cmp td { display: grid; grid-template-columns: 24px minmax(0, 1fr); gap: 10px; align-items: start; padding: 11px 12px; border: 0; border-radius: 12px; font-size: 15px; line-height: 1.4; }
+  .compare .cmp td::before { display: none; content: none; }
+  .compare .cmp td.cmp-bp { background: var(--navy); color: #fff; }
+  .compare .cmp td.cmp-old { background: var(--mist-50); color: var(--slate-500); }
+  .compare .cmp-ic { display: inline-grid; margin: 0; width: 24px; height: 24px; vertical-align: top; }
+}
+.demo-cal { position: relative; }
+.cal-load { position: absolute; inset: 0 0 auto; height: 320px; z-index: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; background: #fff; border: 1px solid var(--mist-200); border-radius: 20px; color: var(--ink-600); font-weight: 500; text-align: center; padding: 20px; }
+.cal-load[hidden] { display: none; }
+.cal-load i { width: 34px; height: 34px; border-radius: 50%; border: 3px solid var(--mist-200); border-top-color: var(--navy); animation: cal-spin .8s linear infinite; }
+.cal-load a { color: var(--navy); font-weight: 600; font-size: 14px; }
+@keyframes cal-spin { to { transform: rotate(360deg); } }
 .cal-gate { background: #fff; border: 1px solid var(--mist-200); border-radius: 20px; box-shadow: var(--sh-2); padding: clamp(24px, 4vw, 44px); display: grid; gap: 14px; justify-items: start; }
 .demo-cal iframe[hidden] { display: none; }
 .cal-gate[hidden] { display: none; }
