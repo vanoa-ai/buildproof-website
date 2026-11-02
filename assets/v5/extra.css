@@ -8,6 +8,8 @@
 .plan-top { flex-wrap: wrap; }
 .foot-contact svg { flex: none; }
 .cal-gate { background: #fff; border: 1px solid var(--mist-200); border-radius: 20px; box-shadow: var(--sh-2); padding: clamp(24px, 4vw, 44px); display: grid; gap: 14px; justify-items: start; }
+.demo-cal iframe[hidden] { display: none; }
+.cal-gate[hidden] { display: none; }
 .cal-gate h2 { font-size: 22px; font-weight: 700; color: var(--navy); }
 .cal-gate p { color: var(--ink-600); }
 .cal-gate .cal-alt { font-size: 14px; color: var(--slate-500); }
