@@ -1,805 +1,280 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nl">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BuildProof — Onderhoudssoftware</title>
-<link rel="icon" type="image/png" href="assets/favicon.png">
-<link rel="stylesheet" href="assets/buildproof-tokens.css">
-<link rel="stylesheet" href="site.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BuildProof | Elke stap op de bouw, bewezen</title>
+<meta name="description" content="Foto&#x27;s, checklists en meetrapporten gaan direct van de bouwplaats naar de werkvoorbereiding. Ook zonder bereik. € 50,00 per gebruiker per maand.">
+<link rel="canonical" href="https://site.buildproof.nl/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BuildProof">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:title" content="BuildProof | Elke stap op de bouw, bewezen">
+<meta property="og:description" content="Foto&#x27;s, checklists en meetrapporten gaan direct van de bouwplaats naar de werkvoorbereiding. Ook zonder bereik. € 50,00 per gebruiker per maand.">
+<meta property="og:url" content="https://site.buildproof.nl/">
+<meta property="og:image" content="https://site.buildproof.nl/assets/img/hero-bouwplaats.jpg">
+<meta name="theme-color" content="#1b2a3d">
+<link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="/assets/bp.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "BuildProof", "applicationCategory": "BusinessApplication", "operatingSystem": "iOS, Android, Web", "url": "https://site.buildproof.nl/", "description": "App en dashboard waarmee installatiebedrijven per kavel vastleggen wat er op de bouw gebeurt.", "offers": {"@type": "Offer", "price": "50.00", "priceCurrency": "EUR", "description": "Per gebruiker per maand, excl. btw"}, "publisher": {"@type": "Organization", "name": "Unlimited Scalability LLC", "email": "info@buildproof.nl", "telephone": "+31475796164"}}</script>
 </head>
 <body>
-
-<!-- ============ HEADER ============ -->
-<header class="site-header">
-  <div class="wrap header-row">
-    <a class="header-logo" href="#" aria-label="BuildProof"><img src="assets/buildproof-logo.png" alt="BuildProof"></a>
-    <nav class="main-nav">
-      <a class="nav-item" href="#product">Product</a>
-      <a class="nav-item" href="#voordelen">Voordelen</a>
-      <a class="nav-item" href="blog/">Kennisbank</a>
-      <a class="nav-item" href="demo/">Demo</a>
-    </nav>
-    <div class="header-actions">
-      <a href="calendly/" class="btn btn-gold">Probeer het gratis</a>
-      <a href="demo/" class="btn btn-dark">Vraag een demo aan</a>
-      <button class="m-burger" id="burgerBtn" aria-label="Menu openen">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-      </button>
-    </div>
-  </div>
-</header>
-
-<!-- ============ MOBILE NAV ============ -->
-<div class="m-nav-overlay" id="mNav">
-  <div class="m-nav-panel">
-    <button class="m-nav-close" id="mNavClose" aria-label="Menu sluiten">
-      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
-    </button>
-    <nav class="m-nav-links">
-      <a href="#product">Product</a>
-      <a href="#voordelen">Voordelen</a>
-      <a href="blog/">Kennisbank</a>
-      <a href="demo/">Demo</a>
-    </nav>
-    <div class="m-nav-ctas">
-      <a href="calendly/" class="btn btn-gold">Probeer het gratis</a>
-      <a href="demo/" class="btn btn-dark">Vraag een demo aan</a>
-    </div>
-  </div>
-</div>
-
-<!-- ============ HERO ============ -->
-<section class="hero">
-  <div class="wrap hero-inner">
-    <h1>Vereenvoudig <b>het onderhoud</b><br>met <b>moderne software</b> .</h1>
-    <div class="hero-ctas">
-      <a href="calendly/" class="btn btn-gold btn-lg">Ontdek het product</a>
-      <a href="demo/" class="btn btn-dark btn-lg">Vraag een demo aan</a>
-    </div>
-  </div>
-</section>
-
-<!-- ============ FEATURE TABS ============ -->
-<section class="features" id="product">
-  <div class="wrap">
-    <div class="tabbar" role="tablist">
-      <button class="tab" role="tab" aria-selected="true"  data-tab="0">Voorzieningen</button>
-      <button class="tab" role="tab" aria-selected="false" data-tab="1">Onderhoudsplannen</button>
-      <button class="tab" role="tab" aria-selected="false" data-tab="2">bestellingen</button>
-      <button class="tab" role="tab" aria-selected="false" data-tab="3">reserveonderdelen</button>
-      <button class="tab" role="tab" aria-selected="false" data-tab="4">Dashboards</button>
-    </div>
-
-    <div class="tab-panels">
-
-      <!-- PANEL 0 — Voorzieningen -->
-      <div class="panel active" data-panel="0">
-        <div class="panel-grid">
-          <div class="panel-copy">
-            <h2>Verhoog de beschik&shy;baarheid van assets</h2>
-            <p>Krijg een helder en gestructureerd overzicht van de volledige historie van elk object op alle locaties. Krijg direct toegang tot al uw onderhoudsgegevens en de geavanceerde AI-copilot om optimale beslissingen te nemen.</p>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <linearGradient id="lw" x1="0.21" y1="0.09" x2="0.79" y2="0.91"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#cdd7e3"/></linearGradient>
+  <linearGradient id="la" x1="0.21" y1="0.09" x2="0.79" y2="0.91"><stop offset="0" stop-color="#fff0a8"/><stop offset="1" stop-color="#e9ad00"/></linearGradient>
+  <filter id="ls" x="-40%" y="-60%" width="180%" height="220%"><feDropShadow dx="1.72" dy="2.46" stdDeviation="4" flood-color="#000" flood-opacity="0.3"/></filter>
+  <symbol id="mark" viewBox="0 6 104 88"><g transform="translate(13.4 0) skewX(-15)"><rect x="12" y="63.5" width="76" height="17" rx="3" fill="url(#lw)" filter="url(#ls)"/><rect x="12" y="41.5" width="76" height="17" rx="3" fill="url(#lw)" filter="url(#ls)"/><rect x="12" y="19.5" width="76" height="17" rx="3" fill="url(#la)" filter="url(#ls)"/></g></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></symbol>
+  <symbol id="i-wind" viewBox="0 0 24 24"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4M12 17h.01"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24"><path d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4z"/><path d="M8 2v16M16 6v16"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8"/></symbol>
+  <symbol id="i-scan" viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2M3 12h18"/></symbol>
+  <symbol id="i-share" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.59 13.51 6.83 3.98M15.41 6.51l-6.82 3.98"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+  <symbol id="i-bars" viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="i-server" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><path d="M6 6h.01M6 18h.01"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+  <symbol id="i-archive" viewBox="0 0 24 24"><path d="M21 8v13H3V8M1 3h22v5H1zM10 12h4"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+</defs></svg>
+<header class="nav"><div class="in"><a class="word" href="/" aria-label="BuildProof, naar de homepage"><svg aria-hidden="true"><use href="#mark"/></svg>BuildProof</a><div class="nav-right"><nav aria-label="Hoofdmenu"><a href="/#functies">Functies</a><a href="/#tarief">Tarief</a><a href="/#starten">Starten</a><a href="/#vragen">Vragen</a><a href="/blog/">Kennisbank</a><a class="btn amber" href="/demo/">Plan een demo</a></nav><details class="menu"><summary aria-label="Menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg></summary><div class="menu-panel"><a href="/#functies">Functies</a><a href="/#tarief">Tarief</a><a href="/#starten">Starten</a><a href="/#vragen">Vragen</a><a href="/blog/">Kennisbank</a><a href="/privacyverklaring/">Privacyverklaring</a></div></details></div></div></header>
+<main id="top">
+  <section class="hero">
+    <div class="in">
+      <div class="hero-copy">
+        <div>
+          <div class="label">Voor installatiebedrijven in de woningbouw</div>
+          <h1>Elke stap op de bouw, bewezen.</h1>
+          <p class="hero-sub">Foto's, checklists en meetrapporten gaan direct van de bouwplaats naar de werkvoorbereiding. Ook zonder bereik. Gebouwd vanaf de werkvloer, niet vanachter een bureau.</p>
+        </div>
+        <div class="cta">
+          <a class="btn amber" href="/demo/">Plan een demo</a>
+          <a class="btn line" href="#tarief">Bekijk het tarief</a>
+        </div>
+      </div>
+      <div class="dim" aria-hidden="true"><span>kavel 1</span><i></i><span>oplevering</span></div>
+      <div class="stage">
+        <figure><img src="/assets/img/hero-bouwplaats.jpg" alt="Twee monteurs met koffie bij de open achterdeuren van hun bus in een nieuwbouwwijk" width="1400" height="1120"></figure>
+        <div class="board" role="img" aria-label="Voorbeeldproject met 24 kavels: 14 gereed, 5 bezig, 2 open en 3 nog niet gestart">
+          <div class="board-top"><strong>Nieuwbouw De Weide</strong><span>Voorbeeldproject</span></div>
+          <div class="kavels" aria-hidden="true">
+            <b class="g">1</b><b class="g">2</b><b class="g">3</b><b class="g">4</b><b class="g">5</b><b class="g">6</b>
+            <b class="g">7</b><b class="b">8</b><b class="o">9</b><b class="g">10</b><b class="g">11</b><b class="g">12</b>
+            <b class="g">13</b><b class="b">14</b><b class="g">15</b><b class="o">16</b><b class="g">17</b><b class="b">18</b>
+            <b class="g">19</b><b class="n">20</b><b class="b">21</b><b class="b">22</b><b class="n">23</b><b class="n">24</b>
           </div>
-          <div class="mock-stage">
-            <div class="ph-photo photo-tl"><div class="pp pp1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 21a7 7 0 0 1 14 0"/><circle cx="12" cy="8" r="4"/><path d="M8 7a4 4 0 0 1 8 0"/></svg></div></div>
-            <div class="laptop">
-              <div class="laptop-bar"><i></i><i></i><i></i><span class="grab"></span></div>
-              <div class="app">
-                <div class="app-rail">
-  <span class="ic brand"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"><path d="M5 4l14 16M19 4L5 20"/></svg></span>
-  <span class="ic active"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l2 4 4 .6-3 3 .7 4-3.7-2-3.7 2 .7-4-3-3 4-.6z"/></svg></span>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12M6 12h12M6 16h8"/></svg>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3-3"/></svg>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 11h16"/></svg>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="16" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4-8 4-8-4 8-4zM4 13l8 4 8-4M4 17l8 4 8-4"/></svg>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18"/></svg>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
-  <span class="sp"></span>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M5 20a7 7 0 0 1 14 0"/></svg>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M18.4 5.6 17 7M7 17l-1.4 1.4"/></svg>
-</div>
-                <div class="app-main">
-                  <div class="app-head"><div class="app-title">Activa <span class="dd">▾</span></div><span class="app-add">+ Toevoegen</span></div>
-                  <div class="app-toolbar">
-                    <span class="tool-chip">▦ Tabel</span>
-                    <span class="tool-search">Zoek activa…</span>
-                    <span class="tool-chip">⇅ Sorteren</span>
-                    <span class="tool-chip">▽ Filteren</span>
-                  </div>
-                  <table class="dt">
-                    <thead><tr><th>Status</th><th>Asset</th><th>Locatie</th><th>Categorie</th><th>Laatste onderhoud</th></tr></thead>
-                    <tbody>
-                      <tr><td><span class="pill on">Actief</span></td><td>Transportband A-12</td><td>Hal 2</td><td>Mechanica</td><td>10.03.2025</td></tr>
-                      <tr><td><span class="pill on">Actief</span></td><td>Compressor CDC-12384</td><td>Hal 1</td><td>Pneumatiek</td><td>13.03.2025</td></tr>
-                      <tr><td><span class="pill on">Actief</span></td><td>Pomp P-204</td><td>Buiten</td><td>Hydrauliek</td><td>01.04.2025</td></tr>
-                      <tr><td><span class="pill off">Inactief</span></td><td>Generator G-9</td><td>Kelder</td><td>Elektra</td><td>05.04.2025</td></tr>
-                      <tr><td><span class="pill on">Actief</span></td><td>Ventilatie L-7</td><td>Dak</td><td>HVAC</td><td>21.04.2025</td></tr>
-                      <tr><td><span class="pill on">Actief</span></td><td>Robotcel R-2</td><td>Hal 3</td><td>Robotica</td><td>01.05.2025</td></tr>
-                      <tr><td><span class="pill off">Inactief</span></td><td>Menger M-4122</td><td>Hal 2</td><td>Mechanica</td><td>21.05.2025</td></tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-            <div class="ph-photo photo-br"><div class="pp pp4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 21a7 7 0 0 1 14 0"/><circle cx="12" cy="8" r="4"/><path d="M8 7a4 4 0 0 1 8 0"/></svg></div></div>
+          <div class="legend" aria-hidden="true">
+            <span><i class="g"></i><b>14</b> gereed</span><span><i class="b"></i><b>5</b> bezig</span><span><i class="o"></i><b>2</b> open</span><span><i class="n" style="box-shadow:inset 0 0 0 1px #8a94a3"></i><b>3</b> nog niet</span>
           </div>
         </div>
-        <div class="trust-strip">
-  <span class="stars">★★★★★</span>
-  <span class="trust-label">Ontdek waarom andere bedrijven ons vertrouwen</span>
-</div>
       </div>
+    </div>
+  </section>
 
-      <!-- PANEL 1 — Onderhoudsplannen -->
-      <div class="panel" data-panel="1">
-        <div class="panel-grid">
-          <div class="panel-copy">
-            <h2>Voorkom ongeplande uitval.</h2>
-            <p>Richt je op preventief onderhoud en voorkom storingen voordat ze zich voordoen. Standaardiseer, plan en scheduleer onderhoudsactiviteiten zodat je team altijd een stap voor is op storingen, de stilstandtijd verkort en efficiënter werkt.</p>
+  <section class="band white after-hero">
+    <div class="in split">
+      <div class="head">
+        <h2>Het werk is goed gedaan. Maar staat het ook in het dossier?</h2>
+        <p class="lead">Bij een vraag of claim ligt de bewijslast bij jou, ook als het werk al jaren achter een wand zit.</p>
+      </div>
+      <ul class="pains">
+        <li><h3>Bewijs staat overal en nergens</h3><p>Foto's staan in camerarollen en groepsapps, zonder kavel of onderdeel erbij. Checklists op papier, meetwaarden in een schrift.</p></li>
+        <li><h3>Je ziet het pas achteraf</h3><p>Wat er op de bouw gebeurt, komt pas binnen als iemand het doorstuurt. De status per kavel houdt iemand bij in Excel, als daar tijd voor is.</p></li>
+        <li><h3>Dat kost discussie en geld</h3><p>Zonder meetrapport of vastgelegd meerwerk sta je zwak bij de oplevering, en betaal je voor iets dat je niet kunt aantonen.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="band" id="functies">
+    <div class="in stack" style="gap:clamp(40px,6vw,72px)">
+      <div class="field">
+        <figure><img src="/assets/img/monteur-portret.jpg" alt="Lachende monteur met een kop koffie bij zijn bus" width="1000" height="1339" loading="lazy"></figure>
+        <div class="stack">
+          <div class="head">
+            <div class="label">Op de bouwplaats</div>
+            <h2>Openen, kavel kiezen, vastleggen.</h2>
+            <p class="lead">Als de monteur het niet gebruikt, werkt het niet. De app voor iOS, Android en tablet bewaart alles en verstuurt het zodra er bereik is.</p>
           </div>
-          <div class="mock-stage">
-            <div class="ph-photo photo-tl"><div class="pp pp1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 21a7 7 0 0 1 14 0"/><circle cx="12" cy="8" r="4"/><path d="M8 7a4 4 0 0 1 8 0"/></svg></div></div>
-            <div class="laptop">
-              <div class="laptop-bar"><i></i><i></i><i></i><span class="grab"></span></div>
-              <div class="app">
-                <div class="app-rail">
-  <span class="ic brand"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"><path d="M5 4l14 16M19 4L5 20"/></svg></span>
-  <span class="ic active"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l2 4 4 .6-3 3 .7 4-3.7-2-3.7 2 .7-4-3-3 4-.6z"/></svg></span>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12M6 12h12M6 16h8"/></svg>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3-3"/></svg>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 11h16"/></svg>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="16" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4-8 4-8-4 8-4zM4 13l8 4 8-4M4 17l8 4 8-4"/></svg>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18"/></svg>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
-  <span class="sp"></span>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M5 20a7 7 0 0 1 14 0"/></svg>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M18.4 5.6 17 7M7 17l-1.4 1.4"/></svg>
-</div>
-                <div class="app-main">
-                  <div class="app-head"><div class="app-title">Alle onderhoudsplannen <span class="dd">▾</span></div><span class="app-add">+ Toevoegen</span></div>
-                  <div class="app-toolbar">
-                    <span class="tool-chip">▦ Tabel</span>
-                    <span class="tool-search">Zoek onderhoudsplannen…</span>
-                    <span class="tool-chip">⇅ Sorteren</span>
-                    <span class="tool-chip">▽ Filteren</span>
-                  </div>
-                  <table class="dt">
-                    <thead><tr><th>Status</th><th>Onderwerp</th><th>Activa</th><th>Startdatum</th><th>Periode</th></tr></thead>
-                    <tbody>
-                      <tr><td><span class="pill on">Actief</span></td><td>Keuringsplanning augustus</td><td>⚙ CDC-12384</td><td>10.03.2025</td><td>1 jaar</td></tr>
-                      <tr><td><span class="pill on">Actief</span></td><td>Smeermiddel vervangen</td><td>⚙ CDC-12384</td><td>13.03.2025</td><td>1 jaar</td></tr>
-                      <tr><td><span class="pill on">Actief</span></td><td>Machines ontvetten</td><td>⚙ CDC-12384</td><td>01.04.2025</td><td>6 maanden</td></tr>
-                      <tr><td><span class="pill on">Actief</span></td><td>Documentatie bijwerken</td><td>⚙ CDC-12384</td><td>01.05.2025</td><td>Wekelijks</td></tr>
-                      <tr><td><span class="pill on">Actief</span></td><td>Controleren op software-update</td><td>⚙ X1242</td><td>01.08.2025</td><td>2 maanden</td></tr>
-                      <tr><td><span class="pill off">Inactief</span></td><td>Controleren op software-update</td><td>⚙ CDC-12384</td><td>21.08.2025</td><td>6 maanden</td></tr>
-                      <tr><td><span class="pill off">Inactief</span></td><td>Reiniging</td><td>⚙ CDC-12384</td><td>21.10.2025</td><td>1 maand</td></tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-            <div class="phone">
-              <div class="scr">
-                <div class="ph-head"><span class="bp"></span> Opdrachten van mijn groep ▾</div>
-                <div class="ph-card"><span class="tag">Open</span><h5>Jaarlijkse smeerbeurt nodig</h5><div class="meta">👤 Hans Mulder</div><div class="meta">⚙ CDC-12384</div></div>
-                <div class="ph-card"><span class="tag">Open</span><h5>Documentatie inbedrijfstelling machine</h5><div class="meta">👤 Peter de Boer</div><div class="meta">⚙ CDC-12384</div></div>
-              </div>
-            </div>
+          <div class="feats">
+            <div class="feat"><svg aria-hidden="true"><use href="#i-camera"/></svg><div><h3>Foto's</h3><p>Per kavel en onderdeel, meteen op de juiste plek.</p></div></div>
+            <div class="feat"><svg aria-hidden="true"><use href="#i-check"/></svg><div><h3>Checklists</h3><p>Door jou ingesteld. Een deel is pas af als de vragen zijn beantwoord.</p></div></div>
+            <div class="feat"><svg aria-hidden="true"><use href="#i-wind"/></svg><div><h3>Meetrapport</h3><p>Inregelen op de telefoon, voor elk merk. Het rapport staat klaar als PDF.</p></div></div>
+            <div class="feat"><svg aria-hidden="true"><use href="#i-plus"/></svg><div><h3>Meerwerk</h3><p>Met foto en omschrijving, vastgelegd vóór de discussie.</p></div></div>
+            <div class="feat"><svg aria-hidden="true"><use href="#i-pen"/></svg><div><h3>Leverbonnen</h3><p>Direct laten aftekenen, gekoppeld aan de verwachte levering.</p></div></div>
+            <div class="feat"><svg aria-hidden="true"><use href="#i-alert"/></svg><div><h3>Storingen en veiligheid</h3><p>Storingen, afwijkingen en veiligheidsmeldingen op één plek.</p></div></div>
+            <div class="feat"><svg aria-hidden="true"><use href="#i-map"/></svg><div><h3>Tekeningen</h3><p>De tekeningen van het project altijd bij de hand.</p></div></div>
+            <div class="feat"><svg aria-hidden="true"><use href="#i-clock"/></svg><div><h3>Uren en planning</h3><p>Uren per persoon en project. De planning staat in de app.</p></div></div>
           </div>
         </div>
-        <div class="trust-strip">
-  <span class="stars">★★★★★</span>
-  <span class="trust-label">Ontdek waarom andere bedrijven ons vertrouwen</span>
-</div>
       </div>
 
-      <!-- PANEL 2 — bestellingen -->
-      <div class="panel" data-panel="2">
-        <div class="panel-grid">
-          <div class="panel-copy">
-            <h2>Beheer alle<br>maatregelen centraal.</h2>
-            <p>Centraal aanmaken, plannen, volgen en uitvoeren van onderhoudsorders. Zorg ervoor dat de werkvloer altijd weet welke werkzaamheden er moeten worden uitgevoerd, wanneer en hoe, terwijl de backoffice elke stap in de gaten houdt.</p>
+      <div class="office">
+        <div class="head">
+          <div class="label">Voor de werkvoorbereiding</div>
+          <h2>Je ziet per kavel wat klaar is, zonder na te bellen.</h2>
+          <p class="lead">Het dashboard in de browser laat zien wat er op de bouw gebeurt, op het moment dat het gebeurt.</p>
+        </div>
+        <div class="feats">
+          <div class="feat"><svg aria-hidden="true"><use href="#i-grid"/></svg><div><h3>Status per kavel</h3><p>Op plattegrond of in mappen, met het bewijs erbij.</p></div></div>
+          <div class="feat"><svg aria-hidden="true"><use href="#i-file"/></svg><div><h3>Dossier</h3><p>Rapport als PDF of ZIP per project of kavel, garanties erbij.</p></div></div>
+          <div class="feat"><svg aria-hidden="true"><use href="#i-scan"/></svg><div><h3>Tekening uitlezen</h3><p>Luchtstaat, kavels en onderdelen uit de tekening. Jij controleert.</p></div></div>
+          <div class="feat"><svg aria-hidden="true"><use href="#i-share"/></svg><div><h3>Delen</h3><p>Voortgang delen met hoofdaannemer of opdrachtgever via een link.</p></div></div>
+          <div class="feat"><svg aria-hidden="true"><use href="#i-cal"/></svg><div><h3>Planning en orders</h3><p>Rooster per medewerker, orderbevestigingen en leveringen per project.</p></div></div>
+          <div class="feat"><svg aria-hidden="true"><use href="#i-bars"/></svg><div><h3>Cijfers</h3><p>Voortgang per week, maand, kwartaal of jaar. Uren en meerwerk als PDF.</p></div></div>
+          <div class="feat"><svg aria-hidden="true"><use href="#i-users"/></svg><div><h3>Team</h3><p>Onderaannemers en tijdelijke monteurs via een uitnodigingslink.</p></div></div>
+          <div class="feat"><svg aria-hidden="true"><use href="#i-server"/></svg><div><h3>Jouw merk en server</h3><p>Eigen logo, en automatisch een kopie naar je eigen server.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band white shots-band" id="schermen">
+    <div class="in">
+      <div class="head">
+        <div class="label">De app</div>
+        <h2>Zo ziet het er op de bouw uit.</h2>
+        <p class="lead">Echte schermen uit de app, met een voorbeeldproject.</p>
+      </div>
+      <div class="shots">
+        <figure><div class="phone"><img src="/assets/screens/kavels.jpg" alt="Lijst met kavels en de voortgang per kavel" width="460" height="920" loading="lazy"></div><figcaption>Kavels<span>Per kavel zien wat klaar is.</span></figcaption></figure>
+        <figure><div class="phone"><img src="/assets/screens/camera.jpg" alt="Camera met gekozen onderdeel en kavel" width="460" height="920" loading="lazy"></div><figcaption>Camera<span>Kavel en onderdeel staan er al bij.</span></figcaption></figure>
+        <figure><div class="phone"><img src="/assets/screens/kavel.jpg" alt="Kavel met foto's per onderdeel en per deel" width="460" height="920" loading="lazy"></div><figcaption>Kavel<span>Foto's per onderdeel en deel.</span></figcaption></figure>
+        <figure><div class="phone"><img src="/assets/screens/inregelen.jpg" alt="Meetrapport met streefwaarden per ruimte" width="460" height="920" loading="lazy"></div><figcaption>Meetrapport<span>Inregelen per ruimte.</span></figcaption></figure>
+        <figure><div class="phone"><img src="/assets/screens/acties.jpg" alt="Acties: meerwerk, veiligheid, uren, leverbonnen en tekeningen" width="460" height="920" loading="lazy"></div><figcaption>Acties<span>Meerwerk, uren en leverbonnen.</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="band pricing" id="tarief">
+    <div class="in">
+      <div class="head">
+        <div class="label">Tarief</div>
+        <h2>Eén prijs, alle modules erin.</h2>
+        <p class="lead">Geen pakketten om uit te kiezen en geen tweede app meer nodig. Je betaalt per gebruiker.</p>
+      </div>
+      <div class="price-grid">
+        <div class="card calc">
+          <div><div class="amount">€ 50,00</div><div class="per">per gebruiker per maand, excl. btw</div></div>
+          <div class="slider">
+            <label for="users"><span>Aantal gebruikers</span><output id="users-out" for="users">15</output></label>
+            <input id="users" type="range" min="1" max="60" step="1" value="15">
           </div>
-          <div class="mock-stage">
-            <div class="ph-photo photo-tl"><div class="pp pp1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 21a7 7 0 0 1 14 0"/><circle cx="12" cy="8" r="4"/><path d="M8 7a4 4 0 0 1 8 0"/></svg></div></div>
-            <div class="laptop">
-              <div class="laptop-bar"><i></i><i></i><i></i><span class="grab"></span></div>
-              <div class="app">
-                <div class="app-rail">
-  <span class="ic brand"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"><path d="M5 4l14 16M19 4L5 20"/></svg></span>
-  <span class="ic active"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l2 4 4 .6-3 3 .7 4-3.7-2-3.7 2 .7-4-3-3 4-.6z"/></svg></span>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12M6 12h12M6 16h8"/></svg>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3-3"/></svg>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 11h16"/></svg>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="16" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4-8 4-8-4 8-4zM4 13l8 4 8-4M4 17l8 4 8-4"/></svg>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18"/></svg>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
-  <span class="sp"></span>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M5 20a7 7 0 0 1 14 0"/></svg>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M18.4 5.6 17 7M7 17l-1.4 1.4"/></svg>
-</div>
-                <div class="app-main">
-                  <div class="app-head"><div class="app-title">Planningsweergave</div><span class="tool-chip">⤢ Volledig scherm</span><span class="app-add">+ Toevoegen</span></div>
-                  <div class="app-toolbar"><span class="tool-chip">Vandaag ▾</span><span class="tool-chip">‹ Januari 2025 ›</span></div>
-                  <table class="dt">
-                    <thead><tr><th>Uitvoerenden</th><th>Wk 01</th><th>Wk 02</th><th>Wk 03</th></tr></thead>
-                    <tbody>
-                      <tr><td>Alexander Mulder</td><td><span class="gbar" style="background:var(--success-bg);color:var(--success);padding:2px 6px;border-radius:4px;font-size:9px;font-weight:800;">Inbedrijfstelling</span></td><td></td><td></td></tr>
-                      <tr><td>Mechanicaer</td><td></td><td><span class="gbar" style="background:var(--blue-100);color:var(--blue-600);padding:2px 6px;border-radius:4px;font-size:9px;font-weight:800;">Opdrachtvoorbereiding</span></td><td></td></tr>
-                      <tr><td>Adrian Kuvalis</td><td><span class="gbar" style="background:var(--success-bg);color:var(--success);padding:2px 6px;border-radius:4px;font-size:9px;font-weight:800;">Mechanisch werk</span></td><td></td><td></td></tr>
-                      <tr><td>Philip Kurze</td><td></td><td><span class="gbar" style="background:var(--success-bg);color:var(--success);padding:2px 6px;border-radius:4px;font-size:9px;font-weight:800;">Mechanisch werk</span></td><td></td></tr>
-                      <tr><td>Elektroniker</td><td></td><td></td><td><span class="gbar" style="background:var(--success-bg);color:var(--success);padding:2px 6px;border-radius:4px;font-size:9px;font-weight:800;">Elektrisch werk</span></td></tr>
-                      <tr><td>Claudia Howell</td><td></td><td></td><td></td></tr>
-                      <tr><td>Antonio Abernathy</td><td></td><td></td><td></td></tr>
-                      <tr><td>Malcolm Murphy</td><td></td><td></td><td></td></tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-            <div class="ph-photo photo-br"><div class="pp pp2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></div></div>
+          <div class="totals">
+            <div><small>Per maand</small><strong id="month">€ 750,00</strong></div>
+            <div><small>Per jaar</small><strong id="year">€ 9.000,00</strong></div>
           </div>
+          <ul class="included" aria-label="Inbegrepen">
+            <li>Foto's</li><li>Checklists</li><li>Meetrapport</li><li>Meerwerk</li><li>Leverbonnen</li><li>Storingen</li><li>Veiligheid</li><li>Uren</li><li>Planning</li><li>Tekeningen</li><li>Rapporten</li>
+          </ul>
         </div>
-        <div class="trust-strip">
-  <span class="stars">★★★★★</span>
-  <span class="trust-label">Ontdek waarom andere bedrijven ons vertrouwen</span>
-</div>
-      </div>
-
-      <!-- PANEL 3 — reserveonderdelen -->
-      <div class="panel" data-panel="3">
-        <div class="panel-grid">
-          <div class="panel-copy">
-            <h2>Houd reserveonderdelen onder controle.</h2>
-            <p>Beheer en bewaak de voorraadniveaus op alle locaties om kostbare tekorten en spoedbestellingen te voorkomen, zodat u de juiste onderdelen op tijd klaar hebt voor de volgende onderhoudsbeurt.</p>
-          </div>
-          <div class="mock-stage">
-            <div class="ph-photo photo-tl"><div class="pp pp1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 21a7 7 0 0 1 14 0"/><circle cx="12" cy="8" r="4"/><path d="M8 7a4 4 0 0 1 8 0"/></svg></div></div>
-            <div class="laptop">
-              <div class="laptop-bar"><i></i><i></i><i></i><span class="grab"></span></div>
-              <div class="app">
-                <div class="app-rail">
-  <span class="ic brand"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"><path d="M5 4l14 16M19 4L5 20"/></svg></span>
-  <span class="ic active"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l2 4 4 .6-3 3 .7 4-3.7-2-3.7 2 .7-4-3-3 4-.6z"/></svg></span>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12M6 12h12M6 16h8"/></svg>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3-3"/></svg>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 11h16"/></svg>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="16" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4-8 4-8-4 8-4zM4 13l8 4 8-4M4 17l8 4 8-4"/></svg>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18"/></svg>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
-  <span class="sp"></span>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M5 20a7 7 0 0 1 14 0"/></svg>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M18.4 5.6 17 7M7 17l-1.4 1.4"/></svg>
-</div>
-                <div class="app-main">
-                  <div class="app-head"><div class="app-title">Alle reserveonderdelen <span class="dd">▾</span></div><span class="app-add">+ Toevoegen</span></div>
-                  <div class="app-toolbar"><span class="tool-chip">▦ Tabel</span><span class="tool-search">Artikel zoeken…</span><span class="tool-chip">⇅ Sorteren</span><span class="tool-chip">▽ Filteren</span></div>
-                  <table class="dt">
-                    <thead><tr><th>Naam</th><th>Artikelnr.</th><th>Beschikbaar</th><th>Benodigd</th><th>Wijziging</th><th>Opslaglocatie</th></tr></thead>
-                    <tbody>
-                      <tr><td>Katalysator</td><td>C-0321</td><td>55</td><td>50</td><td class="neg">-9</td><td>Ruimte 21A</td></tr>
-                      <tr><td>Katalysator Plus</td><td>C-2038</td><td>35</td><td>30</td><td>0</td><td class="muted">-</td></tr>
-                      <tr><td>Schone luchtkataly…</td><td>C-8904</td><td>35</td><td>30</td><td>0</td><td class="muted">-</td></tr>
-                      <tr><td>Eco-katalysator</td><td>C-7851</td><td>51</td><td>50</td><td>0</td><td>Ruimte 21A</td></tr>
-                      <tr><td>Milieuvriendelijk…</td><td>C-5127</td><td class="neg">5</td><td>10</td><td>0</td><td class="muted">-</td></tr>
-                      <tr><td>Emissiefilter</td><td>C-1573</td><td class="neg">5</td><td>10</td><td class="pos">+1</td><td class="muted">-</td></tr>
-                      <tr><td>Uitlaatreiniger</td><td>C-4829</td><td>42</td><td>40</td><td class="neg">-2</td><td class="muted">·</td></tr>
-                      <tr><td>Groene katalysat…</td><td>C-3460</td><td>40</td><td>40</td><td>0</td><td class="muted">·</td></tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-            <div class="ph-photo photo-br"><div class="pp pp2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8l9-5 9 5v8l-9 5-9-5z"/><path d="M3 8l9 5 9-5M12 13v8"/></svg></div></div>
-          </div>
+        <div class="card prak">
+          <div class="label">Uit de praktijk</div>
+          <h3>1 fte bespaard bij een bedrijf van 10 tot 20 man</h3>
+          <table>
+            <tr><td>Uren controleren en inboeken</td><td>8 uur per week</td></tr>
+            <tr><td>Foto's naar mappen slepen</td><td>8 uur per week</td></tr>
+            <tr><td>Checklists controleren</td><td>3 uur per week</td></tr>
+            <tr class="sum"><td>Alleen al op kantoor</td><td>19 uur per week</td></tr>
+          </table>
+          <p>Daar komen opleverdossiers, meetrapporten en minder navragen op de bouw nog bij.</p>
+          <p class="fine">Praktijkcijfers van een bestaand installatiebedrijf. Indicatie loonkosten 1 fte administratief medewerker: € 55.000,00 tot € 65.000,00 per jaar.</p>
         </div>
-        <div class="trust-strip">
-  <span class="stars">★★★★★</span>
-  <span class="trust-label">Ontdek waarom andere bedrijven ons vertrouwen</span>
-</div>
       </div>
+    </div>
+  </section>
 
-      <!-- PANEL 4 — Dashboards -->
-      <div class="panel" data-panel="4">
-        <div class="panel-grid">
-          <div class="panel-copy">
-            <h2>Verkrijg waardevolle inzichten en KPI's.</h2>
-            <p>Volg trends met kant-en-klare rapporten en dashboards en verbind BuildProof via robuuste API's met de favoriete BI-tools van uw IT-team voor diepgaandere analyses.</p>
-          </div>
-          <div class="mock-stage">
-            <div class="ph-photo photo-tl"><div class="pp pp4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 21a7 7 0 0 1 14 0"/><circle cx="12" cy="8" r="4"/><path d="M8 7a4 4 0 0 1 8 0"/></svg></div></div>
-            <div class="laptop">
-              <div class="laptop-bar"><i></i><i></i><i></i><span class="grab"></span></div>
-              <div class="app">
-                <div class="app-rail">
-  <span class="ic brand"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"><path d="M5 4l14 16M19 4L5 20"/></svg></span>
-  <span class="ic active"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l2 4 4 .6-3 3 .7 4-3.7-2-3.7 2 .7-4-3-3 4-.6z"/></svg></span>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12M6 12h12M6 16h8"/></svg>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3-3"/></svg>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 11h16"/></svg>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="16" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4-8 4-8-4 8-4zM4 13l8 4 8-4M4 17l8 4 8-4"/></svg>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18"/></svg>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
-  <span class="sp"></span>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M5 20a7 7 0 0 1 14 0"/></svg>
-  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M18.4 5.6 17 7M7 17l-1.4 1.4"/></svg>
-</div>
-                <div class="app-main">
-                  <div class="app-head"><div class="app-title">Dashboard</div><span class="tool-chip">Filter op datum ▾</span></div>
-                  <div class="kpi-row">
-                    <div class="kpi"><div class="lbl">Activa</div><div class="val">5.723 <span class="neg">↓60%</span></div></div>
-                    <div class="kpi"><div class="lbl">Werkorders</div><div class="val">403 <span class="pos">↑103%</span></div></div>
-                    <div class="kpi"><div class="lbl">Contacten</div><div class="val">1.234 <span class="neg">↓60%</span></div></div>
-                    <div class="kpi"><div class="lbl">Reserveonderdelen</div><div class="val">26.329 <span class="pos">↑103%</span></div></div>
-                  </div>
-                  <div style="font-size:11px;font-weight:800;color:var(--ink-900);margin:4px 0 8px;">Proces-KPI's</div>
-                  <div class="charts">
-                    <div class="chart-card">
-                      <div class="ct">Top organisaties met tickets</div>
-                      <div class="bars">
-                        <div class="bar-row"><span class="nm">Avegan</span><span class="bar" style="width:70%;background:#1b2a3d;"></span></div>
-                        <div class="bar-row"><span class="nm">Rhein Met.</span><span class="bar" style="width:55%;background:var(--success);"></span></div>
-                        <div class="bar-row"><span class="nm">de Boer AG</span><span class="bar" style="width:42%;background:var(--blue-500);"></span></div>
-                        <div class="bar-row"><span class="nm">Donau Ex.</span><span class="bar" style="width:62%;background:#1b2a3d;"></span></div>
-                        <div class="bar-row"><span class="nm">Test 1</span><span class="bar" style="width:38%;background:var(--success);"></span></div>
-                      </div>
-                    </div>
-                    <div class="chart-card">
-                      <div class="ct">Verwerkingstijd meldingen</div>
-                      <div class="spark"><svg viewBox="0 0 120 60" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%"><path d="M0,45 L15,30 L30,38 L45,18 L60,26 L75,12 L90,28 L105,20 L120,30 L120,60 L0,60 Z" fill="rgba(43,95,158,.22)"/><path d="M0,45 L15,30 L30,38 L45,18 L60,26 L75,12 L90,28 L105,20 L120,30" fill="none" stroke="var(--blue-600)" stroke-width="2"/></svg></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="ph-photo photo-br"><div class="pp pp3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 21a7 7 0 0 1 14 0"/><circle cx="12" cy="8" r="4"/><path d="M8 7a4 4 0 0 1 8 0"/></svg></div></div>
-          </div>
-        </div>
-        <div class="trust-strip">
-  <span class="stars">★★★★★</span>
-  <span class="trust-label">Ontdek waarom andere bedrijven ons vertrouwen</span>
-</div>
+  <section class="band white" id="starten">
+    <div class="in">
+      <div class="head">
+        <div class="label">Starten</div>
+        <h2>Begin met één proefproject.</h2>
       </div>
+      <ol class="steps">
+        <li><h3>Demo</h3><p>We laten het zien op jouw soort project. Vrijblijvend.</p></li>
+        <li><h3>Inrichten</h3><p>Wij lezen de tekening in en zetten checklists klaar.</p></li>
+        <li><h3>Uitnodigen</h3><p>Je vakmensen installeren de app via een link.</p></li>
+        <li><h3>Evalueren</h3><p>Samen bekijken we wat het oplevert.</p></li>
+      </ol>
+    </div>
+  </section>
 
-    </div><!-- /tab-panels -->
+  <section class="band">
+    <div class="in split">
+      <div class="head">
+        <div class="label">Je gegevens</div>
+        <h2>Je bewijs staat veilig, en het blijft van jou.</h2>
+        <p class="lead">Exporteren kan altijd als PDF, foto's en tekeningen. <a class="link" href="/privacyverklaring/">Lees de privacyverklaring</a>.</p>
+      </div>
+      <div class="safe">
+        <div class="feat"><svg aria-hidden="true"><use href="#i-globe"/></svg><div><h3>Opslag in de EU</h3><p>Database en bestanden staan in de EU, met elke dag een backup op een aparte locatie.</p></div></div>
+        <div class="feat"><svg aria-hidden="true"><use href="#i-lock"/></svg><div><h3>Strikt gescheiden</h3><p>Elk bedrijf ziet alleen zijn eigen projecten.</p></div></div>
+        <div class="feat"><svg aria-hidden="true"><use href="#i-archive"/></svg><div><h3>Werk blijft staan</h3><p>Vertrekt een medewerker, dan blijven foto's en rapporten bewaard.</p></div></div>
+        <div class="feat"><svg aria-hidden="true"><use href="#i-shield"/></svg><div><h3>Kwaliteitsborging</h3><p>BuildProof legt de bewijslast vast die je kwaliteitsborger vraagt. De borger beslist.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band white" id="vragen">
+    <div class="in split">
+      <div class="head">
+        <div class="label">Vragen</div>
+        <h2>Wat installateurs ons vragen.</h2>
+        <p class="lead">Staat je vraag er niet bij? Bel <a class="link" href="tel:+31475796164">0475 79 61 64</a> of mail <a class="link" href="mailto:info@buildproof.nl">info@buildproof.nl</a>.</p>
+      </div>
+      <div class="faq">
+        <details open><summary>Wat kost BuildProof?</summary><p>€ 50,00 per gebruiker per maand, excl. btw, met alle modules erin. Met 15 gebruikers is dat € 750,00 per maand.</p></details>
+        <details><summary>Werkt het ook zonder bereik?</summary><p>Ja. Alles wat je vastlegt wordt op het toestel bewaard en verstuurd zodra er weer bereik is, ook vanuit een kelder of ruwbouw.</p></details>
+        <details><summary>De hoofdaannemer gebruikt al een eigen app. Wat dan?</summary><p>Die blijft voor de gebreken van de aannemer. BuildProof is voor jouw eigen bewijs en meetrapporten. Het dossier als PDF lever je zo aan in hun systeem.</p></details>
+        <details><summary>Werkt het meetrapport met elk merk?</summary><p>Ja. BuildProof is niet aan een merk gebonden en zet alle kavels van een project naast elkaar.</p></details>
+        <details><summary>Klopt het wat er uit de tekening wordt gelezen?</summary><p>De AI doet het overtypen, niet het beslissen. Jij ziet de waarden, de app waarschuwt als totalen niet kloppen en je past aan wat nodig is.</p></details>
+        <details><summary>Kunnen onderaannemers meedoen?</summary><p>Ja. Je nodigt ze uit via een link. Ze zien alleen de projecten waarvoor ze zijn uitgenodigd.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="close">
+    <div class="in">
+      <h2>Zie hoe jouw werk bewezen wordt.</h2>
+      <p>Plan een demo, of bel direct: <a href="tel:+31475796164">0475 79 61 64</a></p>
+      <div class="cta"><a class="btn amber" href="/demo/">Plan een demo</a></div>
+    </div>
+  </section>
+</main>
+<footer class="foot">
+  <div class="foot-grid">
+    <div><a class="word" href="/"><svg aria-hidden="true"><use href="#mark"/></svg>BuildProof</a><p>Elke stap op de bouw, bewezen. Gebouwd vanaf de werkvloer, niet vanachter een bureau.</p></div>
+    <div><h3>Website</h3><ul><li><a href="/#functies">Functies</a></li><li><a href="/#tarief">Tarief</a></li><li><a href="/blog/">Kennisbank</a></li><li><a href="/demo/">Plan een demo</a></li><li><a href="https://www.buildproof.nl/">Gratis stappenplan</a></li></ul></div>
+    <div><h3>Contact</h3><ul><li><a href="tel:+31475796164">0475 79 61 64</a></li><li><a href="mailto:info@buildproof.nl">info@buildproof.nl</a></li><li><a href="/privacyverklaring/">Privacyverklaring</a></li></ul></div>
   </div>
-</section>
-
-
-<!-- ============ LOGO WALL ============ -->
-<section class="logowall" style="display:flex;align-items:center;justify-content:center;min-height:200px;">
-  <h3 style="text-align:center;margin:0;">Toonaangevende industriële bedrijven vertrouwen op BuildProof.</h3>
-</section>
-
-<!-- ============ WHY / ACCORDION ============ -->
-<section class="why" id="voordelen">
-  <div class="wrap">
-    <h2>Daarom is BuildProof de beste software voor WKB bewijsvoering.</h2>
-    <div class="why-grid">
-      <div class="acc" id="acc">
-        <div class="acc-item open" data-acc="0">
-          <button class="acc-head"><span class="ai violet"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.6 4.4L18 9l-4.4 1.6L12 15l-1.6-4.4L6 9l4.4-1.6z"/><path d="M19 14l.8 2.2L22 17l-2.2.8L19 20l-.8-2.2L16 17l2.2-.8z"/></svg></span> Kunstmatige intelligentie (AI) <span class="chev"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 15l6-6 6 6"/></svg></span></button>
-          <div class="acc-body"><div class="acc-body-inner">
-            <p>Werk samen met een geïntegreerde AI-copilot die uw BuildProof-gegevens gebruikt en u via chat helpt taken in één keer correct te plannen en uit te voeren.</p>
-          </div></div>
-        </div>
-        <div class="acc-item" data-acc="1">
-          <button class="acc-head"><span class="ai"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-2.7 1.1V21a2 2 0 0 1-4 0v-.1A1.6 1.6 0 0 0 6.5 19l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1A1.6 1.6 0 0 0 3 12.6H3a2 2 0 0 1 0-4h.1A1.6 1.6 0 0 0 4.6 6"/></svg></span> Ontwikkeld in Nederland 🇳🇱 <span class="chev"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 15l6-6 6 6"/></svg></span></button>
-          <div class="acc-body"><div class="acc-body-inner">
-            <p>BuildProof is ontwikkeld in Nederland voor de Europese industrie — met strikte EU-gegevensresidentie en volledige gegevensbescherming, zodat uw gegevens lokaal en veilig blijven.</p>
-          </div></div>
-        </div>
-        <div class="acc-item" data-acc="2">
-          <button class="acc-head"><span class="ai"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5M3 18l9 5 9-5"/></svg></span> Integraties <span class="chev"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 15l6-6 6 6"/></svg></span></button>
-          <div class="acc-body"><div class="acc-body-inner">
-            <p>Breng de werkvloer, het management en externe partners op één lijn; onze robuuste API zorgt ervoor dat gegevens automatisch gesynchroniseerd blijven tussen systemen zoals uw ERP-systeem.</p>
-          </div></div>
-        </div>
-        <div class="acc-item" data-acc="3">
-          <button class="acc-head"><span class="ai"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3l14 9-6 1.5L11 19z"/></svg></span> Intuïtieve bediening <span class="chev"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 15l6-6 6 6"/></svg></span></button>
-          <div class="acc-body"><div class="acc-body-inner">
-            <p>Implementeer BuildProof in een handomdraai dankzij de beproefde uitrolmethode; de moderne, gebruiksvriendelijke interface werkt op alle apparaten — van HMI's tot smartphones.</p>
-          </div></div>
-        </div>
-        <div class="acc-item" data-acc="4">
-          <button class="acc-head"><span class="ai"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4l6 6-9 9H5v-6z"/><path d="M11 7l6 6"/></svg></span> Flexibele aanpassing <span class="chev"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 15l6-6 6 6"/></svg></span></button>
-          <div class="acc-body"><div class="acc-body-inner">
-            <p>Ontwerp de vormgeving, gebruikersrollen en gegevensvelden zodat deze perfect aansluiten op uw processen.</p>
-          </div></div>
-        </div>
-      </div>
-
-      <div class="why-visual">
-        <svg class="why-illus show" data-illus="0" viewBox="0 0 420 320" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect x="40" y="60" width="240" height="150" rx="14" fill="#fff" stroke="#1b2a3d" stroke-width="2.5"/>
-  <rect x="60" y="84" width="120" height="14" rx="7" fill="#e6ebf2"/>
-  <rect x="60" y="112" width="180" height="12" rx="6" fill="#f0d99a"/>
-  <rect x="60" y="134" width="150" height="12" rx="6" fill="#e6ebf2"/>
-  <rect x="60" y="160" width="90" height="26" rx="8" fill="#ffce21"/>
-  <g stroke="#1b2a3d" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M320 110l9 24 24 9-24 9-9 24-9-24-24-9 24-9z" fill="#efe1ff"/>
-  </g>
-  <path d="M352 70l5 13 13 5-13 5-5 13-5-13-13-5 13-5z" fill="#ffce21" stroke="#1b2a3d" stroke-width="2"/>
-  <rect x="250" y="200" width="120" height="70" rx="12" fill="#fff" stroke="#1b2a3d" stroke-width="2.5"/>
-  <rect x="266" y="218" width="60" height="10" rx="5" fill="#e6ebf2"/>
-  <rect x="266" y="236" width="88" height="10" rx="5" fill="#e6ebf2"/>
-  <rect x="266" y="252" width="44" height="10" rx="5" fill="#ffce21"/>
-</svg>
-        <svg class="why-illus" data-illus="1" viewBox="0 0 420 320" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M120 80c-30 0-46 22-44 40-18 2-30 16-30 32 0 18 14 32 34 32h120c22 0 38-16 38-36 0-18-14-32-32-34 2-30-22-50-50-48-12-12-26-18-36-18z" fill="#fff" stroke="#1b2a3d" stroke-width="2.5"/>
-  <g stroke="#1b2a3d" stroke-width="2.2" stroke-linecap="round">
-    <path d="M118 184v40M170 156v68"/>
-  </g>
-  <rect x="92" y="220" width="120" height="80" rx="6" fill="#e6ebf2" stroke="#1b2a3d" stroke-width="2.5"/>
-  <g fill="#fff" stroke="#1b2a3d" stroke-width="1.5"><rect x="102" y="230" width="46" height="16" rx="3"/><rect x="156" y="230" width="46" height="16" rx="3"/><rect x="102" y="252" width="46" height="16" rx="3"/><rect x="156" y="252" width="46" height="16" rx="3"/><rect x="102" y="274" width="46" height="16" rx="3"/><rect x="156" y="274" width="46" height="16" rx="3"/></g>
-  <path d="M250 120l34-12 34 12v34c0 24-18 38-34 44-16-6-34-20-34-44z" fill="#1b2a3d"/>
-  <text x="284" y="158" font-family="Montserrat,sans-serif" font-size="22" font-weight="800" fill="#ffce21" text-anchor="middle">2FA</text>
-  <rect x="100" y="150" width="40" height="26" rx="4" fill="#ffce21" stroke="#1b2a3d" stroke-width="2"/><circle cx="120" cy="163" r="4" fill="#1b2a3d"/>
-  <rect x="296" y="34" width="44" height="30" rx="3" fill="#ffce21" stroke="#1b2a3d" stroke-width="2"/>
-  <rect x="296" y="44" width="44" height="10" fill="#1b2a3d"/>
-</svg>
-        <svg class="why-illus" data-illus="2" viewBox="0 0 420 340" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <line x1="210" y1="160" x2="210" y2="40" stroke="#1b2a3d" stroke-width="1.5" stroke-dasharray="2 4"/><line x1="210" y1="160" x2="330" y2="70" stroke="#1b2a3d" stroke-width="1.5" stroke-dasharray="2 4"/><line x1="210" y1="160" x2="366" y2="160" stroke="#1b2a3d" stroke-width="1.5" stroke-dasharray="2 4"/><line x1="210" y1="160" x2="330" y2="250" stroke="#1b2a3d" stroke-width="1.5" stroke-dasharray="2 4"/><line x1="210" y1="160" x2="210" y2="280" stroke="#1b2a3d" stroke-width="1.5" stroke-dasharray="2 4"/><line x1="210" y1="160" x2="90" y2="250" stroke="#1b2a3d" stroke-width="1.5" stroke-dasharray="2 4"/><line x1="210" y1="160" x2="54" y2="160" stroke="#1b2a3d" stroke-width="1.5" stroke-dasharray="2 4"/><line x1="210" y1="160" x2="90" y2="70" stroke="#1b2a3d" stroke-width="1.5" stroke-dasharray="2 4"/><line x1="210" y1="160" x2="150" y2="40" stroke="#1b2a3d" stroke-width="1.5" stroke-dasharray="2 4"/><line x1="210" y1="160" x2="280" y2="300" stroke="#1b2a3d" stroke-width="1.5" stroke-dasharray="2 4"/>
-  <rect x="176" y="126" width="68" height="68" rx="16" fill="#1b2a3d"/>
-  <path d="M194 142l32 36M226 142l-32 36" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
-  <g><rect x="188" y="24" width="44" height="34" rx="8" fill="#fff" stroke="#1b2a3d" stroke-width="1.8"/><text x="210" y="45" font-family="Nunito,sans-serif" font-size="9" font-weight="800" fill="#3c4a5c" text-anchor="middle">SAP</text></g><g><rect x="308" y="54" width="44" height="34" rx="8" fill="#fff" stroke="#1b2a3d" stroke-width="1.8"/><text x="330" y="75" font-family="Nunito,sans-serif" font-size="9" font-weight="800" fill="#3c4a5c" text-anchor="middle">Teams</text></g><g><rect x="344" y="144" width="44" height="34" rx="8" fill="#fff" stroke="#1b2a3d" stroke-width="1.8"/><text x="366" y="165" font-family="Nunito,sans-serif" font-size="9" font-weight="800" fill="#3c4a5c" text-anchor="middle">HubSpot</text></g><g><rect x="308" y="234" width="44" height="34" rx="8" fill="#fff" stroke="#1b2a3d" stroke-width="1.8"/><text x="330" y="255" font-family="Nunito,sans-serif" font-size="9" font-weight="800" fill="#3c4a5c" text-anchor="middle">Excel</text></g><g><rect x="188" y="264" width="44" height="34" rx="8" fill="#fff" stroke="#1b2a3d" stroke-width="1.8"/><text x="210" y="285" font-family="Nunito,sans-serif" font-size="9" font-weight="800" fill="#3c4a5c" text-anchor="middle">Sage</text></g><g><rect x="68" y="234" width="44" height="34" rx="8" fill="#fff" stroke="#1b2a3d" stroke-width="1.8"/><text x="90" y="255" font-family="Nunito,sans-serif" font-size="9" font-weight="800" fill="#3c4a5c" text-anchor="middle">Jira</text></g><g><rect x="32" y="144" width="44" height="34" rx="8" fill="#fff" stroke="#1b2a3d" stroke-width="1.8"/><text x="54" y="165" font-family="Nunito,sans-serif" font-size="9" font-weight="800" fill="#3c4a5c" text-anchor="middle">Drive</text></g><g><rect x="68" y="54" width="44" height="34" rx="8" fill="#fff" stroke="#1b2a3d" stroke-width="1.8"/><text x="90" y="75" font-family="Nunito,sans-serif" font-size="9" font-weight="800" fill="#3c4a5c" text-anchor="middle">Slack</text></g><g><rect x="128" y="24" width="44" height="34" rx="8" fill="#fff" stroke="#1b2a3d" stroke-width="1.8"/><text x="150" y="45" font-family="Nunito,sans-serif" font-size="9" font-weight="800" fill="#3c4a5c" text-anchor="middle">Power BI</text></g><g><rect x="258" y="284" width="44" height="34" rx="8" fill="#fff" stroke="#1b2a3d" stroke-width="1.8"/><text x="280" y="305" font-family="Nunito,sans-serif" font-size="9" font-weight="800" fill="#3c4a5c" text-anchor="middle">SFTP</text></g>
-</svg>
-        <svg class="why-illus" data-illus="3" viewBox="0 0 420 320" fill="none" xmlns="http://www.w3.org/2000/svg"><g>
-    <rect x="40" y="40" width="160" height="120" rx="12" fill="#fff" stroke="#1b2a3d" stroke-width="2.5"/>
-    <rect x="40" y="40" width="160" height="26" rx="12" fill="#ffce21"/><rect x="40" y="54" width="160" height="12" fill="#ffce21"/>
-    <circle cx="70" cy="70" r="20" fill="#fff" stroke="#1b2a3d" stroke-width="2.5"/>
-    <circle cx="70" cy="65" r="7" fill="#1b2a3d"/><path d="M58 82a12 12 0 0 1 24 0" fill="#1b2a3d"/>
-    <rect x="102" y="98" width="80" height="9" rx="4" fill="#e6ebf2"/>
-    <rect x="54" y="120" width="60" height="9" rx="4" fill="#e6ebf2"/>
-    <rect x="54" y="136" width="120" height="9" rx="4" fill="#f0d99a"/>
-  </g><g>
-    <rect x="230" y="40" width="160" height="120" rx="12" fill="#fff" stroke="#1b2a3d" stroke-width="2.5"/>
-    <rect x="230" y="40" width="160" height="26" rx="12" fill="#ffce21"/><rect x="230" y="54" width="160" height="12" fill="#ffce21"/>
-    <circle cx="260" cy="70" r="20" fill="#fff" stroke="#1b2a3d" stroke-width="2.5"/>
-    <circle cx="260" cy="65" r="7" fill="#1b2a3d"/><path d="M248 82a12 12 0 0 1 24 0" fill="#1b2a3d"/>
-    <rect x="292" y="98" width="80" height="9" rx="4" fill="#e6ebf2"/>
-    <rect x="244" y="120" width="60" height="9" rx="4" fill="#e6ebf2"/>
-    <rect x="244" y="136" width="120" height="9" rx="4" fill="#f0d99a"/>
-  </g><g>
-    <rect x="40" y="180" width="160" height="120" rx="12" fill="#fff" stroke="#1b2a3d" stroke-width="2.5"/>
-    <rect x="40" y="180" width="160" height="26" rx="12" fill="#ffce21"/><rect x="40" y="194" width="160" height="12" fill="#ffce21"/>
-    <circle cx="70" cy="210" r="20" fill="#fff" stroke="#1b2a3d" stroke-width="2.5"/>
-    <circle cx="70" cy="205" r="7" fill="#1b2a3d"/><path d="M58 222a12 12 0 0 1 24 0" fill="#1b2a3d"/>
-    <rect x="102" y="238" width="80" height="9" rx="4" fill="#e6ebf2"/>
-    <rect x="54" y="260" width="60" height="9" rx="4" fill="#e6ebf2"/>
-    <rect x="54" y="276" width="120" height="9" rx="4" fill="#f0d99a"/>
-  </g><g>
-    <rect x="230" y="180" width="160" height="120" rx="12" fill="#fff" stroke="#1b2a3d" stroke-width="2.5"/>
-    <rect x="230" y="180" width="160" height="26" rx="12" fill="#ffce21"/><rect x="230" y="194" width="160" height="12" fill="#ffce21"/>
-    <circle cx="260" cy="210" r="20" fill="#fff" stroke="#1b2a3d" stroke-width="2.5"/>
-    <circle cx="260" cy="205" r="7" fill="#1b2a3d"/><path d="M248 222a12 12 0 0 1 24 0" fill="#1b2a3d"/>
-    <rect x="292" y="238" width="80" height="9" rx="4" fill="#e6ebf2"/>
-    <rect x="244" y="260" width="60" height="9" rx="4" fill="#e6ebf2"/>
-    <rect x="244" y="276" width="120" height="9" rx="4" fill="#f0d99a"/>
-  </g></svg>
-        <svg class="why-illus" data-illus="4" viewBox="0 0 420 320" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect x="40" y="70" width="220" height="180" rx="12" fill="#fff" stroke="#1b2a3d" stroke-width="2.5"/>
-  <rect x="40" y="70" width="220" height="26" rx="12" fill="#ffce21"/><rect x="40" y="84" width="220" height="12" fill="#ffce21"/>
-  <circle cx="58" cy="83" r="3" fill="#1b2a3d"/><circle cx="70" cy="83" r="3" fill="#1b2a3d"/><circle cx="82" cy="83" r="3" fill="#1b2a3d"/>
-  <rect x="58" y="116" width="84" height="56" rx="8" fill="#e6ebf2"/>
-  <rect x="156" y="116" width="84" height="56" rx="8" fill="#faf1d8" stroke="#1b2a3d" stroke-width="1.5"/>
-  <rect x="58" y="186" width="84" height="48" rx="8" fill="#faf1d8" stroke="#1b2a3d" stroke-width="1.5"/>
-  <rect x="156" y="186" width="84" height="48" rx="8" fill="#e6ebf2"/>
-  <g stroke="#1b2a3d" stroke-width="2"><rect x="68" y="126" width="26" height="14" rx="7" fill="#ffce21"/><circle cx="87" cy="133" r="5" fill="#fff"/></g>
-  <path d="M300 110c-26 0-40 18-38 34-14 2-24 14-24 28 0 16 12 26 28 26h70c18 0 30-14 30-30 0-14-12-26-28-26 0-22-18-36-38-34-8-10-20-12-28-2z" fill="#fff" stroke="#1b2a3d" stroke-width="2.5" transform="translate(-2,-46) scale(0.9)"/>
-  <rect x="300" y="180" width="64" height="90" rx="10" fill="#ffce21" stroke="#1b2a3d" stroke-width="2.5"/>
-  <rect x="312" y="196" width="40" height="30" rx="4" fill="#fff"/>
-  <circle cx="324" cy="240" r="5" fill="#1b2a3d"/><circle cx="340" cy="240" r="5" fill="#1b2a3d"/>
-</svg>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ WORK AREAS (verborgen) ============ -->
-<section class="areas" style="display:none">
-  <div class="wrap">
-    <h2>Ontdek onze werkgebieden</h2>
-    <div class="area-grid">
-      <div class="area-card">
-        <div class="area-photo"><div class="pp pp1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l6 4V9l6 4V5l6 3v13z"/><path d="M3 21h18"/></svg></div></div>
-        <h4><span class="ai"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l6 4V9l6 4V5l6 3v13z"/><path d="M3 21h18"/></svg></span> Productie en fabricage</h4>
-        <button class="btn btn-gold">Leer meer ›</button>
-      </div>
-      <div class="area-card">
-        <div class="area-photo"><div class="pp pp2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"/></svg></div></div>
-        <h4><span class="ai"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"/></svg></span> Gebouwen en faciliteiten</h4>
-        <button class="btn btn-gold">Leer meer ›</button>
-      </div>
-      <div class="area-card">
-        <div class="area-photo"><div class="pp pp3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 3v7a4 4 0 0 0 8 0V3M8 3v18M16 3c-2 1-3 4-3 7s1 4 3 4 3-1 3-4-1-6-3-7z"/></svg></div></div>
-        <h4><span class="ai"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 3v7a4 4 0 0 0 8 0V3M8 3v18M16 3c-2 1-3 4-3 7s1 4 3 4 3-1 3-4-1-6-3-7z"/></svg></span> Eten en drinken</h4>
-        <button class="btn btn-gold">Leer meer ›</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ TESTIMONIAL ============ -->
-<section class="testi">
-  <div class="wrap">
-    <div class="testi-head">
-      <div class="testi-ey"><span class="qmark">&#10077;</span> Klantrecensies</div>
-      <div class="testi-nav">
-        <button class="testi-arrow" id="tPrev" aria-label="Vorige"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M15 6l-6 6 6 6"/></svg></button>
-        <button class="testi-arrow" id="tNext" aria-label="Volgende"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></button>
-      </div>
-    </div>
-    <div class="testi-grid">
-      <div>
-        <p class="testi-quote" id="tQuote">"Dankzij BuildProof hebben we onze beschikbaarheid van de installaties met 20% kunnen verhogen — een echte gamechanger voor onze productie."</p>
-        <div class="testi-author" id="tAuthor">Christelijke Smets</div>
-        <div class="testi-role" id="tRole">Fabrieksmanager · Nordfeld Mineral Oil Works</div>
-        <div class="testi-company" id="tCompany">NORDFELD</div>
-        <button class="btn btn-gold">Klantreferentie ›</button>
-      </div>
-      <div class="testi-photo"><div class="pp pp4" id="tPhoto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M5 21a7 7 0 0 1 14 0"/></svg></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ AWARDS ============ -->
-<section class="awards" style="display:none">
-  <div class="wrap awards-grid">
-    <h2>Bekroonde software<br>waarop u kunt vertrouwen.</h2>
-    <div class="award-badges">
-      <div class="award-badge"><div class="ring">★</div><small>TOP<br>MAINTAINER<br>2025</small></div>
-      <div class="award-badge"><div class="ring">♦</div><small>BEST<br>SUPPORT<br>2025</small></div>
-      <div class="award-badge"><div class="ring">▲</div><small>BEST<br>VALUE<br>2025</small></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CTA BAND ============ -->
-<section class="cta-band">
-  <div class="wrap">
-    <h2>Vereenvoudig <b>het onderhoud</b><br>met <b>moderne software</b> .</h2>
-    <p>BuildProof onderhoudssoftware vereenvoudigt uw preventief en reactief onderhoud en helpt u onze complexe wereld draaiende te houden.</p>
-    <div class="hero-ctas">
-      <a href="calendly/" class="btn btn-dark btn-lg">Ontdek het product</a>
-      <a href="demo/" class="btn btn-dark btn-lg" style="background:#fff;color:var(--ink-900)">Vraag een demo aan</a>
-    </div>
-  </div>
-</section>
-
-<!-- ============ STAPPENPLAN ============ -->
-<section class="news">
-  <div class="wrap news-grid">
-    <div>
-      <h2>Download ons gratis stappenplan</h2>
-      <p>Ontdek stap voor stap hoe u WKB-bewijsvoering correct inricht en altijd voldoet aan de eisen.</p>
-      <button class="btn btn-gold" id="stappenplanBtn">Download gratis</button>
-    </div>
-    <div class="news-media" style="background:none;box-shadow:none;display:flex;align-items:center;justify-content:center;">
-      <img src="assets/stappenplan-cover.png" alt="Gratis stappenplan: Van WhatsApp-chaos naar een dossier dat zichzelf bouwt" style="max-height:320px;width:auto;object-fit:contain;filter:drop-shadow(0 20px 40px rgba(27,42,61,0.22));">
-    </div>
-  </div>
-</section>
-
-<!-- ============ BLOG ============ -->
-<section class="blog-preview" id="kennisbank">
-  <div class="wrap">
-    <div class="blog-section-head">
-      <h2>Kennisbank</h2>
-    </div>
-    <div class="blog-grid">
-
-      <a class="blog-card" href="blog/whatsapp-chaos-projectdossier/">
-        <div class="blog-card-img"></div>
-        <div class="blog-card-content">
-          <h3>Van WhatsApp-chaos naar een automatisch projectdossier</h3>
-          <p>Foto's, uren en checklijsten verspreid over WhatsApp-groepen? Ontdek waarom dat je marge kost en hoe een automatisch projectdossier de chaos oplost.</p>
-        </div>
-      </a>
-
-      <a class="blog-card" href="blog/wat-whatsapp-kost/">
-        <div class="blog-card-img"></div>
-        <div class="blog-card-content">
-          <h3>Terugscrollen door 300 bouwfoto's: wat WhatsApp je écht kost</h3>
-          <p>Foto's, uren en afspraken terugzoeken in WhatsApp kost meer dan je denkt. Reken mee wat de chaos je per jaar kost en hoe je die tijd terugwint.</p>
-        </div>
-      </a>
-
-      <a class="blog-card" href="blog/bewijslast-oplevering-garantie/">
-        <div class="blog-card-img"></div>
-        <div class="blog-card-content">
-          <h3>Geen foto's, geen bewijs: het risico van WhatsApp bij oplevering en garantie</h3>
-          <p>Sinds de Wkb moet jij als installateur bewijzen dat een gebrek niet jouw schuld is. Waarom verspreide WhatsApp-foto's een risico zijn en wat je nodig hebt.</p>
-        </div>
-      </a>
-
-    </div>
-    <div style="text-align:center;margin-top:44px;">
-      <a href="blog/" class="btn btn-gold">Bekijk alle artikelen ›</a>
-    </div>
-  </div>
-</section>
-
-<!-- ============ FOOTER ============ -->
-<footer class="footer-full">
-  <div class="footer-full-inner">
-    <div class="footer-full-top">
-      <img src="assets/bp-logo-white.png" alt="BuildProof" class="footer-full-logo">
-      <p class="footer-full-tagline">De beste software voor WKB bewijsvoering.</p>
-      <div class="footer-full-ctas">
-        <a href="calendly/" class="btn btn-gold">Probeer het gratis</a>
-        <a href="demo/" class="btn footer-btn-outline">Vraag een demo aan</a>
-      </div>
-      <div class="footer-full-social">
-        <a href="#" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.5 8h4V24h-4zM8 8h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2 4 0 4.75 2.65 4.75 6.1V24h-4v-7.1c0-1.7 0-3.9-2.37-3.9-2.38 0-2.75 1.85-2.75 3.77V24H8z"/></svg>
-        </a>
-        <a href="#" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-        </a>
-      </div>
-    </div>
-    <div class="footer-full-bottom">
-      <p class="footer-full-copy" id="footer-copy"></p>
-    </div>
-  </div>
+  <div class="foot-end">© 2026 BuildProof is een handelsnaam van Unlimited Scalability LLC, 1309 Coffeen Avenue STE 1200, Sheridan, Wyoming 82801, USA.</div>
 </footer>
-
-
-<!-- ============ STAPPENPLAN MODAL ============ -->
-<div class="sp-overlay" id="spOverlay" hidden role="dialog" aria-modal="true" aria-labelledby="spTitle">
-  <div class="sp-modal">
-    <button class="sp-close" id="spClose" aria-label="Sluiten">
-      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
-    </button>
-    <div class="sp-progress-wrap">
-      <span class="sp-progress-label">50%</span>
-      <div class="sp-progress-track"><div class="sp-progress-bar"></div></div>
-    </div>
-    <h2 class="sp-title" id="spTitle">Waar mogen we hem naar toe sturen?</h2>
-    <form id="spForm" novalidate>
-      <div class="sp-field">
-        <input type="text" id="spVoornaam" name="voornaam" placeholder="Voornaam*" autocomplete="given-name" required>
-      </div>
-      <div class="sp-field">
-        <input type="email" id="spEmail" name="email" placeholder="Email*" autocomplete="email" required>
-      </div>
-      <div class="sp-error" id="spError" hidden></div>
-      <button type="submit" class="btn btn-gold sp-submit">Gratis downloaden</button>
-    </form>
-    <p class="sp-privacy">Uw gegevens worden vertrouwelijk behandeld en nooit gedeeld met derden.</p>
-  </div>
-</div>
-
 <script>
-/* BuildProof homepage — interactions */
 (function () {
-  var copyEl = document.getElementById('footer-copy');
-  if (copyEl) copyEl.textContent = 'Copyright © ' + new Date().getFullYear() + ' BuildProof';
-
-  /* burger menu */
-  var mNav = document.getElementById('mNav');
-  var burger = document.getElementById('burgerBtn');
-  var close = document.getElementById('mNavClose');
-  function openNav() { mNav.classList.add('open'); document.body.style.overflow = 'hidden'; }
-  function closeNav() { mNav.classList.remove('open'); document.body.style.overflow = ''; }
-  if (burger) burger.addEventListener('click', openNav);
-  if (close) close.addEventListener('click', closeNav);
-  if (mNav) mNav.addEventListener('click', function(e) { if (e.target === mNav) closeNav(); });
-  document.querySelectorAll('.m-nav-links a').forEach(function (link) {
-    link.addEventListener('click', closeNav);
-  });
-
-  var tabs = document.querySelectorAll('.tab');
-  var panels = document.querySelectorAll('.panel');
-  tabs.forEach(function (tab) {
-    tab.addEventListener('click', function () {
-      var idx = tab.getAttribute('data-tab');
-      tabs.forEach(function (t) { t.setAttribute('aria-selected', t === tab ? 'true' : 'false'); });
-      panels.forEach(function (p) {
-        p.classList.toggle('active', p.getAttribute('data-panel') === idx);
-      });
-    });
-  });
-
-  var items = document.querySelectorAll('.acc-item');
-  var illus = document.querySelectorAll('.why-illus');
-  items.forEach(function (item) {
-    item.querySelector('.acc-head').addEventListener('click', function () {
-      var idx = item.getAttribute('data-acc');
-      var alreadyOpen = item.classList.contains('open');
-      items.forEach(function (i) { i.classList.remove('open'); });
-      if (!alreadyOpen) {
-        item.classList.add('open');
-        illus.forEach(function (s) {
-          s.classList.toggle('show', s.getAttribute('data-illus') === idx);
-        });
-      }
-    });
-  });
-
-  var reviews = [
-    { q: '"Dankzij BuildProof hebben we onze beschikbaarheid van de installaties met 20% kunnen verhogen — een echte gamechanger voor onze productie."',
-      a: 'Christelijke Smets', r: 'Fabrieksmanager · Nordfeld Mineral Oil Works', c: 'NORDFELD' },
-    { q: '"De overstap van WhatsApp-chaos naar een dossier dat zichzelf bouwt heeft ons bij oplevering enorm veel discussie bespaard. De facturatie loopt nu weken sneller."',
-      a: 'Mark de Vries', r: 'Operationeel directeur · Veldhuis Installatietechniek', c: 'Veldhuis' },
-    { q: '"Onze monteurs leggen hun werk nu in twee minuten per dag vast. Het kantoor sorteert geen foto\u2019s meer en de Wkb-bewijsvoering is altijd compleet."',
-      a: 'Sanne Bakker', r: 'Hoofd Onderhoud · METROVA Industrie', c: 'METROVA' }
-  ];
-  var ti = 0;
-  var qEl = document.getElementById('tQuote'), aEl = document.getElementById('tAuthor'),
-      rEl = document.getElementById('tRole'), cEl = document.getElementById('tCompany');
-  function render() {
-    var rv = reviews[ti];
-    [qEl, aEl, rEl, cEl].forEach(function (el) { if (el) el.style.opacity = 0; });
-    setTimeout(function () {
-      if (qEl) qEl.textContent = rv.q;
-      if (aEl) aEl.textContent = rv.a;
-      if (rEl) rEl.textContent = rv.r;
-      if (cEl) cEl.textContent = rv.c;
-      [qEl, aEl, rEl, cEl].forEach(function (el) { if (el) el.style.opacity = 1; });
-    }, 140);
+  var input = document.getElementById('users');
+  var out = document.getElementById('users-out');
+  var month = document.getElementById('month');
+  var year = document.getElementById('year');
+  function euro(n) { return '€ ' + String(n).replace(/\B(?=(\d{3})+(?!\d))/g, '.') + ',00'; }
+  function update() {
+    var n = Number(input.value);
+    out.textContent = n;
+    month.textContent = euro(n * 50);
+    year.textContent = euro(n * 50 * 12);
   }
-  [qEl, aEl, rEl, cEl].forEach(function (el) { if (el) el.style.transition = 'opacity .14s ease'; });
-  var prev = document.getElementById('tPrev'), next = document.getElementById('tNext');
-  if (prev) prev.addEventListener('click', function () { ti = (ti - 1 + reviews.length) % reviews.length; render(); });
-  if (next) next.addEventListener('click', function () { ti = (ti + 1) % reviews.length; render(); });
-
-  /* stappenplan modal */
-  var spOverlay = document.getElementById('spOverlay');
-  var spClose   = document.getElementById('spClose');
-  var spForm    = document.getElementById('spForm');
-  var spError   = document.getElementById('spError');
-  var spBtn     = document.getElementById('stappenplanBtn');
-
-  function openSp() {
-    spOverlay.hidden = false;
-    document.body.style.overflow = 'hidden';
-    document.getElementById('spVoornaam').focus();
-  }
-  function closeSp() {
-    spOverlay.hidden = true;
-    document.body.style.overflow = '';
-    spForm.reset();
-    spError.hidden = true;
-  }
-
-  if (spBtn)     spBtn.addEventListener('click', openSp);
-  if (spClose)   spClose.addEventListener('click', closeSp);
-  if (spOverlay) spOverlay.addEventListener('click', function(e) { if (e.target === spOverlay) closeSp(); });
-  document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && spOverlay && !spOverlay.hidden) closeSp(); });
-
-  if (spForm) spForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    var submitBtn = spForm.querySelector('button[type="submit"]');
-    var voornaam  = document.getElementById('spVoornaam').value.trim();
-    var email     = document.getElementById('spEmail').value.trim();
-    spError.hidden = true;
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Even geduld…';
-
-    fetch('https://api.site.buildproof.nl/api/subscribe', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ voornaam: voornaam, email: email }),
-    })
-    .then(function(r) { return r.json().then(function(d) { return { ok: r.ok, data: d }; }); })
-    .then(function(res) {
-      if (!res.ok) throw new Error(res.data.error || 'Er ging iets mis.');
-      window.location.href = 'https://tally.so/r/rjGdJ2';
-    })
-    .catch(function(err) {
-      spError.textContent = err.message;
-      spError.hidden = false;
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'Gratis downloaden';
-    });
-  });
+  input.addEventListener('input', update);
+  update();
 })();
 </script>
 </body>

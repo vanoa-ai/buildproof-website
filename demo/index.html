@@ -1,178 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nl">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" type="image/png" href="../assets/favicon.png">
-<title>Demo aanvragen — BuildProof</title>
-<link rel="stylesheet" href="../assets/buildproof-tokens.css">
-<link rel="stylesheet" href="../site.css">
-<style>
-  .demo-page { min-height: 100vh; display: flex; flex-direction: column; }
-  .demo-body { flex: 1; padding: 64px 0 80px; }
-  .demo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
-  .demo-copy h1 { font-family: var(--font-body); font-weight: 900; font-size: 38px; line-height: 1.15; color: var(--ink-900); margin: 0 0 18px; }
-  .demo-copy p { font-size: 17px; line-height: 1.65; color: var(--ink-700); margin: 0 0 28px; }
-  .demo-copy ul { padding: 0 0 0 20px; margin: 0; display: flex; flex-direction: column; gap: 10px; }
-  .demo-copy ul li { font-size: 16px; color: var(--ink-700); line-height: 1.5; }
-  .demo-form-card { background: var(--surface-050); border: 1px solid var(--line-200); border-radius: var(--radius-xl); padding: 40px; box-shadow: var(--shadow-md); }
-  .demo-form-card h2 { font-family: var(--font-display); font-weight: 800; font-size: 22px; color: var(--ink-900); margin: 0 0 28px; }
-  .field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 18px; }
-  .field label { font-weight: 700; font-size: 14px; color: var(--ink-700); }
-  .field input, .field select, .field textarea {
-    border: 1.5px solid var(--line-300); border-radius: var(--radius-md);
-    padding: 12px 14px; font-family: var(--font-body); font-size: 15px; color: var(--ink-900);
-    background: #fff; transition: border-color .15s ease, box-shadow .15s ease;
-  }
-  .field input:focus, .field select:focus, .field textarea:focus {
-    outline: none; border-color: var(--blue-500); box-shadow: 0 0 0 3px var(--blue-100);
-  }
-  .field textarea { resize: vertical; min-height: 100px; }
-  .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-  .submit-btn { width: 100%; padding: 16px; font-size: 16px; margin-top: 6px; }
-  .form-note { font-size: 13px; color: var(--ink-500); text-align: center; margin-top: 14px; }
-  @media (max-width: 1023px) {
-    .demo-grid { grid-template-columns: 1fr; gap: 40px; }
-  }
-  @media (max-width: 767px) {
-    .demo-body { padding: 40px 0 60px; }
-    .demo-copy h1 { font-size: 28px; }
-    .demo-form-card { padding: 28px 20px; }
-    .field-row { grid-template-columns: 1fr; }
-  }
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Plan een demo | BuildProof</title>
+<meta name="description" content="Plan een demo van BuildProof. In 15 minuten weet je of het past. Vrijblijvend.">
+<link rel="canonical" href="https://site.buildproof.nl/demo/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BuildProof">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:title" content="Plan een demo | BuildProof">
+<meta property="og:description" content="Plan een demo van BuildProof. In 15 minuten weet je of het past. Vrijblijvend.">
+<meta property="og:url" content="https://site.buildproof.nl/demo/">
+<meta property="og:image" content="https://site.buildproof.nl/assets/img/hero-bouwplaats.jpg">
+<meta name="theme-color" content="#1b2a3d">
+<link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="/assets/bp.css">
 </head>
-<body class="demo-page">
-
-<header class="site-header">
-  <div class="wrap header-row">
-    <a class="header-logo" href="../" aria-label="BuildProof"><img src="../assets/buildproof-logo.png" alt="BuildProof"></a>
-    <nav class="main-nav">
-      <a class="nav-item" href="../#product">Product</a>
-      <a class="nav-item" href="../#voordelen">Voordelen</a>
-      <a class="nav-item" href="../blog/">Kennisbank</a>
-      <a class="nav-item" href="../demo/">Demo</a>
-    </nav>
-    <div class="header-actions">
-      <a href="../calendly/" class="btn btn-gold">Probeer het gratis</a>
-      <a href="../demo/" class="btn btn-dark">Vraag een demo aan</a>
-      <button class="m-burger" id="burgerBtn" aria-label="Menu openen">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-      </button>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <linearGradient id="lw" x1="0.21" y1="0.09" x2="0.79" y2="0.91"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#cdd7e3"/></linearGradient>
+  <linearGradient id="la" x1="0.21" y1="0.09" x2="0.79" y2="0.91"><stop offset="0" stop-color="#fff0a8"/><stop offset="1" stop-color="#e9ad00"/></linearGradient>
+  <filter id="ls" x="-40%" y="-60%" width="180%" height="220%"><feDropShadow dx="1.72" dy="2.46" stdDeviation="4" flood-color="#000" flood-opacity="0.3"/></filter>
+  <symbol id="mark" viewBox="0 6 104 88"><g transform="translate(13.4 0) skewX(-15)"><rect x="12" y="63.5" width="76" height="17" rx="3" fill="url(#lw)" filter="url(#ls)"/><rect x="12" y="41.5" width="76" height="17" rx="3" fill="url(#lw)" filter="url(#ls)"/><rect x="12" y="19.5" width="76" height="17" rx="3" fill="url(#la)" filter="url(#ls)"/></g></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></symbol>
+  <symbol id="i-wind" viewBox="0 0 24 24"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4M12 17h.01"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24"><path d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4z"/><path d="M8 2v16M16 6v16"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8"/></symbol>
+  <symbol id="i-scan" viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2M3 12h18"/></symbol>
+  <symbol id="i-share" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.59 13.51 6.83 3.98M15.41 6.51l-6.82 3.98"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+  <symbol id="i-bars" viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="i-server" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><path d="M6 6h.01M6 18h.01"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+  <symbol id="i-archive" viewBox="0 0 24 24"><path d="M21 8v13H3V8M1 3h22v5H1zM10 12h4"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+</defs></svg>
+<header class="nav"><div class="in"><a class="word" href="/" aria-label="BuildProof, naar de homepage"><svg aria-hidden="true"><use href="#mark"/></svg>BuildProof</a><div class="nav-right"><nav aria-label="Hoofdmenu"><a href="/#functies">Functies</a><a href="/#tarief">Tarief</a><a href="/#starten">Starten</a><a href="/#vragen">Vragen</a><a href="/blog/">Kennisbank</a><a class="btn amber" href="/demo/">Plan een demo</a></nav><details class="menu"><summary aria-label="Menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg></summary><div class="menu-panel"><a href="/#functies">Functies</a><a href="/#tarief">Tarief</a><a href="/#starten">Starten</a><a href="/#vragen">Vragen</a><a href="/blog/">Kennisbank</a><a href="/privacyverklaring/">Privacyverklaring</a></div></details></div></div></header>
+<main>
+  <section class="page-head"><div class="in"><div class="label">Plan een demo</div><h1>In 15 minuten weet je of het past.</h1><p>Kies een moment dat jou uitkomt. Vrijblijvend.</p></div></section>
+  <section class="band"><div class="in demo">
+    <div class="stack">
+      <ol class="demo-steps">
+        <li><div><h3>Kies een moment</h3><p>In de agenda, direct bevestigd.</p></div></li>
+        <li><div><h3>We bellen je</h3><p>We horen hoe jullie nu foto's, checklists en rapporten vastleggen.</p></div></li>
+        <li><div><h3>Je weet waar je aan toe bent</h3><p>Of BuildProof past, en wat de volgende stap is.</p></div></li>
+      </ol>
+      <div class="direct"><span>Liever direct contact?</span><a href="tel:+31475796164">0475 79 61 64</a><a href="mailto:info@buildproof.nl">info@buildproof.nl</a></div>
     </div>
-  </div>
-</header>
-
-<div class="m-nav-overlay" id="mNav">
-  <div class="m-nav-panel">
-    <button class="m-nav-close" id="mNavClose" aria-label="Menu sluiten">
-      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
-    </button>
-    <nav class="m-nav-links">
-      <a href="../#product">Product</a>
-      <a href="../#voordelen">Voordelen</a>
-      <a href="../blog/">Kennisbank</a>
-      <a href="../demo/">Demo</a>
-    </nav>
-    <div class="m-nav-ctas">
-      <a href="../calendly/" class="btn btn-gold">Probeer het gratis</a>
-      <a href="../demo/" class="btn btn-dark">Vraag een demo aan</a>
+    <div class="agenda" id="agenda">
+      <h2>Agenda</h2>
+      <p class="lead">De agenda draait bij Calendly, dat eigen cookies kan plaatsen. Daarom laden we hem pas als jij erom vraagt.</p>
+      <button class="btn amber" id="open-agenda" type="button" style="border:0;cursor:pointer">Open de agenda</button>
+      <p class="note">Of open hem <a class="link" href="https://calendly.com/buildproof-nl/kort-gesprek" rel="noopener">direct bij Calendly</a>. Lees ook de <a class="link" href="/privacyverklaring/">privacyverklaring</a>.</p>
     </div>
-  </div>
-</div>
-
-<main class="demo-body">
-  <div class="wrap demo-grid">
-    <div class="demo-copy">
-      <h1>Vraag een persoonlijke demo aan</h1>
-      <p>Ontdek hoe BuildProof uw WKB-bewijsvoering en onderhoud vereenvoudigt. Onze expert laat u in 30 minuten zien hoe de software werkt voor uw specifieke situatie.</p>
-      <ul>
-        <li>Persoonlijke rondleiding door de software</li>
-        <li>Antwoord op al uw vragen</li>
-        <li>Geen verplichtingen</li>
-        <li>Binnen 1 werkdag contact</li>
-      </ul>
-    </div>
-    <div class="demo-form-card">
-      <h2>Vul uw gegevens in</h2>
-      <form onsubmit="handleSubmit(event)">
-        <div class="field-row">
-          <div class="field">
-            <label for="voornaam">Voornaam</label>
-            <input type="text" id="voornaam" name="voornaam" placeholder="Jan" required>
-          </div>
-          <div class="field">
-            <label for="achternaam">Achternaam</label>
-            <input type="text" id="achternaam" name="achternaam" placeholder="de Vries" required>
-          </div>
-        </div>
-        <div class="field">
-          <label for="email">Zakelijk e-mailadres</label>
-          <input type="email" id="email" name="email" placeholder="jan@bedrijf.nl" required>
-        </div>
-        <div class="field">
-          <label for="telefoon">Telefoonnummer</label>
-          <input type="tel" id="telefoon" name="telefoon" placeholder="+31 6 12345678">
-        </div>
-        <div class="field">
-          <label for="bedrijf">Bedrijfsnaam</label>
-          <input type="text" id="bedrijf" name="bedrijf" placeholder="Uw bedrijfsnaam" required>
-        </div>
-        <div class="field">
-          <label for="grootte">Aantal medewerkers</label>
-          <select id="grootte" name="grootte">
-            <option value="">Selecteer...</option>
-            <option>1 – 10</option>
-            <option>11 – 50</option>
-            <option>51 – 200</option>
-            <option>201 – 500</option>
-            <option>500+</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="bericht">Wat wilt u bereiken met BuildProof? (optioneel)</label>
-          <textarea id="bericht" name="bericht" placeholder="Vertel ons kort over uw situatie..."></textarea>
-        </div>
-        <button type="submit" class="btn btn-gold submit-btn">Demo aanvragen</button>
-        <p class="form-note">Uw gegevens worden vertrouwelijk behandeld en nooit gedeeld met derden.</p>
-      </form>
-    </div>
-  </div>
+  </div></section>
 </main>
-
-<footer class="footer">
-  <div class="wrap">
-    <div class="footer-brand">
-      <img src="../assets/buildproof-logo.png" alt="BuildProof">
-      <p class="copy" id="footer-copy"></p>
-    </div>
+<footer class="foot">
+  <div class="foot-grid">
+    <div><a class="word" href="/"><svg aria-hidden="true"><use href="#mark"/></svg>BuildProof</a><p>Elke stap op de bouw, bewezen. Gebouwd vanaf de werkvloer, niet vanachter een bureau.</p></div>
+    <div><h3>Website</h3><ul><li><a href="/#functies">Functies</a></li><li><a href="/#tarief">Tarief</a></li><li><a href="/blog/">Kennisbank</a></li><li><a href="/demo/">Plan een demo</a></li><li><a href="https://www.buildproof.nl/">Gratis stappenplan</a></li></ul></div>
+    <div><h3>Contact</h3><ul><li><a href="tel:+31475796164">0475 79 61 64</a></li><li><a href="mailto:info@buildproof.nl">info@buildproof.nl</a></li><li><a href="/privacyverklaring/">Privacyverklaring</a></li></ul></div>
   </div>
+  <div class="foot-end">© 2026 BuildProof is een handelsnaam van Unlimited Scalability LLC, 1309 Coffeen Avenue STE 1200, Sheridan, Wyoming 82801, USA.</div>
 </footer>
-
 <script>
-  var c = document.getElementById('footer-copy');
-  if (c) c.textContent = 'Copyright © ' + new Date().getFullYear() + ' BuildProof';
-
-  (function () {
-    var mNav = document.getElementById('mNav');
-    var burger = document.getElementById('burgerBtn');
-    var close = document.getElementById('mNavClose');
-    function openNav() { mNav.classList.add('open'); document.body.style.overflow = 'hidden'; }
-    function closeNav() { mNav.classList.remove('open'); document.body.style.overflow = ''; }
-    if (burger) burger.addEventListener('click', openNav);
-    if (close) close.addEventListener('click', closeNav);
-    if (mNav) mNav.addEventListener('click', function(e) { if (e.target === mNav) closeNav(); });
-    document.querySelectorAll('.m-nav-links a').forEach(function (link) { link.addEventListener('click', closeNav); });
-  })();
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    var btn = e.target.querySelector('button[type="submit"]');
-    btn.textContent = 'Verzonden! We nemen snel contact op.';
-    btn.disabled = true;
-    btn.style.background = 'var(--success-bg)';
-    btn.style.color = 'var(--success)';
-  }
+document.getElementById('open-agenda').addEventListener('click', function () {
+  var box = document.getElementById('agenda');
+  box.innerHTML = '<iframe title="Agenda om een demo te plannen" src="https://calendly.com/buildproof-nl/kort-gesprek?hide_gdpr_banner=1&primary_color=fece21&embed_domain=site.buildproof.nl&embed_type=Inline"></iframe>';
+  box.style.padding = '8px';
+  box.style.display = 'block';
+});
 </script>
 </body>
 </html>

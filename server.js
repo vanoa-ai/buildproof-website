@@ -19,6 +19,27 @@ app.set('trust proxy', 1);
 app.use(cors(corsOptions));
 app.options('*', cors(corsOptions));
 app.use(express.json({ limit: '10kb' }));
+app.disable('x-powered-by');
+app.use((req, res, next) => {
+  res.set('X-Content-Type-Options', 'nosniff');
+  res.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+  next();
+});
+
+// Oude prototypes en de oude agenda-url gaan naar de echte pagina's
+app.use((req, res, next) => {
+  if (/^\/(buildproof-(nieuw|v3|v4|v5)|installatieflow)(\/|$)/.test(req.path)) return res.redirect(301, '/');
+  if (/^\/calendly(\/|$)/.test(req.path)) return res.redirect(301, '/demo/');
+  next();
+});
+
+// Bestanden in de repo-root die niet publiek horen te zijn
+const PRIVATE_PATHS = /^\/(server\.js|package(-lock)?\.json|ecosystem\.config\.js|nginx-api\.conf|site\.css|node_modules|uploads)(\/|$)/;
+app.use((req, res, next) => {
+  if (PRIVATE_PATHS.test(req.path)) return res.status(404).sendFile(path.join(__dirname, '404.html'));
+  next();
+});
+
 app.use(express.static(path.join(__dirname)));
 
 // Max 5 form submissions per IP per 15 minutes
@@ -81,6 +102,8 @@ app.post('/api/subscribe', cors(corsOptions), limiter, async (req, res) => {
     return res.status(502).json({ error: 'Er ging iets mis. Probeer het opnieuw.' });
   }
 });
+
+app.use((req, res) => res.status(404).sendFile(path.join(__dirname, '404.html')));
 
 app.listen(PORT, () => {
   console.log(`BuildProof draait op http://localhost:${PORT}`);
